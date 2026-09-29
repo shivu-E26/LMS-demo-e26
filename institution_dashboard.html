@@ -1,585 +1,3528 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="shell-type" content="web_dashboard" />
 
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"background":"#f7f9ff","on-primary-fixed-variant":"#2f4865","on-surface":"#121c26","on-secondary-fixed":"#001e30","surface-container":"#e4effd","on-secondary":"#ffffff","inverse-primary":"#afc9ea","surface-container-lowest":"#ffffff","outline":"#74777e","inverse-surface":"#27313c","secondary-fixed":"#cbe6ff","outline-variant":"#c3c6ce","error":"#ba1a1a","primary":"#001d36","on-tertiary-fixed":"#002113","inverse-on-surface":"#e8f2ff","surface-variant":"#d9e3f1","on-primary":"#ffffff","on-error-container":"#93000a","on-surface-variant":"#43474d","tertiary-fixed":"#a4f3ca","on-error":"#ffffff","surface-dim":"#d1dbe9","surface-tint":"#47607e","on-primary-container":"#819aba","error-container":"#ffdad6","primary-fixed-dim":"#afc9ea","tertiary":"#002113","primary-fixed":"#d1e4ff","surface-bright":"#f7f9ff","on-primary-fixed":"#001d36","surface-container-highest":"#d9e3f1","secondary-container":"#8ecdff","secondary":"#156490","on-tertiary-container":"#5aa782","on-background":"#121c26","on-secondary-container":"#005782","surface-container-high":"#dfe9f7","tertiary-fixed-dim":"#88d6af","surface":"#f7f9ff","secondary-fixed-dim":"#8ecdff","tertiary-container":"#003824","primary-container":"#17324d","on-tertiary":"#ffffff","surface-container-low":"#edf4ff","on-tertiary-fixed-variant":"#005236","on-secondary-fixed-variant":"#004b71"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin-mobile":"1rem","space-md":"1rem","margin":"2rem","gutter":"1.5rem","space-xl":"2rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem"},fontFamily:{"display-hero":["Inter"],"body-regular":["Inter"],"label-mono":["JetBrains Mono"],"body-medium":["Inter"],"table-cell":["Inter"],"badge-micro":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"],"display-hero-mobile":["Inter"],"card-title":["Inter"],"table-header":["Inter"]},fontSize:{"display-hero":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-regular":["14px",{"lineHeight":"21px","fontWeight":"400"}],"label-mono":["12px",{"lineHeight":"16px","fontWeight":"500"}],"body-medium":["14px",{"lineHeight":"21px","fontWeight":"500"}],"table-cell":["13px",{"lineHeight":"18px","fontWeight":"400"}],"badge-micro":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.02em","fontWeight":"700"}],"card-title":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"table-header":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}]}}}}</script>  <link rel="stylesheet" href="shared/demo.css">
-</head><body class="bg-background font-body-regular text-body-regular text-on-surface antialiased" data-roles="institution"><aside class="fixed left-0 top-0 h-screen w-60 bg-primary-container text-on-primary z-50 flex flex-col justify-between select-none shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="px-space-md py-space-md flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><span class="e26-brand-mark" aria-label="E26">E26</span><div class="flex flex-col min-w-0"><span class="font-headline-md text-headline-md text-on-primary tracking-tight leading-none truncate">E26 Digital Learning Platform</span><span class="font-badge-micro text-badge-micro uppercase tracking-wider text-secondary-fixed mt-0.5">Higher Education ERP</span></div></div><div class="mt-space-xs"><span class="inline-flex items-center px-space-xs py-0.5 rounded bg-primary text-secondary-fixed font-badge-micro text-badge-micro tracking-wider uppercase">INSTITUTION ADMIN</span></div></div><nav class="flex-1 px-space-sm py-space-xs flex flex-col gap-1" data-active-classes="bg-secondary text-on-secondary font-body-medium rounded-lg"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 transition-all bg-secondary text-on-secondary font-body-medium rounded-lg" data-path="dashboard" href="institution_dashboard.html"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="departments" href="institution_departments.html"><span class="material-symbols-outlined text-[18px]">domain</span><span>Departments</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="programs" href="institution_programs.html"><span class="material-symbols-outlined text-[18px]">schema</span><span>Programs</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="courses" href="institution_programs.html"><span class="material-symbols-outlined text-[18px]">menu_book</span><span>Courses</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="lecturers" href="institution_departments.html"><span class="material-symbols-outlined text-[18px]">supervisor_account</span><span>Lecturers</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="students" href="institution_students.html"><span class="material-symbols-outlined text-[18px]">school</span><span>Students</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="publisher-library" href="institution_licensing.html"><span class="material-symbols-outlined text-[18px]">local_library</span><span>Publisher Library</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="assignments" href="#"><span class="material-symbols-outlined text-[18px]">assignment</span><span>Assignments</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="assessments" href="#"><span class="material-symbols-outlined text-[18px]">fact_check</span><span>Assessments</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="reports" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>Settings</span></a></nav></div><div class="p-space-md bg-primary/70"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span><span class="font-label-mono text-label-mono text-tertiary-fixed tracking-wider uppercase">Demo Institution · Active</span></div><div class="mt-1 text-[10px] text-primary-fixed-dim tracking-tight font-label-mono">LMS integration / Privacy controls configured</div></div></aside><div class="pl-60 min-h-screen flex flex-col"><header class="fixed top-0 left-60 right-0 h-14 bg-surface/90 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><span class="e26-brand-mark" aria-label="E26">E26</span><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-[18px]">account_balance</span><span class="font-body-medium text-body-medium text-on-surface">Demo Institution • Business &amp; Management Department</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">unfold_more</span></div></div><div class="flex-1 max-w-lg mx-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full h-9 pl-9 pr-4 rounded bg-surface-container-lowest text-on-surface placeholder-outline font-body-regular text-body-regular focus:outline-none shadow-[0_1px_3px_rgba(16,24,40,0.04)] transition-all" placeholder="Search departments, courses, faculty, students (⌘K)" type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="h-5 w-px bg-surface-variant"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-body-medium text-body-medium text-on-surface leading-tight">Institution Admin</span><span class="font-badge-micro text-badge-micro uppercase text-on-surface-variant tracking-wider leading-none mt-0.5">Institution Administrator</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full flex-1 pt-14 px-gutter pb-space-xl bg-background"><div class="flex flex-col w-full">
-<!-- Dynamic Dashboard Header -->
-<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-lg">
-<div class="flex flex-col gap-1">
-<div class="flex items-center gap-space-xs">
-<span class="font-headline-lg text-headline-lg text-on-surface">Institution Dashboard</span>
-<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-mono text-[11px] tracking-wide uppercase">Term 2025–2026</span>
-</div>
-<p class="font-body-regular text-body-regular text-on-surface-variant">Overview of your institution • Academic Term 2025–2026 • Demo Institution</p>
-</div>
-<!-- Header Actions -->
-<div class="flex items-center gap-space-sm self-start lg:self-auto">
-<button class="h-9 px-3.5 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-all flex items-center gap-2 shadow-sm font-body-medium text-body-medium">
-<span class="material-symbols-outlined text-[18px] text-secondary">download</span>
-<span>Export Institutional Audit</span>
-</button>
-<div class="relative inline-block text-left" id="provisionMenuWrapper">
-<button class="h-9 px-4 rounded bg-primary-container text-on-primary hover:bg-secondary transition-all flex items-center gap-2 font-body-medium text-body-medium shadow-sm" id="provisionMenuBtn">
-<span class="material-symbols-outlined text-[18px]">add_circle</span>
-<span>+ Quick Provision</span>
-<span class="material-symbols-outlined text-[16px]">expand_more</span>
-</button>
-<!-- Dropdown Dialog Menu -->
-<div class="hidden absolute right-0 mt-2 w-56 rounded-xl bg-surface-container-lowest shadow-xl z-30 py-2" id="provisionDropdown">
-<div class="px-3 py-1.5 font-badge-micro text-badge-micro uppercase tracking-wider text-outline">Provision Entity</div>
-<a class="flex items-center gap-2.5 px-3 py-2 text-on-surface hover:bg-surface-container font-body-regular text-body-regular transition-colors" href="#">
-<span class="material-symbols-outlined text-secondary text-[18px]">domain_add</span>
-<span>New Department</span>
-</a>
-<a class="flex items-center gap-2.5 px-3 py-2 text-on-surface hover:bg-surface-container font-body-regular text-body-regular transition-colors" href="#">
-<span class="material-symbols-outlined text-secondary text-[18px]">post_add</span>
-<span>New Course Section</span>
-</a>
-<a class="flex items-center gap-2.5 px-3 py-2 text-on-surface hover:bg-surface-container font-body-regular text-body-regular transition-colors" href="#">
-<span class="material-symbols-outlined text-secondary text-[18px]">person_add</span>
-<span>Faculty Lecturer</span>
-</a>
-<div class="my-1 h-px bg-surface-variant"></div>
-<a class="flex items-center gap-2.5 px-3 py-2 text-secondary hover:bg-surface-container font-body-regular text-body-regular transition-colors" href="#">
-<span class="material-symbols-outlined text-[18px]">cloud_upload</span>
-<span>SIS CSV Batch Import</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-<!-- SECTION 1: Top Institutional KPI Cards (6 Grid) -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-space-md mb-space-lg">
-<!-- Card 1: Students -->
-<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
-<div class="flex items-center justify-between text-on-surface-variant mb-2">
-<span class="font-table-header text-table-header uppercase tracking-wider">Total Students</span>
-<div class="p-1 rounded bg-surface-container text-secondary">
-<span class="material-symbols-outlined text-[18px]">school</span>
-</div>
-</div>
-<div>
-<div class="font-display-hero text-[28px] leading-tight text-on-surface tracking-tight">18,450</div>
-<div class="flex items-center gap-1.5 mt-2">
-<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-mono text-[11px] font-semibold">
-<span class="material-symbols-outlined text-[12px]">trending_up</span>
-            +4.2%
-          </span>
-<span class="font-label-mono text-[11px] text-outline">YoY</span>
-</div>
-</div>
-<div class="mt-3 pt-2 font-badge-micro text-badge-micro text-secondary tracking-tight">99.1% ACTIVE ENROLLMENT</div>
-</div>
-<!-- Card 2: Lecturers -->
-<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
-<div class="flex items-center justify-between text-on-surface-variant mb-2">
-<span class="font-table-header text-table-header uppercase tracking-wider">Total Lecturers</span>
-<div class="p-1 rounded bg-surface-container text-secondary">
-<span class="material-symbols-outlined text-[18px]">supervisor_account</span>
-</div>
-</div>
-<div>
-<div class="font-display-hero text-[28px] leading-tight text-on-surface tracking-tight">840</div>
-<div class="flex items-center gap-1.5 mt-2">
-<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-mono text-[11px] font-semibold">
-            Full-time &amp; Adjunct
-          </span>
-</div>
-</div>
-<div class="mt-3 pt-2 font-badge-micro text-badge-micro text-tertiary-container text-on-tertiary-container tracking-tight">100% ONBOARDED VERIFIED</div>
-</div>
-<!-- Card 3: Departments -->
-<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
-<div class="flex items-center justify-between text-on-surface-variant mb-2">
-<span class="font-table-header text-table-header uppercase tracking-wider">Departments</span>
-<div class="p-1 rounded bg-surface-container text-secondary">
-<span class="material-symbols-outlined text-[18px]">domain</span>
-</div>
-</div>
-<div>
-<div class="font-display-hero text-[28px] leading-tight text-on-surface tracking-tight">14</div>
-<div class="flex items-center gap-1.5 mt-2">
-<span class="font-body-regular text-table-cell text-on-surface-variant">Across 4 Major Faculties</span>
-</div>
-</div>
-<div class="mt-3 pt-2 font-badge-micro text-badge-micro text-outline tracking-tight">GOVERNANCE CONFIGURED</div>
-</div>
-<!-- Card 4: Active Courses -->
-<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
-<div class="flex items-center justify-between text-on-surface-variant mb-2">
-<span class="font-table-header text-table-header uppercase tracking-wider">Active Courses</span>
-<div class="p-1 rounded bg-surface-container text-secondary">
-<span class="material-symbols-outlined text-[18px]">menu_book</span>
-</div>
-</div>
-<div>
-<div class="font-display-hero text-[28px] leading-tight text-on-surface tracking-tight">520</div>
-<div class="flex items-center gap-1.5 mt-2">
-<span class="inline-flex items-center gap-1 text-on-surface-variant font-table-cell text-table-cell">
-<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Live Sections
-          </span>
-</div>
-</div>
-<div class="mt-3 pt-2 font-badge-micro text-badge-micro text-secondary tracking-tight">98.4% SYLLABUS ADOPTION</div>
-</div>
-<!-- Card 5: Licensed Titles -->
-<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
-<div class="flex items-center justify-between text-on-surface-variant mb-2">
-<span class="font-table-header text-table-header uppercase tracking-wider">Licensed Titles</span>
-<div class="p-1 rounded bg-surface-container text-secondary">
-<span class="material-symbols-outlined text-[18px]">local_library</span>
-</div>
-</div>
-<div>
-<div class="font-display-hero text-[28px] leading-tight text-on-surface tracking-tight">312</div>
-<div class="flex items-center gap-1.5 mt-2">
-<span class="font-table-cell text-table-cell text-on-surface-variant truncate">Publisher Codices</span>
-</div>
-</div>
-<div class="mt-3 pt-2 font-badge-micro text-badge-micro text-on-surface-variant tracking-tight">18 GLOBAL PUBLISHERS</div>
-</div>
-<!-- Card 6: Seats Used -->
-<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
-<div class="flex items-center justify-between text-on-surface-variant mb-2">
-<span class="font-table-header text-table-header uppercase tracking-wider">Seats Utilized</span>
-<div class="p-1 rounded bg-surface-container text-secondary">
-<span class="material-symbols-outlined text-[18px]">pie_chart</span>
-</div>
-</div>
-<div>
-<div class="font-display-hero text-[28px] leading-tight text-on-surface tracking-tight">86.4%</div>
-<div class="flex items-center gap-1.5 mt-2">
-<span class="font-label-mono text-label-mono text-on-surface-variant">24.1k / 28.0k</span>
-</div>
-</div>
-<div class="mt-3 pt-2 font-badge-micro text-badge-micro text-secondary tracking-tight">3,820 SEATS AVAILABLE</div>
-</div>
-</div>
-<!-- SECTION 2: Campus Content Licenses & Seat Allocation -->
-<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm mb-space-lg">
-<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-space-md">
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-[22px]">verified_user</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Campus Content Licenses &amp; Seat Allocation</h2>
-</div>
-<p class="font-body-regular text-body-regular text-on-surface-variant mt-0.5">Manage institutional seat pools, consortium quotas, and publisher titles</p>
-</div>
-<div class="flex flex-wrap items-center gap-space-sm">
-<div class="flex items-center gap-1.5 px-3 py-1 rounded bg-surface-container text-on-surface font-body-medium text-table-cell">
-<span class="material-symbols-outlined text-secondary text-[16px]">menu_book</span>
-<span class="font-semibold text-secondary">312</span>
-<span class="text-on-surface-variant">Active Codices</span>
-</div>
-<div class="flex items-center gap-1.5 px-3 py-1 rounded bg-surface-container text-on-surface font-body-medium text-table-cell">
-<span class="material-symbols-outlined text-outline text-[16px]">group_add</span>
-<span class="font-semibold text-on-surface">26,500</span>
-<span class="text-on-surface-variant">Assigned</span>
-</div>
-<div class="flex items-center gap-1.5 px-3 py-1 rounded bg-surface-container-high text-on-surface font-body-medium text-table-cell">
-<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
-<span class="font-semibold text-secondary">24,180</span>
-<span class="text-on-surface-variant">Used</span>
-</div>
-<div class="flex items-center gap-1.5 px-3 py-1 rounded bg-surface-container text-tertiary-container font-body-medium text-table-cell">
-<span class="material-symbols-outlined text-on-tertiary-container text-[16px]">add_task</span>
-<span class="font-semibold text-on-tertiary-container">3,820</span>
-<span class="text-on-surface-variant">Buffer Pool</span>
-</div>
-</div>
-</div>
-<!-- Visual Segmented Progress Bar -->
-<div class="mt-2 flex flex-col gap-2">
-<div class="flex items-center justify-between text-label-mono font-label-mono text-on-surface-variant text-[11px]">
-<span>Total Provisioned Campus Seats: 28,000 Capacity</span>
-<span class="text-secondary font-semibold">Healthy Capacity • Auto-Scale threshold at 95%</span>
-</div>
-<!-- Segmented Bar Container -->
-<div class="w-full h-4 rounded-full bg-surface-container overflow-hidden flex shadow-inner">
-<!-- Active Used: 86.4% -->
-<div class="h-full bg-primary-container relative group cursor-pointer transition-all hover:bg-secondary" style="width: 86.4%;">
-<div class="absolute inset-0 bg-white/5"></div>
-</div>
-<!-- Reserved for Spring: 8.3% -->
-<div class="h-full bg-secondary-container relative group cursor-pointer transition-all hover:opacity-90" style="width: 8.3%;"></div>
-<!-- Unassigned Headroom: 5.3% -->
-<div class="h-full bg-surface-dim relative group cursor-pointer" style="width: 5.3%;"></div>
-</div>
-<!-- Segment Legend & Metadata -->
-<div class="flex flex-wrap items-center justify-between pt-2 gap-y-2">
-<div class="flex flex-wrap items-center gap-space-lg text-table-cell font-table-cell text-on-surface-variant">
-<div class="flex items-center gap-2">
-<span class="w-3 h-3 rounded-sm bg-primary-container"></span>
-<span class="text-on-surface font-medium">Active In-Use</span>
-<span class="font-label-mono text-[12px] text-outline">(24,180 • 86.4%)</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="w-3 h-3 rounded-sm bg-secondary-container"></span>
-<span class="text-on-surface font-medium">Reserved Term Buffer</span>
-<span class="font-label-mono text-[12px] text-outline">(2,320 • 8.3%)</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="w-3 h-3 rounded-sm bg-surface-dim"></span>
-<span class="text-on-surface font-medium">Unassigned Capacity</span>
-<span class="font-label-mono text-[12px] text-outline">(1,500 • 5.3%)</span>
-</div>
-</div>
-<button class="flex items-center gap-1.5 text-secondary hover:text-primary transition-colors font-body-medium text-body-medium">
-<span>Manage License Quotas</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-<!-- SECTION 3: Academic Overview (Grid of 2 major analytical cards) -->
-<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-lg">
-<!-- Academic Department Distribution & Engagement (7 Columns) -->
-<div class="xl:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col">
-<div class="flex items-center justify-between pb-space-md">
-<div class="flex flex-col">
-<h3 class="font-headline-md text-headline-md text-on-surface">Academic Department Distribution &amp; Engagement</h3>
-<p class="font-body-regular text-body-regular text-on-surface-variant">Enrollments, instructional staffing, and digital curriculum adoption</p>
-</div>
-<span class="inline-flex items-center gap-1 text-secondary text-table-cell font-body-medium cursor-pointer hover:underline">
-          View All 14
-          <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</span>
-</div>
-<!-- Data Table -->
-<div class="overflow-x-auto w-full">
-<table class="w-full text-left">
-<thead>
-<tr class="bg-surface-container-low text-on-surface-variant font-table-header text-table-header uppercase tracking-wider">
-<th class="py-2.5 px-3 rounded-l">Department</th>
-<th class="py-2.5 px-3">Students</th>
-<th class="py-2.5 px-3">Courses</th>
-<th class="py-2.5 px-3">Faculty</th>
-<th class="py-2.5 px-3 rounded-r text-right">Seat Utilization</th>
-</tr>
-</thead>
-<tbody class="divide-y-0 text-on-surface font-table-cell text-table-cell">
-<!-- Row 1 -->
-<tr class="hover:bg-surface-container-low transition-colors">
-<td class="py-3 px-3">
-<div class="flex items-center gap-2">
-<span class="w-2 h-2 rounded-full bg-secondary"></span>
-<div class="flex flex-col">
-<span class="font-body-medium text-on-surface">Computer Science &amp; AI</span>
-<span class="text-[11px] text-outline font-label-mono">FAC-ENG-01</span>
-</div>
-</div>
-</td>
-<td class="py-3 px-3 font-label-mono font-medium">4,820</td>
-<td class="py-3 px-3">94 sections</td>
-<td class="py-3 px-3">142 profs</td>
-<td class="py-3 px-3 text-right">
-<div class="flex items-center justify-end gap-2">
-<div class="w-16 h-2 rounded-full bg-surface-container overflow-hidden">
-<div class="h-full bg-secondary" style="width: 92%;"></div>
-</div>
-<span class="font-label-mono text-[12px] font-semibold text-on-surface">92%</span>
-</div>
-</td>
-</tr>
-<!-- Row 2 -->
-<tr class="hover:bg-surface-container-low transition-colors">
-<td class="py-3 px-3">
-<div class="flex items-center gap-2">
-<span class="w-2 h-2 rounded-full bg-primary-container"></span>
-<div class="flex flex-col">
-<span class="font-body-medium text-on-surface">Clinical Medicine</span>
-<span class="text-[11px] text-outline font-label-mono">FAC-MED-04</span>
-</div>
-</div>
-</td>
-<td class="py-3 px-3 font-label-mono font-medium">3,150</td>
-<td class="py-3 px-3">112 sections</td>
-<td class="py-3 px-3">185 profs</td>
-<td class="py-3 px-3 text-right">
-<div class="flex items-center justify-end gap-2">
-<div class="w-16 h-2 rounded-full bg-surface-container overflow-hidden">
-<div class="h-full bg-secondary" style="width: 88%;"></div>
-</div>
-<span class="font-label-mono text-[12px] font-semibold text-on-surface">88%</span>
-</div>
-</td>
-</tr>
-<!-- Row 3 -->
-<tr class="hover:bg-surface-container-low transition-colors">
-<td class="py-3 px-3">
-<div class="flex items-center gap-2">
-<span class="w-2 h-2 rounded-full bg-secondary"></span>
-<div class="flex flex-col">
-<span class="font-body-medium text-on-surface">Mechanical Engineering</span>
-<span class="text-[11px] text-outline font-label-mono">FAC-ENG-03</span>
-</div>
-</div>
-</td>
-<td class="py-3 px-3 font-label-mono font-medium">2,940</td>
-<td class="py-3 px-3">82 sections</td>
-<td class="py-3 px-3">110 profs</td>
-<td class="py-3 px-3 text-right">
-<div class="flex items-center justify-end gap-2">
-<div class="w-16 h-2 rounded-full bg-surface-container overflow-hidden">
-<div class="h-full bg-secondary" style="width: 79%;"></div>
-</div>
-<span class="font-label-mono text-[12px] font-semibold text-on-surface">79%</span>
-</div>
-</td>
-</tr>
-<!-- Row 4 -->
-<tr class="hover:bg-surface-container-low transition-colors">
-<td class="py-3 px-3">
-<div class="flex items-center gap-2">
-<span class="w-2 h-2 rounded-full bg-primary-container"></span>
-<div class="flex flex-col">
-<span class="font-body-medium text-on-surface">Economics &amp; Finance</span>
-<span class="text-[11px] text-outline font-label-mono">FAC-SOC-02</span>
-</div>
-</div>
-</td>
-<td class="py-3 px-3 font-label-mono font-medium">3,800</td>
-<td class="py-3 px-3">105 sections</td>
-<td class="py-3 px-3">128 profs</td>
-<td class="py-3 px-3 text-right">
-<div class="flex items-center justify-end gap-2">
-<div class="w-16 h-2 rounded-full bg-surface-container overflow-hidden">
-<div class="h-full bg-secondary" style="width: 84%;"></div>
-</div>
-<span class="font-label-mono text-[12px] font-semibold text-on-surface">84%</span>
-</div>
-</td>
-</tr>
-<!-- Row 5 -->
-<tr class="hover:bg-surface-container-low transition-colors">
-<td class="py-3 px-3">
-<div class="flex items-center gap-2">
-<span class="w-2 h-2 rounded-full bg-outline"></span>
-<div class="flex flex-col">
-<span class="font-body-medium text-on-surface">Law &amp; Jurisprudence</span>
-<span class="text-[11px] text-outline font-label-mono">FAC-LAW-01</span>
-</div>
-</div>
-</td>
-<td class="py-3 px-3 font-label-mono font-medium">2,100</td>
-<td class="py-3 px-3">65 sections</td>
-<td class="py-3 px-3">92 profs</td>
-<td class="py-3 px-3 text-right">
-<div class="flex items-center justify-end gap-2">
-<div class="w-16 h-2 rounded-full bg-surface-container overflow-hidden">
-<div class="h-full bg-secondary" style="width: 72%;"></div>
-</div>
-<span class="font-label-mono text-[12px] font-semibold text-on-surface">72%</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<!-- Campus Benchmark Note -->
-<div class="mt-auto pt-4 flex items-center justify-between text-[11px] font-label-mono text-outline">
-<span class="flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px] text-secondary">insights</span>
-          Highest adoption velocity: Computer Science &amp; AI (+18.4% textbook reads)
-        </span>
-<span>Privacy controls configured</span>
-</div>
-</div>
-<!-- Course Activity & Adoptions Analytics (5 Columns) -->
-<div class="xl:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
-<div>
-<div class="flex items-center justify-between pb-space-sm">
-<h3 class="font-headline-md text-headline-md text-on-surface">Course Activity &amp; Adoptions</h3>
-<span class="p-1 rounded bg-surface-container text-secondary">
-<span class="material-symbols-outlined text-[18px]">auto_graph</span>
-</span>
-</div>
-<p class="font-body-regular text-body-regular text-on-surface-variant mb-space-md">Real-time metrics on reading engagement and LMS interoperability</p>
-<!-- 4 Sub-metrics Bento Tiles -->
-<div class="grid grid-cols-2 gap-space-sm mb-space-md">
-<div class="p-3 rounded-lg bg-surface-container-low flex flex-col">
-<span class="font-table-header text-[11px] text-on-surface-variant uppercase tracking-wider">Term Completion</span>
-<div class="font-display-hero text-[24px] text-on-surface font-bold mt-1">84.6%</div>
-<div class="flex items-center gap-1 mt-1 text-[11px] font-label-mono text-on-tertiary-container">
-<span class="material-symbols-outlined text-[12px]">verified</span>
-              On Academic Schedule
-            </div>
-</div>
-<div class="p-3 rounded-lg bg-surface-container-low flex flex-col">
-<span class="font-table-header text-[11px] text-on-surface-variant uppercase tracking-wider">Avg Books / Course</span>
-<div class="font-display-hero text-[24px] text-on-surface font-bold mt-1">3.4</div>
-<div class="flex items-center gap-1 mt-1 text-[11px] font-label-mono text-secondary">
-<span class="material-symbols-outlined text-[12px]">bookmark</span>
-              Multi-Source Adopted
-            </div>
-</div>
-<div class="p-3 rounded-lg bg-surface-container-low flex flex-col">
-<span class="font-table-header text-[11px] text-on-surface-variant uppercase tracking-wider">Weekly Reader Vol</span>
-<div class="font-display-hero text-[24px] text-on-surface font-bold mt-1">142.0k</div>
-<div class="flex items-center gap-1 mt-1 text-[11px] font-label-mono text-secondary">
-<span class="material-symbols-outlined text-[12px]">speed</span>
-              Daily Reader Accesses
-            </div>
-</div>
-<div class="p-3 rounded-lg bg-surface-container-low flex flex-col">
-<span class="font-table-header text-[11px] text-on-surface-variant uppercase tracking-wider">LMS integration Sync Health</span>
-<div class="font-display-hero text-[24px] text-tertiary-container font-bold mt-1">100%</div>
-<div class="flex items-center gap-1 mt-1 text-[11px] font-label-mono text-outline">
-              institution learning platform
-            </div>
-</div>
-</div>
-<!-- Inline SVG Visualization: Reading Volume Trend -->
-<div class="bg-surface-container-low rounded-lg p-3">
-<div class="flex items-center justify-between text-[11px] font-label-mono mb-2">
-<span class="text-on-surface-variant font-medium">WEEKLY ACCESS CURVE (7 WEEKS)</span>
-<span class="text-secondary font-semibold">+12% PEAK MIDTERM</span>
-</div>
-<svg class="w-full h-16 text-secondary" fill="none" viewbox="0 0 300 60">
-<path d="M0 45 C40 40, 70 48, 100 32 C130 16, 160 30, 200 18 C240 6, 270 12, 300 8 L300 60 L0 60 Z" fill="currentColor" fill-opacity="0.1"></path>
-<path d="M0 45 C40 40, 70 48, 100 32 C130 16, 160 30, 200 18 C240 6, 270 12, 300 8" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
-<circle cx="200" cy="18" fill="currentColor" r="3"></circle>
-<circle cx="300" cy="8" fill="currentColor" r="3"></circle>
-</svg>
-<div class="flex justify-between text-[10px] font-label-mono text-outline mt-1 px-1">
-<span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5 (Mid)</span><span>W6</span><span>W7</span>
-</div>
-</div>
-</div>
-<div class="pt-4 flex items-center justify-between">
-<span class="font-body-regular text-table-cell text-on-surface-variant">LMS Gateway: OAuth 2.0 State Verified</span>
-<button class="text-secondary font-body-medium text-table-cell hover:underline">Diagnostics Log</button>
-</div>
-</div>
-</div>
-<!-- SECTION 4: Recent Institutional Activity Feed -->
-<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
-<div class="flex items-center justify-between pb-space-md">
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-[22px]">history_edu</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Recent Institutional Activity</h2>
-</div>
-<p class="font-body-regular text-body-regular text-on-surface-variant">System audit log of academic provisions, publisher assignments, and SIS synchronization</p>
-</div>
-<button class="px-3 py-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-body-medium text-table-cell flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[16px]">filter_list</span>
-<span>Filter Logs</span>
-</button>
-</div>
-<!-- Feed Items -->
-<div class="flex flex-col gap-2">
-<!-- Activity 1 -->
-<div class="flex items-start justify-between p-3 rounded-lg hover:bg-surface-container-low transition-colors group">
-<div class="flex items-start gap-3">
-<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0 mt-0.5">
-<span class="material-symbols-outlined text-[18px]">person_add</span>
-</div>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="font-body-medium text-body-medium text-on-surface">New Lecturer Added</span>
-<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline font-label-mono text-[10px] uppercase">Staffing</span>
-</div>
-<p class="font-body-regular text-body-regular text-on-surface-variant mt-0.5">
-              Prof. Julian Thorne assigned to Department of Computer Science &amp; AI
-            </p>
-</div>
-</div>
-<span class="font-label-mono text-[11px] text-outline shrink-0 ml-4">12m ago</span>
-</div>
-<!-- Activity 2 -->
-<div class="flex items-start justify-between p-3 rounded-lg hover:bg-surface-container-low transition-colors group">
-<div class="flex items-start gap-3">
-<div class="w-8 h-8 rounded-full bg-surface-container-high text-secondary flex items-center justify-center shrink-0 mt-0.5">
-<span class="material-symbols-outlined text-[18px]">sync_alt</span>
-</div>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="font-body-medium text-body-medium text-on-surface">New Students Imported</span>
-<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline font-label-mono text-[10px] uppercase">SIS Ingestion</span>
-</div>
-<p class="font-body-regular text-body-regular text-on-surface-variant mt-0.5">
-              Batch SIS sync: 145 students enrolled into MSc Bioengineering cohort (Autumn Session)
-            </p>
-</div>
-</div>
-<span class="font-label-mono text-[11px] text-outline shrink-0 ml-4">1h ago</span>
-</div>
-<!-- Activity 3 -->
-<div class="flex items-start justify-between p-3 rounded-lg hover:bg-surface-container-low transition-colors group">
-<div class="flex items-start gap-3">
-<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 mt-0.5">
-<span class="material-symbols-outlined text-[18px]">auto_stories</span>
-</div>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="font-body-medium text-body-medium text-on-surface">Publisher Title Assigned</span>
-<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline font-label-mono text-[10px] uppercase">Curriculum</span>
-</div>
-<p class="font-body-regular text-body-regular text-on-surface-variant mt-0.5">
-<span class="italic font-medium text-on-surface">‘Principles of Modern Neurobiology (6th Ed.)’</span> allocated 450 seats for Med-301 Section B
-            </p>
-</div>
-</div>
-<span class="font-label-mono text-[11px] text-outline shrink-0 ml-4">3h ago</span>
-</div>
-<!-- Activity 4 -->
-<div class="flex items-start justify-between p-3 rounded-lg hover:bg-surface-container-low transition-colors group">
-<div class="flex items-start gap-3">
-<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 mt-0.5">
-<span class="material-symbols-outlined text-[18px]">add_box</span>
-</div>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="font-body-medium text-body-medium text-on-surface">Course Created</span>
-<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline font-label-mono text-[10px] uppercase">Academic Dept</span>
-</div>
-<p class="font-body-regular text-body-regular text-on-surface-variant mt-0.5">
-<span class="font-medium text-on-surface">‘CS-480: Advanced Distributed Systems’</span> provisioned by HOD Dr. Aris Thorne
-            </p>
-</div>
-</div>
-<span class="font-label-mono text-[11px] text-outline shrink-0 ml-4">5h ago</span>
-</div>
-<!-- Activity 5 -->
-<div class="flex items-start justify-between p-3 rounded-lg hover:bg-surface-container-low transition-colors group">
-<div class="flex items-start gap-3">
-<div class="w-8 h-8 rounded-full bg-surface-container text-secondary flex items-center justify-center shrink-0 mt-0.5">
-<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
-</div>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="font-body-medium text-body-medium text-on-surface">Assignment Activity</span>
-<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline font-label-mono text-[10px] uppercase">Assessment</span>
-</div>
-<p class="font-body-regular text-body-regular text-on-surface-variant mt-0.5">
-              Midterm Assessment codex published across 8 sections with LTI automated sync
-            </p>
-</div>
-</div>
-<span class="font-label-mono text-[11px] text-outline shrink-0 ml-4">1d ago</span>
-</div>
-</div>
-</div>
-<script>
-    (function () {
-      const btn = document.getElementById('provisionMenuBtn');
-      const dropdown = document.getElementById('provisionDropdown');
-      const wrapper = document.getElementById('provisionMenuWrapper');
+  <title>Institution Dashboard | E26 Digital Learning Platform</title>
 
-      if (btn && dropdown) {
-        btn.addEventListener('click', function (e) {
-          e.stopPropagation();
-          dropdown.classList.toggle('hidden');
-        });
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        document.addEventListener('click', function (e) {
-          if (!wrapper.contains(e.target)) {
-            dropdown.classList.add('hidden');
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            background: "#f6f8fc",
+            primary: "#0b2540",
+            "primary-container": "#123653",
+            "on-primary": "#ffffff",
+            secondary: "#176b98",
+            "secondary-container": "#d9efff",
+            "secondary-fixed": "#cbe8fb",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#07557c",
+            tertiary: "#08704f",
+            "tertiary-container": "#dff6eb",
+            "on-tertiary-container": "#075c42",
+            surface: "#f6f8fc",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f1f5fa",
+            "surface-container": "#e8eef5",
+            "surface-container-high": "#e0e8f1",
+            "surface-container-highest": "#d7e0ea",
+            "surface-dim": "#ccd6e2",
+            "on-surface": "#17212b",
+            "on-surface-variant": "#5f6b77",
+            outline: "#8793a0",
+            "outline-variant": "#ccd4dd",
+            error: "#ba1a1a",
+            "error-container": "#ffdad6"
           }
-        });
+        }
       }
-    })();
+    };
   </script>
-</div></main></div>  <script src="shared/demo-runtime.js"></script>
-</body></html>
+
+  <style>
+    :root {
+      --navy: #0b2540;
+      --navy-2: #123653;
+      --blue: #176b98;
+      --blue-soft: #eaf5fc;
+      --green: #08704f;
+      --green-soft: #e8f7f0;
+      --page: #f6f8fc;
+      --card: #ffffff;
+      --border: #e2e8ef;
+      --muted: #647180;
+      --text: #17212b;
+      --shadow-sm: 0 1px 2px rgba(16, 24, 40, .04);
+      --shadow-md: 0 8px 24px rgba(16, 24, 40, .06);
+      --shadow-lg: 0 18px 45px rgba(16, 24, 40, .10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+    }
+
+    body {
+      background: var(--page);
+      color: var(--text);
+      font-family: Inter, sans-serif;
+      overscroll-behavior: none;
+    }
+
+    ::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    * {
+      scrollbar-width: none;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .mono {
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    /* =========================================================
+       SIDEBAR
+    ========================================================= */
+
+    .sidebar {
+      position: fixed;
+      inset: 0 auto 0 0;
+      width: 250px;
+      background: linear-gradient(180deg, #123653 0%, #0b2540 100%);
+      color: white;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 8px 0 30px rgba(7, 24, 41, .08);
+      transition: transform .25s ease;
+    }
+
+    .sidebar-brand {
+      padding: 24px 20px 18px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      flex: 0 0 42px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      letter-spacing: -.04em;
+      font-size: 17px;
+    }
+
+    .brand-title {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 700;
+      letter-spacing: -.01em;
+    }
+
+    .brand-subtitle {
+      margin-top: 4px;
+      color: #bcd5e9;
+      font-size: 9px;
+      font-family: "JetBrains Mono", monospace;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .admin-badge {
+      display: inline-flex;
+      margin-top: 15px;
+      padding: 6px 9px;
+      border-radius: 6px;
+      background: rgba(23,107,152,.42);
+      color: #d9f0ff;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .08em;
+    }
+
+    .sidebar-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 15px 12px;
+    }
+
+    .nav-section-label {
+      padding: 0 10px 8px;
+      color: #8eacc3;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .nav-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .nav-item {
+      min-height: 42px;
+      padding: 0 11px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: #c2d6e8;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: .18s ease;
+    }
+
+    .nav-item .material-symbols-outlined {
+      font-size: 19px;
+    }
+
+    .nav-item:hover {
+      background: rgba(255,255,255,.07);
+      color: white;
+      transform: translateX(1px);
+    }
+
+    .nav-item.active {
+      background: #176b98;
+      color: white;
+      box-shadow: 0 5px 14px rgba(0,0,0,.12);
+    }
+
+    .sidebar-footer {
+      padding: 15px 18px 17px;
+      background: rgba(0,0,0,.15);
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+
+    .status-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #b8f1d9;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #65dcae;
+      box-shadow: 0 0 0 4px rgba(101,220,174,.12);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .55; }
+    }
+
+    .sidebar-note {
+      margin-top: 7px;
+      color: #89a4bb;
+      font-size: 9px;
+      line-height: 14px;
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    /* =========================================================
+       MOBILE SIDEBAR
+    ========================================================= */
+
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 18, 31, .45);
+      z-index: 90;
+      display: none;
+    }
+
+    .mobile-overlay.show {
+      display: block;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      width: 36px;
+      height: 36px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--blue-soft);
+      color: var(--navy);
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* =========================================================
+       MAIN SHELL
+    ========================================================= */
+
+    .app-shell {
+      min-height: 100vh;
+      padding-left: 250px;
+    }
+
+    .topbar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 250px;
+      height: 68px;
+      z-index: 70;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+    }
+
+    .topbar-left,
+    .topbar-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .topbar-left {
+      gap: 13px;
+      min-width: 0;
+    }
+
+    .institution-switcher {
+      min-height: 40px;
+      padding: 0 12px;
+      border-radius: 9px;
+      background: #f4f7fa;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .institution-switcher .material-symbols-outlined {
+      color: var(--blue);
+      font-size: 19px;
+    }
+
+    .top-search {
+      position: relative;
+      width: min(420px, 35vw);
+    }
+
+    .top-search .material-symbols-outlined {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #82909d;
+      font-size: 19px;
+      pointer-events: none;
+    }
+
+    .top-search input {
+      width: 100%;
+      height: 40px;
+      padding: 0 13px 0 39px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      outline: none;
+      background: #fff;
+      color: var(--text);
+      font-size: 12px;
+      transition: .18s ease;
+    }
+
+    .top-search input::placeholder {
+      color: #8a96a3;
+    }
+
+    .top-search input:focus {
+      border-color: #83bad7;
+      box-shadow: 0 0 0 3px rgba(23,107,152,.09);
+    }
+
+    .topbar-right {
+      gap: 8px;
+    }
+
+    .icon-btn {
+      width: 36px;
+      height: 36px;
+      border: 0;
+      border-radius: 9px;
+      background: transparent;
+      color: #65717d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: .18s ease;
+    }
+
+    .icon-btn:hover {
+      background: #edf2f7;
+      color: var(--navy);
+    }
+
+    .notification-dot {
+      position: absolute;
+      top: 7px;
+      right: 7px;
+      width: 7px;
+      height: 7px;
+      background: #d92d20;
+      border: 2px solid white;
+      border-radius: 50%;
+    }
+
+    .topbar-divider {
+      width: 1px;
+      height: 25px;
+      background: var(--border);
+      margin: 0 7px;
+    }
+
+    .admin-profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-left: 4px;
+    }
+
+    .profile-text {
+      text-align: right;
+    }
+
+    .profile-name {
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 15px;
+    }
+
+    .profile-role {
+      margin-top: 2px;
+      color: #75818d;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .profile-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile-avatar .material-symbols-outlined {
+      font-size: 19px;
+    }
+
+    /* =========================================================
+       PAGE
+    ========================================================= */
+
+    .main {
+      padding: 92px 30px 35px;
+      max-width: 1700px;
+      margin: 0 auto;
+    }
+
+    .page-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .page-title-wrap {
+      min-width: 0;
+    }
+
+    .page-title-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .page-title {
+      margin: 0;
+      color: var(--text);
+      font-size: 25px;
+      line-height: 32px;
+      letter-spacing: -.025em;
+      font-weight: 700;
+    }
+
+    .term-badge {
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: #eaf3fb;
+      color: var(--blue);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+
+    .page-description {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .page-actions {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      flex-shrink: 0;
+    }
+
+    .btn {
+      height: 39px;
+      padding: 0 14px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: .18s ease;
+      white-space: nowrap;
+    }
+
+    .btn .material-symbols-outlined {
+      font-size: 18px;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      background: #f3f6f9;
+      border-color: #d3dce5;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #123b5b;
+      transform: translateY(-1px);
+      box-shadow: 0 5px 14px rgba(11,37,64,.16);
+    }
+
+    /* =========================================================
+       CARDS
+    ========================================================= */
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 13px;
+      margin-bottom: 18px;
+    }
+
+    .kpi-card {
+      min-height: 150px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .kpi-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .kpi-label {
+      color: #687582;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .kpi-icon {
+      width: 31px;
+      height: 31px;
+      border-radius: 8px;
+      background: #edf5fa;
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .kpi-icon .material-symbols-outlined {
+      font-size: 18px;
+    }
+
+    .kpi-value {
+      margin-top: 10px;
+      color: var(--text);
+      font-size: 27px;
+      line-height: 31px;
+      font-weight: 700;
+      letter-spacing: -.04em;
+    }
+
+    .kpi-meta {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 7px;
+      min-height: 18px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .positive {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 3px 6px;
+      border-radius: 5px;
+      background: var(--green-soft);
+      color: var(--green);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      font-weight: 600;
+    }
+
+    .positive .material-symbols-outlined {
+      font-size: 12px;
+    }
+
+    .kpi-foot {
+      margin-top: 13px;
+      padding-top: 9px;
+      border-top: 1px solid #edf0f3;
+      color: var(--blue);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+
+    .kpi-foot.green {
+      color: var(--green);
+    }
+
+    .kpi-foot.muted {
+      color: #7d8995;
+    }
+
+    /* =========================================================
+       SECTION HEADERS
+    ========================================================= */
+
+    .section-card {
+      padding: 21px;
+      margin-bottom: 18px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 17px;
+    }
+
+    .section-title-wrap {
+      min-width: 0;
+    }
+
+    .section-title-row {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .section-title-icon {
+      width: 33px;
+      height: 33px;
+      border-radius: 8px;
+      background: #edf5fa;
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .section-title-icon .material-symbols-outlined {
+      font-size: 19px;
+    }
+
+    .section-title {
+      margin: 0;
+      color: var(--text);
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 700;
+      letter-spacing: -.015em;
+    }
+
+    .section-description {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 17px;
+    }
+
+    .metric-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 7px;
+    }
+
+    .metric-pill {
+      min-height: 31px;
+      padding: 0 10px;
+      border-radius: 7px;
+      background: #f2f6f9;
+      color: #586674;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 9px;
+      white-space: nowrap;
+    }
+
+    .metric-pill strong {
+      color: var(--text);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+    }
+
+    .metric-pill.blue strong {
+      color: var(--blue);
+    }
+
+    .metric-pill.green strong {
+      color: var(--green);
+    }
+
+    /* =========================================================
+       LICENSE SECTION
+    ========================================================= */
+
+    .license-capacity {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+    }
+
+    .license-capacity strong {
+      color: var(--green);
+    }
+
+    .segmented-bar {
+      height: 15px;
+      width: 100%;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #e7edf3;
+      display: flex;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,.05);
+    }
+
+    .seg-active {
+      width: 86.4%;
+      background: var(--navy);
+    }
+
+    .seg-reserved {
+      width: 8.3%;
+      background: #69b9df;
+    }
+
+    .seg-unassigned {
+      width: 5.3%;
+      background: #cbd5df;
+    }
+
+    .license-bottom {
+      margin-top: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 17px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #65717d;
+      font-size: 10px;
+    }
+
+    .legend-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    .legend-dot.active {
+      background: var(--navy);
+    }
+
+    .legend-dot.reserved {
+      background: #69b9df;
+    }
+
+    .legend-dot.unassigned {
+      background: #cbd5df;
+    }
+
+    .legend-value {
+      color: #788490;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+    }
+
+    .text-action {
+      border: 0;
+      background: transparent;
+      color: var(--blue);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .text-action:hover {
+      text-decoration: underline;
+    }
+
+    /* =========================================================
+       ANALYTICS
+    ========================================================= */
+
+    .analytics-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 7fr) minmax(330px, 5fr);
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .analytics-card {
+      padding: 21px;
+      min-width: 0;
+    }
+
+    .table-scroll {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+
+    th {
+      padding: 10px 11px;
+      background: #f2f6f9;
+      color: #6c7884;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    th:first-child {
+      border-radius: 7px 0 0 7px;
+    }
+
+    th:last-child {
+      border-radius: 0 7px 7px 0;
+    }
+
+    td {
+      padding: 13px 11px;
+      border-bottom: 1px solid #edf0f3;
+      color: #465360;
+      font-size: 11px;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    tbody tr {
+      transition: background .16s ease;
+    }
+
+    tbody tr:hover {
+      background: #f8fafc;
+    }
+
+    .department-cell {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 210px;
+    }
+
+    .department-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: var(--blue);
+    }
+
+    .department-dot.dark {
+      background: var(--navy);
+    }
+
+    .department-dot.gray {
+      background: #8c98a4;
+    }
+
+    .department-name {
+      color: var(--text);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .department-code {
+      margin-top: 2px;
+      color: #89949f;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8px;
+    }
+
+    .table-number {
+      color: var(--text);
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 600;
+    }
+
+    .utilization {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 7px;
+    }
+
+    .mini-progress {
+      width: 54px;
+      height: 6px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #e7edf2;
+    }
+
+    .mini-progress span {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--blue);
+    }
+
+    .utilization strong {
+      width: 30px;
+      color: var(--text);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+    }
+
+    .benchmark-note {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-top: 14px;
+      color: #87929d;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8px;
+    }
+
+    .benchmark-note span {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .benchmark-note .material-symbols-outlined {
+      color: var(--blue);
+      font-size: 14px;
+    }
+
+    /* =========================================================
+       COURSE ACTIVITY
+    ========================================================= */
+
+    .submetric-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+      margin-bottom: 15px;
+    }
+
+    .submetric {
+      min-height: 92px;
+      padding: 12px;
+      border-radius: 9px;
+      background: #f3f7fa;
+    }
+
+    .submetric-label {
+      color: #75818c;
+      font-size: 8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+    }
+
+    .submetric-value {
+      margin-top: 7px;
+      color: var(--text);
+      font-size: 22px;
+      line-height: 25px;
+      font-weight: 700;
+      letter-spacing: -.035em;
+    }
+
+    .submetric-status {
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--blue);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8px;
+    }
+
+    .submetric-status.green {
+      color: var(--green);
+    }
+
+    .submetric-status .material-symbols-outlined {
+      font-size: 12px;
+    }
+
+    .trend-box {
+      padding: 12px;
+      border-radius: 9px;
+      background: #f3f7fa;
+    }
+
+    .trend-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #687582;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8px;
+    }
+
+    .trend-header strong {
+      color: var(--blue);
+    }
+
+    .trend-chart {
+      width: 100%;
+      height: 78px;
+      margin-top: 4px;
+      display: block;
+    }
+
+    .trend-labels {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 2px;
+      color: #8b96a0;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 7px;
+    }
+
+    .diagnostics {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 15px;
+      padding-top: 13px;
+      border-top: 1px solid #edf0f3;
+      color: #7c8792;
+      font-size: 9px;
+    }
+
+    /* =========================================================
+       ACTIVITY FEED
+    ========================================================= */
+
+    .activity-card {
+      padding: 21px;
+    }
+
+    .activity-item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 13px 10px;
+      border-radius: 9px;
+      transition: .16s ease;
+    }
+
+    .activity-item:hover {
+      background: #f6f8fa;
+    }
+
+    .activity-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      min-width: 0;
+    }
+
+    .activity-icon {
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #edf5fa;
+      color: var(--blue);
+    }
+
+    .activity-icon.green {
+      background: var(--green-soft);
+      color: var(--green);
+    }
+
+    .activity-icon.navy {
+      background: #e9eff5;
+      color: var(--navy);
+    }
+
+    .activity-icon .material-symbols-outlined {
+      font-size: 18px;
+    }
+
+    .activity-content {
+      min-width: 0;
+    }
+
+    .activity-title-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .activity-title {
+      color: var(--text);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .activity-tag {
+      padding: 3px 6px;
+      border-radius: 4px;
+      background: #edf1f4;
+      color: #78848f;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 7px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .activity-description {
+      margin: 4px 0 0;
+      color: #697681;
+      font-size: 10px;
+      line-height: 16px;
+    }
+
+    .activity-time {
+      flex-shrink: 0;
+      color: #89949e;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8px;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+
+    /* =========================================================
+       DROPDOWN
+    ========================================================= */
+
+    .dropdown-wrapper {
+      position: relative;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      width: 245px;
+      padding: 7px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: var(--shadow-lg);
+      z-index: 200;
+      display: none;
+    }
+
+    .dropdown.show {
+      display: block;
+      animation: dropdownIn .16s ease;
+    }
+
+    @keyframes dropdownIn {
+      from {
+        opacity: 0;
+        transform: translateY(-4px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .dropdown-label {
+      padding: 8px 9px 6px;
+      color: #8a96a1;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .dropdown-item {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      padding: 9px;
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      text-align: left;
+      color: var(--text);
+      font-size: 11px;
+      transition: .15s ease;
+    }
+
+    .dropdown-item:hover {
+      background: #f2f6f9;
+    }
+
+    .dropdown-item .material-symbols-outlined {
+      color: var(--blue);
+      font-size: 18px;
+    }
+
+    .dropdown-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 5px 0;
+    }
+
+    /* =========================================================
+       TOAST
+    ========================================================= */
+
+    .toast-container {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 500;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .toast {
+      min-width: 280px;
+      max-width: 380px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: #122b43;
+      color: white;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 11px;
+      animation: toastIn .2s ease;
+    }
+
+    .toast .material-symbols-outlined {
+      color: #8fd5ff;
+      font-size: 18px;
+    }
+
+    @keyframes toastIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 1450px) {
+      .kpi-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 1180px) {
+      .top-search {
+        width: 280px;
+      }
+
+      .analytics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-text {
+        display: none;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .sidebar {
+        transform: translateX(-100%);
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .app-shell {
+        padding-left: 0;
+      }
+
+      .topbar {
+        left: 0;
+        padding: 0 18px;
+      }
+
+      .mobile-menu-btn {
+        display: flex;
+      }
+
+      .top-search {
+        flex: 1;
+        width: auto;
+        max-width: none;
+      }
+
+      .institution-switcher {
+        display: none;
+      }
+
+      .main {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .topbar {
+        height: 62px;
+        gap: 8px;
+      }
+
+      .topbar-left {
+        flex: 1;
+      }
+
+      .topbar-right {
+        gap: 3px;
+      }
+
+      .topbar-divider,
+      .profile-text {
+        display: none;
+      }
+
+      .admin-profile {
+        padding-left: 0;
+      }
+
+      .top-search {
+        display: none;
+      }
+
+      .main {
+        padding-top: 82px;
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .page-header {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .page-actions {
+        width: 100%;
+      }
+
+      .page-actions .btn {
+        flex: 1;
+      }
+
+      .kpi-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+      }
+
+      .kpi-card {
+        min-height: 140px;
+        padding: 13px;
+      }
+
+      .kpi-value {
+        font-size: 23px;
+      }
+
+      .section-card,
+      .analytics-card,
+      .activity-card {
+        padding: 15px;
+      }
+
+      .section-heading {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .metric-pills {
+        justify-content: flex-start;
+      }
+
+      .license-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .activity-item {
+        gap: 8px;
+      }
+
+      .activity-time {
+        font-size: 7px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .kpi-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page-title {
+        font-size: 22px;
+      }
+
+      .page-actions {
+        flex-direction: column;
+      }
+
+      .page-actions .btn {
+        width: 100%;
+      }
+
+      .submetric-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .activity-item {
+        flex-direction: column;
+      }
+
+      .activity-time {
+        margin-left: 45px;
+      }
+
+      .benchmark-note {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================================================
+       MOBILE OVERLAY
+  ========================================================== -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- =========================================================
+       SIDEBAR
+  ========================================================== -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-brand">
+      <div class="brand-row">
+        <div class="brand-mark">E26</div>
+
+        <div>
+          <div class="brand-title">
+            E26 Digital Learning Platform
+          </div>
+
+          <div class="brand-subtitle">
+            Higher Education ERP
+          </div>
+        </div>
+      </div>
+
+      <div class="admin-badge">
+        Institution Admin
+      </div>
+    </div>
+
+    <div class="sidebar-scroll">
+
+      <div class="nav-section-label">
+        Workspace
+      </div>
+
+      <nav class="nav-list">
+
+        <a
+          class="nav-item active"
+          href="institution_dashboard.html"
+        >
+          <span class="material-symbols-outlined">dashboard</span>
+          <span>Dashboard</span>
+        </a>
+
+        <a
+          class="nav-item"
+          href="institution_departments.html"
+        >
+          <span class="material-symbols-outlined">domain</span>
+          <span>Departments</span>
+        </a>
+
+        <a
+          class="nav-item"
+          href="institution_programs.html"
+        >
+          <span class="material-symbols-outlined">schema</span>
+          <span>Programs</span>
+        </a>
+
+        <a
+          class="nav-item"
+          href="institution_programs.html"
+        >
+          <span class="material-symbols-outlined">menu_book</span>
+          <span>Courses</span>
+        </a>
+
+        <a
+          class="nav-item"
+          href="institution_departments.html"
+        >
+          <span class="material-symbols-outlined">supervisor_account</span>
+          <span>Lecturers</span>
+        </a>
+
+        <a
+          class="nav-item"
+          href="institution_students.html"
+        >
+          <span class="material-symbols-outlined">school</span>
+          <span>Students</span>
+        </a>
+
+        <a
+          class="nav-item"
+          href="institution_licensing.html"
+        >
+          <span class="material-symbols-outlined">local_library</span>
+          <span>Publisher Library</span>
+        </a>
+
+        <a
+          class="nav-item"
+          href="#"
+          data-placeholder="Assignments"
+        >
+          <span class="material-symbols-outlined">assignment</span>
+          <span>Assignments</span>
+        </a>
+
+        <a
+          class="nav-item"
+          href="#"
+          data-placeholder="Assessments"
+        >
+          <span class="material-symbols-outlined">fact_check</span>
+          <span>Assessments</span>
+        </a>
+
+        <a
+          class="nav-item"
+          href="#"
+          data-placeholder="Reports"
+        >
+          <span class="material-symbols-outlined">analytics</span>
+          <span>Reports</span>
+        </a>
+
+        <a
+          class="nav-item"
+          href="#"
+          data-placeholder="Settings"
+        >
+          <span class="material-symbols-outlined">settings</span>
+          <span>Settings</span>
+        </a>
+
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="status-line">
+        <span class="status-dot"></span>
+        Demo Institution · Active
+      </div>
+
+      <div class="sidebar-note">
+        LMS integration / Privacy controls configured
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- =========================================================
+       MAIN APPLICATION
+  ========================================================== -->
+  <div class="app-shell">
+
+    <!-- =======================================================
+         TOPBAR
+    ======================================================== -->
+    <header class="topbar">
+
+      <div class="topbar-left">
+
+        <button
+          class="mobile-menu-btn"
+          id="mobileMenuBtn"
+          aria-label="Open menu"
+        >
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+
+        <button class="institution-switcher">
+          <span class="material-symbols-outlined">
+            account_balance
+          </span>
+
+          <span>
+            Demo Institution • Business &amp; Management Department
+          </span>
+
+          <span class="material-symbols-outlined">
+            unfold_more
+          </span>
+        </button>
+
+        <div class="top-search">
+          <span class="material-symbols-outlined">
+            search
+          </span>
+
+          <input
+            id="globalSearch"
+            type="text"
+            placeholder="Search departments, courses, faculty, students (⌘K)"
+            autocomplete="off"
+          />
+        </div>
+
+      </div>
+
+      <div class="topbar-right">
+
+        <button
+          class="icon-btn"
+          id="notificationBtn"
+          aria-label="Notifications"
+        >
+          <span class="material-symbols-outlined">
+            notifications
+          </span>
+
+          <span class="notification-dot"></span>
+        </button>
+
+        <button
+          class="icon-btn"
+          id="helpBtn"
+          aria-label="Help"
+        >
+          <span class="material-symbols-outlined">
+            help
+          </span>
+        </button>
+
+        <div class="topbar-divider"></div>
+
+        <div class="admin-profile">
+
+          <div class="profile-text">
+            <div class="profile-name">
+              Institution Admin
+            </div>
+
+            <div class="profile-role">
+              Institution Administrator
+            </div>
+          </div>
+
+          <div class="profile-avatar">
+            <span class="material-symbols-outlined">
+              person
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </header>
+
+    <!-- =======================================================
+         MAIN
+    ======================================================== -->
+    <main class="main">
+
+      <!-- =====================================================
+           PAGE HEADER
+      ====================================================== -->
+      <section class="page-header">
+
+        <div class="page-title-wrap">
+
+          <div class="page-title-row">
+
+            <h1 class="page-title">
+              Institution Dashboard
+            </h1>
+
+            <span class="term-badge">
+              Term 2025–2026
+            </span>
+
+          </div>
+
+          <p class="page-description">
+            Overview of your institution • Academic Term 2025–2026 • Demo Institution
+          </p>
+
+        </div>
+
+        <div class="page-actions">
+
+          <button
+            class="btn btn-secondary"
+            id="exportBtn"
+          >
+            <span class="material-symbols-outlined">
+              download
+            </span>
+
+            <span>
+              Export Institutional Audit
+            </span>
+          </button>
+
+          <div class="dropdown-wrapper">
+
+            <button
+              class="btn btn-primary"
+              id="provisionMenuBtn"
+            >
+              <span class="material-symbols-outlined">
+                add_circle
+              </span>
+
+              <span>
+                Quick Provision
+              </span>
+
+              <span class="material-symbols-outlined">
+                expand_more
+              </span>
+            </button>
+
+            <div
+              class="dropdown"
+              id="provisionDropdown"
+            >
+
+              <div class="dropdown-label">
+                Provision Entity
+              </div>
+
+              <button
+                class="dropdown-item"
+                data-action="New Department"
+              >
+                <span class="material-symbols-outlined">
+                  domain_add
+                </span>
+
+                <span>
+                  New Department
+                </span>
+              </button>
+
+              <button
+                class="dropdown-item"
+                data-action="New Course Section"
+              >
+                <span class="material-symbols-outlined">
+                  post_add
+                </span>
+
+                <span>
+                  New Course Section
+                </span>
+              </button>
+
+              <button
+                class="dropdown-item"
+                data-action="Faculty Lecturer"
+              >
+                <span class="material-symbols-outlined">
+                  person_add
+                </span>
+
+                <span>
+                  Faculty Lecturer
+                </span>
+              </button>
+
+              <div class="dropdown-divider"></div>
+
+              <button
+                class="dropdown-item"
+                data-action="SIS CSV Batch Import"
+              >
+                <span class="material-symbols-outlined">
+                  cloud_upload
+                </span>
+
+                <span>
+                  SIS CSV Batch Import
+                </span>
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           KPI CARDS
+      ====================================================== -->
+      <section class="kpi-grid">
+
+        <!-- Students -->
+        <article class="card kpi-card">
+
+          <div>
+
+            <div class="kpi-top">
+
+              <span class="kpi-label">
+                Total Students
+              </span>
+
+              <div class="kpi-icon">
+                <span class="material-symbols-outlined">
+                  school
+                </span>
+              </div>
+
+            </div>
+
+            <div class="kpi-value">
+              18,450
+            </div>
+
+            <div class="kpi-meta">
+
+              <span class="positive">
+                <span class="material-symbols-outlined">
+                  trending_up
+                </span>
+                +4.2%
+              </span>
+
+              <span>YoY</span>
+
+            </div>
+
+          </div>
+
+          <div class="kpi-foot">
+            99.1% ACTIVE ENROLLMENT
+          </div>
+
+        </article>
+
+        <!-- Lecturers -->
+        <article class="card kpi-card">
+
+          <div>
+
+            <div class="kpi-top">
+
+              <span class="kpi-label">
+                Total Lecturers
+              </span>
+
+              <div class="kpi-icon">
+                <span class="material-symbols-outlined">
+                  supervisor_account
+                </span>
+              </div>
+
+            </div>
+
+            <div class="kpi-value">
+              840
+            </div>
+
+            <div class="kpi-meta">
+              <span>
+                Full-time &amp; Adjunct
+              </span>
+            </div>
+
+          </div>
+
+          <div class="kpi-foot green">
+            100% ONBOARDED VERIFIED
+          </div>
+
+        </article>
+
+        <!-- Departments -->
+        <article class="card kpi-card">
+
+          <div>
+
+            <div class="kpi-top">
+
+              <span class="kpi-label">
+                Departments
+              </span>
+
+              <div class="kpi-icon">
+                <span class="material-symbols-outlined">
+                  domain
+                </span>
+              </div>
+
+            </div>
+
+            <div class="kpi-value">
+              14
+            </div>
+
+            <div class="kpi-meta">
+              Across 4 Major Faculties
+            </div>
+
+          </div>
+
+          <div class="kpi-foot muted">
+            GOVERNANCE CONFIGURED
+          </div>
+
+        </article>
+
+        <!-- Courses -->
+        <article class="card kpi-card">
+
+          <div>
+
+            <div class="kpi-top">
+
+              <span class="kpi-label">
+                Active Courses
+              </span>
+
+              <div class="kpi-icon">
+                <span class="material-symbols-outlined">
+                  menu_book
+                </span>
+              </div>
+
+            </div>
+
+            <div class="kpi-value">
+              520
+            </div>
+
+            <div class="kpi-meta">
+
+              <span
+                style="
+                  width:6px;
+                  height:6px;
+                  border-radius:50%;
+                  background:#176b98;
+                  display:inline-block;
+                "
+              ></span>
+
+              Live Sections
+
+            </div>
+
+          </div>
+
+          <div class="kpi-foot">
+            98.4% SYLLABUS ADOPTION
+          </div>
+
+        </article>
+
+        <!-- Titles -->
+        <article class="card kpi-card">
+
+          <div>
+
+            <div class="kpi-top">
+
+              <span class="kpi-label">
+                Licensed Titles
+              </span>
+
+              <div class="kpi-icon">
+                <span class="material-symbols-outlined">
+                  local_library
+                </span>
+              </div>
+
+            </div>
+
+            <div class="kpi-value">
+              312
+            </div>
+
+            <div class="kpi-meta">
+              Publisher Codices
+            </div>
+
+          </div>
+
+          <div class="kpi-foot muted">
+            18 GLOBAL PUBLISHERS
+          </div>
+
+        </article>
+
+        <!-- Seats -->
+        <article class="card kpi-card">
+
+          <div>
+
+            <div class="kpi-top">
+
+              <span class="kpi-label">
+                Seats Utilized
+              </span>
+
+              <div class="kpi-icon">
+                <span class="material-symbols-outlined">
+                  pie_chart
+                </span>
+              </div>
+
+            </div>
+
+            <div class="kpi-value">
+              86.4%
+            </div>
+
+            <div class="kpi-meta">
+              <span class="mono">
+                24.1k / 28.0k
+              </span>
+            </div>
+
+          </div>
+
+          <div class="kpi-foot">
+            3,820 SEATS AVAILABLE
+          </div>
+
+        </article>
+
+      </section>
+
+      <!-- =====================================================
+           LICENSE ALLOCATION
+      ====================================================== -->
+      <section class="card section-card">
+
+        <div class="section-heading">
+
+          <div class="section-title-wrap">
+
+            <div class="section-title-row">
+
+              <div class="section-title-icon">
+                <span class="material-symbols-outlined">
+                  verified_user
+                </span>
+              </div>
+
+              <h2 class="section-title">
+                Campus Content Licenses &amp; Seat Allocation
+              </h2>
+
+            </div>
+
+            <p class="section-description">
+              Manage institutional seat pools, consortium quotas, and publisher titles
+            </p>
+
+          </div>
+
+          <div class="metric-pills">
+
+            <div class="metric-pill blue">
+              <span class="material-symbols-outlined" style="font-size:15px;">
+                menu_book
+              </span>
+              <strong>312</strong>
+              <span>Active Codices</span>
+            </div>
+
+            <div class="metric-pill">
+              <span class="material-symbols-outlined" style="font-size:15px;">
+                group_add
+              </span>
+              <strong>26,500</strong>
+              <span>Assigned</span>
+            </div>
+
+            <div class="metric-pill green">
+              <span class="material-symbols-outlined" style="font-size:15px;">
+                check_circle
+              </span>
+              <strong>24,180</strong>
+              <span>Used</span>
+            </div>
+
+            <div class="metric-pill">
+              <span class="material-symbols-outlined" style="font-size:15px;">
+                add_task
+              </span>
+              <strong>3,820</strong>
+              <span>Buffer Pool</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="license-capacity">
+
+          <span>
+            Total Provisioned Campus Seats: 28,000 Capacity
+          </span>
+
+          <strong>
+            Healthy Capacity • Auto-Scale threshold at 95%
+          </strong>
+
+        </div>
+
+        <div class="segmented-bar">
+          <div class="seg-active"></div>
+          <div class="seg-reserved"></div>
+          <div class="seg-unassigned"></div>
+        </div>
+
+        <div class="license-bottom">
+
+          <div class="legend">
+
+            <div class="legend-item">
+              <span class="legend-dot active"></span>
+              <strong style="color:#17212b;">
+                Active In-Use
+              </strong>
+              <span class="legend-value">
+                (24,180 • 86.4%)
+              </span>
+            </div>
+
+            <div class="legend-item">
+              <span class="legend-dot reserved"></span>
+              <strong style="color:#17212b;">
+                Reserved Term Buffer
+              </strong>
+              <span class="legend-value">
+                (2,320 • 8.3%)
+              </span>
+            </div>
+
+            <div class="legend-item">
+              <span class="legend-dot unassigned"></span>
+              <strong style="color:#17212b;">
+                Unassigned Capacity
+              </strong>
+              <span class="legend-value">
+                (1,500 • 5.3%)
+              </span>
+            </div>
+
+          </div>
+
+          <button
+            class="text-action"
+            data-action="Manage License Quotas"
+          >
+            Manage License Quotas
+            <span class="material-symbols-outlined" style="font-size:15px;">
+              arrow_forward
+            </span>
+          </button>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           ANALYTICS GRID
+      ====================================================== -->
+      <section class="analytics-grid">
+
+        <!-- Department Distribution -->
+        <article class="card analytics-card">
+
+          <div class="section-heading">
+
+            <div class="section-title-wrap">
+
+              <h2 class="section-title">
+                Academic Department Distribution &amp; Engagement
+              </h2>
+
+              <p class="section-description">
+                Enrollments, instructional staffing, and digital curriculum adoption
+              </p>
+
+            </div>
+
+            <button
+              class="text-action"
+              data-action="View All Departments"
+            >
+              View All 14
+              <span class="material-symbols-outlined" style="font-size:15px;">
+                chevron_right
+              </span>
+            </button>
+
+          </div>
+
+          <div class="table-scroll">
+
+            <table>
+
+              <thead>
+                <tr>
+                  <th>Department</th>
+                  <th>Students</th>
+                  <th>Courses</th>
+                  <th>Faculty</th>
+                  <th style="text-align:right;">
+                    Seat Utilization
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td>
+                    <div class="department-cell">
+
+                      <span class="department-dot"></span>
+
+                      <div>
+                        <div class="department-name">
+                          Computer Science &amp; AI
+                        </div>
+
+                        <div class="department-code">
+                          FAC-ENG-01
+                        </div>
+                      </div>
+
+                    </div>
+                  </td>
+
+                  <td class="table-number">4,820</td>
+                  <td>94 sections</td>
+                  <td>142 profs</td>
+
+                  <td>
+                    <div class="utilization">
+                      <div class="mini-progress">
+                        <span style="width:92%;"></span>
+                      </div>
+                      <strong>92%</strong>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="department-cell">
+
+                      <span class="department-dot dark"></span>
+
+                      <div>
+                        <div class="department-name">
+                          Clinical Medicine
+                        </div>
+
+                        <div class="department-code">
+                          FAC-MED-04
+                        </div>
+                      </div>
+
+                    </div>
+                  </td>
+
+                  <td class="table-number">3,150</td>
+                  <td>112 sections</td>
+                  <td>185 profs</td>
+
+                  <td>
+                    <div class="utilization">
+                      <div class="mini-progress">
+                        <span style="width:88%;"></span>
+                      </div>
+                      <strong>88%</strong>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="department-cell">
+
+                      <span class="department-dot"></span>
+
+                      <div>
+                        <div class="department-name">
+                          Mechanical Engineering
+                        </div>
+
+                        <div class="department-code">
+                          FAC-ENG-03
+                        </div>
+                      </div>
+
+                    </div>
+                  </td>
+
+                  <td class="table-number">2,940</td>
+                  <td>82 sections</td>
+                  <td>110 profs</td>
+
+                  <td>
+                    <div class="utilization">
+                      <div class="mini-progress">
+                        <span style="width:79%;"></span>
+                      </div>
+                      <strong>79%</strong>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="department-cell">
+
+                      <span class="department-dot dark"></span>
+
+                      <div>
+                        <div class="department-name">
+                          Economics &amp; Finance
+                        </div>
+
+                        <div class="department-code">
+                          FAC-SOC-02
+                        </div>
+                      </div>
+
+                    </div>
+                  </td>
+
+                  <td class="table-number">3,800</td>
+                  <td>105 sections</td>
+                  <td>128 profs</td>
+
+                  <td>
+                    <div class="utilization">
+                      <div class="mini-progress">
+                        <span style="width:84%;"></span>
+                      </div>
+                      <strong>84%</strong>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="department-cell">
+
+                      <span class="department-dot gray"></span>
+
+                      <div>
+                        <div class="department-name">
+                          Law &amp; Jurisprudence
+                        </div>
+
+                        <div class="department-code">
+                          FAC-LAW-01
+                        </div>
+                      </div>
+
+                    </div>
+                  </td>
+
+                  <td class="table-number">2,100</td>
+                  <td>65 sections</td>
+                  <td>92 profs</td>
+
+                  <td>
+                    <div class="utilization">
+                      <div class="mini-progress">
+                        <span style="width:72%;"></span>
+                      </div>
+                      <strong>72%</strong>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+          <div class="benchmark-note">
+
+            <span>
+              <span class="material-symbols-outlined">
+                insights
+              </span>
+
+              Highest adoption velocity: Computer Science &amp; AI (+18.4% textbook reads)
+            </span>
+
+            <span>
+              Privacy controls configured
+            </span>
+
+          </div>
+
+        </article>
+
+        <!-- Course Activity -->
+        <article class="card analytics-card">
+
+          <div class="section-title-row">
+            <div>
+              <h2 class="section-title">
+                Course Activity &amp; Adoptions
+              </h2>
+
+              <p class="section-description">
+                Real-time metrics on reading engagement and LMS interoperability
+              </p>
+            </div>
+
+            <div class="section-title-icon">
+              <span class="material-symbols-outlined">
+                auto_graph
+              </span>
+            </div>
+          </div>
+
+          <div class="submetric-grid">
+
+            <div class="submetric">
+              <div class="submetric-label">
+                Term Completion
+              </div>
+
+              <div class="submetric-value">
+                84.6%
+              </div>
+
+              <div class="submetric-status green">
+                <span class="material-symbols-outlined">
+                  verified
+                </span>
+                On Academic Schedule
+              </div>
+            </div>
+
+            <div class="submetric">
+              <div class="submetric-label">
+                Avg Books / Course
+              </div>
+
+              <div class="submetric-value">
+                3.4
+              </div>
+
+              <div class="submetric-status">
+                <span class="material-symbols-outlined">
+                  bookmark
+                </span>
+                Multi-Source Adopted
+              </div>
+            </div>
+
+            <div class="submetric">
+              <div class="submetric-label">
+                Weekly Reader Vol
+              </div>
+
+              <div class="submetric-value">
+                142.0k
+              </div>
+
+              <div class="submetric-status">
+                <span class="material-symbols-outlined">
+                  speed
+                </span>
+                Daily Reader Accesses
+              </div>
+            </div>
+
+            <div class="submetric">
+              <div class="submetric-label">
+                LMS Integration Sync Health
+              </div>
+
+              <div class="submetric-value" style="color:#08704f;">
+                100%
+              </div>
+
+              <div class="submetric-status" style="color:#77838e;">
+                Institution learning platform
+              </div>
+            </div>
+
+          </div>
+
+          <div class="trend-box">
+
+            <div class="trend-header">
+
+              <span>
+                WEEKLY ACCESS CURVE (7 WEEKS)
+              </span>
+
+              <strong>
+                +12% PEAK MIDTERM
+              </strong>
+
+            </div>
+
+            <svg
+              class="trend-chart"
+              viewBox="0 0 600 100"
+              preserveAspectRatio="none"
+            >
+
+              <defs>
+                <linearGradient
+                  id="trendFill"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="1"
+                >
+                  <stop
+                    offset="0%"
+                    stop-color="#176b98"
+                    stop-opacity=".18"
+                  />
+
+                  <stop
+                    offset="100%"
+                    stop-color="#176b98"
+                    stop-opacity="0"
+                  />
+                </linearGradient>
+              </defs>
+
+              <path
+                d="M0 72
+                   C80 65, 110 80, 170 49
+                   C230 19, 275 47, 335 34
+                   C390 22, 435 11, 480 20
+                   C525 28, 560 11, 600 7
+                   L600 100
+                   L0 100 Z"
+                fill="url(#trendFill)"
+              />
+
+              <path
+                d="M0 72
+                   C80 65, 110 80, 170 49
+                   C230 19, 275 47, 335 34
+                   C390 22, 435 11, 480 20
+                   C525 28, 560 11, 600 7"
+                fill="none"
+                stroke="#176b98"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+
+              <circle
+                cx="480"
+                cy="20"
+                r="4"
+                fill="#176b98"
+              />
+
+              <circle
+                cx="600"
+                cy="7"
+                r="4"
+                fill="#176b98"
+              />
+
+            </svg>
+
+            <div class="trend-labels">
+              <span>W1</span>
+              <span>W2</span>
+              <span>W3</span>
+              <span>W4</span>
+              <span>W5 (Mid)</span>
+              <span>W6</span>
+              <span>W7</span>
+            </div>
+
+          </div>
+
+          <div class="diagnostics">
+
+            <span>
+              LMS Gateway: OAuth 2.0 State Verified
+            </span>
+
+            <button
+              class="text-action"
+              data-action="Open Diagnostics Log"
+            >
+              Diagnostics Log
+            </button>
+
+          </div>
+
+        </article>
+
+      </section>
+
+      <!-- =====================================================
+           RECENT ACTIVITY
+      ====================================================== -->
+      <section class="card activity-card">
+
+        <div class="section-heading">
+
+          <div class="section-title-wrap">
+
+            <div class="section-title-row">
+
+              <div class="section-title-icon">
+                <span class="material-symbols-outlined">
+                  history_edu
+                </span>
+              </div>
+
+              <h2 class="section-title">
+                Recent Institutional Activity
+              </h2>
+
+            </div>
+
+            <p class="section-description">
+              System audit log of academic provisions, publisher assignments, and SIS synchronization
+            </p>
+
+          </div>
+
+          <button
+            class="btn btn-secondary"
+            id="filterLogsBtn"
+            style="height:34px;"
+          >
+            <span class="material-symbols-outlined" style="font-size:16px;">
+              filter_list
+            </span>
+
+            Filter Logs
+          </button>
+
+        </div>
+
+        <div>
+
+          <!-- Activity 1 -->
+          <div class="activity-item">
+
+            <div class="activity-left">
+
+              <div class="activity-icon">
+                <span class="material-symbols-outlined">
+                  person_add
+                </span>
+              </div>
+
+              <div class="activity-content">
+
+                <div class="activity-title-row">
+
+                  <span class="activity-title">
+                    New Lecturer Added
+                  </span>
+
+                  <span class="activity-tag">
+                    Staffing
+                  </span>
+
+                </div>
+
+                <p class="activity-description">
+                  Prof. Julian Thorne assigned to Department of Computer Science &amp; AI
+                </p>
+
+              </div>
+
+            </div>
+
+            <span class="activity-time">
+              12m ago
+            </span>
+
+          </div>
+
+          <!-- Activity 2 -->
+          <div class="activity-item">
+
+            <div class="activity-left">
+
+              <div class="activity-icon">
+                <span class="material-symbols-outlined">
+                  sync_alt
+                </span>
+              </div>
+
+              <div class="activity-content">
+
+                <div class="activity-title-row">
+
+                  <span class="activity-title">
+                    New Students Imported
+                  </span>
+
+                  <span class="activity-tag">
+                    SIS Ingestion
+                  </span>
+
+                </div>
+
+                <p class="activity-description">
+                  Batch SIS sync: 145 students enrolled into MSc Bioengineering cohort (Autumn Session)
+                </p>
+
+              </div>
+
+            </div>
+
+            <span class="activity-time">
+              1h ago
+            </span>
+
+          </div>
+
+          <!-- Activity 3 -->
+          <div class="activity-item">
+
+            <div class="activity-left">
+
+              <div class="activity-icon">
+
+                <span class="material-symbols-outlined">
+                  auto_stories
+                </span>
+
+              </div>
+
+              <div class="activity-content">
+
+                <div class="activity-title-row">
+
+                  <span class="activity-title">
+                    Publisher Title Assigned
+                  </span>
+
+                  <span class="activity-tag">
+                    Curriculum
+                  </span>
+
+                </div>
+
+                <p class="activity-description">
+                  <strong style="color:#17212b;">
+                    ‘Principles of Modern Neurobiology (6th Ed.)’
+                  </strong>
+                  allocated 450 seats for Med-301 Section B
+                </p>
+
+              </div>
+
+            </div>
+
+            <span class="activity-time">
+              3h ago
+            </span>
+
+          </div>
+
+          <!-- Activity 4 -->
+          <div class="activity-item">
+
+            <div class="activity-left">
+
+              <div class="activity-icon navy">
+
+                <span class="material-symbols-outlined">
+                  add_box
+                </span>
+
+              </div>
+
+              <div class="activity-content">
+
+                <div class="activity-title-row">
+
+                  <span class="activity-title">
+                    Course Created
+                  </span>
+
+                  <span class="activity-tag">
+                    Academic Dept
+                  </span>
+
+                </div>
+
+                <p class="activity-description">
+                  <strong style="color:#17212b;">
+                    ‘CS-480: Advanced Distributed Systems’
+                  </strong>
+                  provisioned by HOD Dr. Aris Thorne
+                </p>
+
+              </div>
+
+            </div>
+
+            <span class="activity-time">
+              5h ago
+            </span>
+
+          </div>
+
+          <!-- Activity 5 -->
+          <div class="activity-item">
+
+            <div class="activity-left">
+
+              <div class="activity-icon green">
+
+                <span class="material-symbols-outlined">
+                  assignment_turned_in
+                </span>
+
+              </div>
+
+              <div class="activity-content">
+
+                <div class="activity-title-row">
+
+                  <span class="activity-title">
+                    Assignment Activity
+                  </span>
+
+                  <span class="activity-tag">
+                    Assessment
+                  </span>
+
+                </div>
+
+                <p class="activity-description">
+                  Midterm Assessment codex published across 8 sections with LTI automated sync
+                </p>
+
+              </div>
+
+            </div>
+
+            <span class="activity-time">
+              1d ago
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- =========================================================
+       TOAST CONTAINER
+  ========================================================== -->
+  <div
+    class="toast-container"
+    id="toastContainer"
+  ></div>
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
+  <script>
+
+    /* ---------------------------------------------------------
+       ELEMENTS
+    --------------------------------------------------------- */
+
+    const sidebar =
+      document.getElementById("sidebar");
+
+    const mobileMenuBtn =
+      document.getElementById("mobileMenuBtn");
+
+    const mobileOverlay =
+      document.getElementById("mobileOverlay");
+
+    const provisionMenuBtn =
+      document.getElementById("provisionMenuBtn");
+
+    const provisionDropdown =
+      document.getElementById("provisionDropdown");
+
+    const exportBtn =
+      document.getElementById("exportBtn");
+
+    const globalSearch =
+      document.getElementById("globalSearch");
+
+    const toastContainer =
+      document.getElementById("toastContainer");
+
+
+    /* ---------------------------------------------------------
+       TOAST
+    --------------------------------------------------------- */
+
+    function showToast(message, icon = "check_circle") {
+
+      const toast =
+        document.createElement("div");
+
+      toast.className = "toast";
+
+      toast.innerHTML = `
+        <span class="material-symbols-outlined">
+          ${icon}
+        </span>
+
+        <span>${message}</span>
+      `;
+
+      toastContainer.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = "0";
+        toast.style.transform = "translateY(8px)";
+
+        setTimeout(() => {
+          toast.remove();
+        }, 180);
+
+      }, 2800);
+    }
+
+
+    /* ---------------------------------------------------------
+       MOBILE MENU
+    --------------------------------------------------------- */
+
+    function openMobileMenu() {
+
+      sidebar.classList.add("open");
+      mobileOverlay.classList.add("show");
+
+    }
+
+    function closeMobileMenu() {
+
+      sidebar.classList.remove("open");
+      mobileOverlay.classList.remove("show");
+
+    }
+
+    mobileMenuBtn?.addEventListener(
+      "click",
+      openMobileMenu
+    );
+
+    mobileOverlay?.addEventListener(
+      "click",
+      closeMobileMenu
+    );
+
+
+    /* ---------------------------------------------------------
+       PROVISION DROPDOWN
+    --------------------------------------------------------- */
+
+    provisionMenuBtn?.addEventListener(
+      "click",
+      function(event) {
+
+        event.stopPropagation();
+
+        provisionDropdown.classList.toggle("show");
+
+      }
+    );
+
+    document.addEventListener(
+      "click",
+      function(event) {
+
+        if (
+          !provisionDropdown.contains(event.target) &&
+          !provisionMenuBtn.contains(event.target)
+        ) {
+          provisionDropdown.classList.remove("show");
+        }
+
+      }
+    );
+
+
+    /* ---------------------------------------------------------
+       DROPDOWN ACTIONS
+    --------------------------------------------------------- */
+
+    document
+      .querySelectorAll(".dropdown-item")
+      .forEach(item => {
+
+        item.addEventListener(
+          "click",
+          function() {
+
+            const action =
+              this.dataset.action || "Action";
+
+            provisionDropdown.classList.remove("show");
+
+            showToast(
+              `${action} selected`,
+              "add_circle"
+            );
+
+          }
+        );
+
+      });
+
+
+    /* ---------------------------------------------------------
+       PLACEHOLDER NAVIGATION
+    --------------------------------------------------------- */
+
+    document
+      .querySelectorAll("[data-placeholder]")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          function(event) {
+
+            event.preventDefault();
+
+            const page =
+              this.dataset.placeholder;
+
+            showToast(
+              `${page} module is available in the full LMS`,
+              "info"
+            );
+
+            closeMobileMenu();
+
+          }
+        );
+
+      });
+
+
+    /* ---------------------------------------------------------
+       ACTION BUTTONS
+    --------------------------------------------------------- */
+
+    document
+      .querySelectorAll("[data-action]")
+      .forEach(button => {
+
+        if (
+          button.classList.contains("dropdown-item")
+        ) {
+          return;
+        }
+
+        button.addEventListener(
+          "click",
+          function() {
+
+            const action =
+              this.dataset.action;
+
+            if (!action) return;
+
+            showToast(
+              `${action} opened`,
+              "open_in_new"
+            );
+
+          }
+        );
+
+      });
+
+
+    /* ---------------------------------------------------------
+       EXPORT
+    --------------------------------------------------------- */
+
+    exportBtn?.addEventListener(
+      "click",
+      function() {
+
+        showToast(
+          "Preparing institutional audit export...",
+          "download"
+        );
+
+        setTimeout(() => {
+
+          const report = [
+            "E26 Digital Learning Platform",
+            "Institutional Audit Export",
+            "",
+            "Academic Term: 2025–2026",
+            "Total Students: 18,450",
+            "Total Lecturers: 840",
+            "Departments: 14",
+            "Active Courses: 520",
+            "Licensed Titles: 312",
+            "Seats Utilized: 86.4%",
+            "Campus Capacity: 28,000",
+            "",
+            "Generated from Institution Dashboard"
+          ].join("\\n");
+
+          const blob =
+            new Blob(
+              [report],
+              { type: "text/plain" }
+            );
+
+          const url =
+            URL.createObjectURL(blob);
+
+          const a =
+            document.createElement("a");
+
+          a.href = url;
+          a.download =
+            "e26-institutional-audit.txt";
+
+          document.body.appendChild(a);
+
+          a.click();
+
+          a.remove();
+
+          URL.revokeObjectURL(url);
+
+          showToast(
+            "Institutional audit exported",
+            "download_done"
+          );
+
+        }, 700);
+
+      }
+    );
+
+
+    /* ---------------------------------------------------------
+       SEARCH
+    --------------------------------------------------------- */
+
+    function handleSearch() {
+
+      const query =
+        globalSearch.value
+          .trim()
+          .toLowerCase();
+
+      const rows =
+        document.querySelectorAll(
+          "tbody tr"
+        );
+
+      let visibleRows = 0;
+
+      rows.forEach(row => {
+
+        const text =
+          row.textContent.toLowerCase();
+
+        const match =
+          !query ||
+          text.includes(query);
+
+        row.style.display =
+          match ? "" : "none";
+
+        if (match) {
+          visibleRows++;
+        }
+
+      });
+
+      if (query) {
+
+        showToast(
+          `${visibleRows} matching department record${visibleRows === 1 ? "" : "s"}`,
+          "search"
+        );
+
+      }
+
+    }
+
+    let searchTimer;
+
+    globalSearch?.addEventListener(
+      "input",
+      function() {
+
+        clearTimeout(searchTimer);
+
+        searchTimer =
+          setTimeout(() => {
+
+            const query =
+              globalSearch.value
+                .trim()
+                .toLowerCase();
+
+            const rows =
+              document.querySelectorAll(
+                "tbody tr"
+              );
+
+            rows.forEach(row => {
+
+              const text =
+                row.textContent.toLowerCase();
+
+              row.style.display =
+                !query ||
+                text.includes(query)
+                  ? ""
+                  : "none";
+
+            });
+
+          }, 120);
+
+      }
+    );
+
+
+    /* ---------------------------------------------------------
+       KEYBOARD SEARCH
+    --------------------------------------------------------- */
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (
+          (event.metaKey || event.ctrlKey) &&
+          event.key.toLowerCase() === "k"
+        ) {
+
+          event.preventDefault();
+
+          globalSearch?.focus();
+
+        }
+
+        if (event.key === "Escape") {
+
+          provisionDropdown?.classList.remove(
+            "show"
+          );
+
+          closeMobileMenu();
+
+        }
+
+      }
+    );
+
+
+    /* ---------------------------------------------------------
+       NOTIFICATIONS
+    --------------------------------------------------------- */
+
+    document
+      .getElementById("notificationBtn")
+      ?.addEventListener(
+        "click",
+        function() {
+
+          showToast(
+            "You have 3 institutional notifications",
+            "notifications"
+          );
+
+        }
+      );
+
+
+    /* ---------------------------------------------------------
+       HELP
+    --------------------------------------------------------- */
+
+    document
+      .getElementById("helpBtn")
+      ?.addEventListener(
+        "click",
+        function() {
+
+          showToast(
+            "Institution Admin help center opened",
+            "help"
+          );
+
+        }
+      );
+
+
+    /* ---------------------------------------------------------
+       FILTER LOGS
+    --------------------------------------------------------- */
+
+    document
+      .getElementById("filterLogsBtn")
+      ?.addEventListener(
+        "click",
+        function() {
+
+          showToast(
+            "Audit log filters are ready",
+            "filter_list"
+          );
+
+        }
+      );
+
+
+    /* ---------------------------------------------------------
+       SIDEBAR RESPONSIVE CLOSE
+    --------------------------------------------------------- */
+
+    window.addEventListener(
+      "resize",
+      function() {
+
+        if (window.innerWidth > 980) {
+          closeMobileMenu();
+        }
+
+      }
+    );
+
+  </script>
+
+  <script src="shared/demo-runtime.js"></script>
+
+</body>
+</html>
