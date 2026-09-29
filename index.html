@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#112544">
+  <title>E26 Digital Learning Platform | Demo Role Launcher</title>
+  <link rel="stylesheet" href="shared/demo.css">
+</head>
+<body class="launcher-page">
+  <main class="launcher-shell">
+    <header class="launcher-header">
+      <div class="launcher-brand"><span class="e26-mark" aria-hidden="true">E26</span><div><div class="brand-title">E26 Digital Learning Platform</div><div class="brand-subtitle">Client demonstration</div></div></div>
+      <span class="term-label">Academic Term 2025–2026</span>
+    </header>
+    <section class="launcher-intro" aria-labelledby="launcher-title">
+      <p class="eyebrow">Choose your workspace</p>
+      <h1 id="launcher-title">Demo Role Launcher</h1>
+      <p>Explore the platform from the perspective of each participant in the learning lifecycle.</p>
+    </section>
+    <section id="role-grid" class="role-grid" aria-label="Demo roles"></section>
+    <footer class="launcher-footer">This demonstration uses local browser storage for role selection and demo activity.</footer>
+  </main>
+  <script>
+    const DEMO_ROLES = {
+      publisher: { name: "Publisher", description: "Content, publishing, licensing and analytics", dashboard: "publisher_dashboard.html", icon: "publish" },
+      institution: { name: "Institution Admin", description: "Institution, departments, courses, users and licenses", dashboard: "institution_dashboard.html", icon: "account_balance" },
+      hod: { name: "HOD / Department Manager", description: "Department, lecturers, students, courses and reports", dashboard: "hod_dashboard.html", icon: "domain" },
+      lecturer: { name: "Lecturer / Instructor", description: "Courses, publisher content, assignments, assessments and grading", dashboard: "lecturer_dashboard.html", icon: "co_present" },
+      student: { name: "Student", description: "Courses, e-books, personal studybook, assignments and progress", dashboard: "student_dashboard.html", icon: "school" }
+    };
+    const icons = {
+      publish: '<path d="M5 20h14v-2H5v2Zm7-18-5.5 5.5 1.42 1.42L11 5.83V16h2V5.83l3.08 3.09 1.42-1.42L12 2Z"/>',
+      account_balance: '<path d="M12 3 2 8v2h20V8L12 3Zm-7 9v6H3v2h18v-2h-2v-6h-2v6h-4v-6h-2v6H7v-6H5Z"/>',
+      domain: '<path d="M3 21V3h12v4h6v14H3Zm2-2h8V5H5v14Zm10 0h4V9h-4v10ZM7 7h2v2H7V7Zm4 0h2v2h-2V7Zm-4 4h2v2H7v-2Zm4 0h2v2h-2v-2Zm-4 4h2v2H7v-2Zm4 0h2v2h-2v-2Z"/>',
+      co_present: '<path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0H5Zm15-9a3 3 0 1 0-2.6-4.5 6 6 0 0 1 0 3A3 3 0 0 0 20 11Zm-1 2c-.5 0-1 .1-1.5.3a8.8 8.8 0 0 1 2.3 5.7H23a4 4 0 0 0-4-6Z"/>',
+      school: '<path d="m12 3-10 5 10 5 8-4v6h2V8L12 3Zm-6 9v4c3.3 2.7 8.7 2.7 12 0v-4l-6 3-6-3Z"/>'
+    };
+    const roleGrid = document.getElementById('role-grid');
+    Object.entries(DEMO_ROLES).forEach(([key, role]) => {
+      const card = document.createElement('article');
+      card.className = 'role-card';
+      card.innerHTML = `<div class="role-icon" aria-hidden="true"><svg viewBox="0 0 24 24">${icons[role.icon]}</svg></div><div class="role-copy"><h2>${role.name}</h2><p>${role.description}</p></div><a class="role-open" href="${role.dashboard}" data-role="${key}">Open ${key === 'hod' ? 'HOD' : role.name} Demo <span aria-hidden="true">→</span></a>`;
+      roleGrid.append(card);
+    });
+    roleGrid.addEventListener('click', (event) => {
+      const link = event.target.closest('a[data-role]');
+      if (link) {
+        const role=link.dataset.role;
+        try { localStorage.setItem('e26_demo_role', role); } catch { /* role also travels in the URL for local-file previews */ }
+        const next=new URL(link.href,location.href);
+        next.searchParams.set('e26_demo_role',role);
+        link.href=next.pathname.split('/').pop()+next.search;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"background":"#f7f9ff","on-tertiary-fixed":"#002113","surface-bright":"#f7f9ff","primary-fixed":"#d1e4ff","on-primary-fixed":"#001d36","outline-variant":"#c3c6ce","surface-container-high":"#dfe9f7","outline":"#74777e","tertiary-fixed":"#a4f3ca","error":"#ba1a1a","secondary":"#156490","on-tertiary-fixed-variant":"#005236","inverse-primary":"#afc9ea","surface-container-highest":"#d9e3f1","on-primary":"#ffffff","surface-container-low":"#edf4ff","surface-dim":"#d1dbe9","on-secondary-container":"#005782","primary-container":"#17324d","on-surface":"#121c26","tertiary-fixed-dim":"#88d6af","on-tertiary-container":"#5aa782","secondary-fixed-dim":"#8ecdff","on-secondary-fixed-variant":"#004b71","on-tertiary":"#ffffff","on-error":"#ffffff","surface-variant":"#d9e3f1","surface-container-lowest":"#ffffff","tertiary-container":"#003824","primary-fixed-dim":"#afc9ea","on-secondary":"#ffffff","on-error-container":"#93000a","inverse-surface":"#27313c","tertiary":"#002113","error-container":"#ffdad6","on-primary-container":"#819aba","secondary-fixed":"#cbe6ff","surface-container":"#e4effd","on-surface-variant":"#43474d","on-primary-fixed-variant":"#2f4865","surface":"#f7f9ff","surface-tint":"#47607e","secondary-container":"#8ecdff","inverse-on-surface":"#e8f2ff","primary":"#001d36","on-secondary-fixed":"#001e30","on-background":"#121c26"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-xl":"2rem","space-lg":"1.5rem","space-md":"1rem","gutter-mobile":"1rem","margin-mobile":"1rem","margin":"2rem","space-xs":"0.25rem","gutter":"1.5rem"},"fontFamily":{"badge-micro":["Inter"],"table-cell":["Inter"],"display-hero":["Inter"],"display-hero-mobile":["Inter"],"body-medium":["Inter"],"body-regular":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"],"label-mono":["JetBrains Mono"],"table-header":["Inter"],"card-title":["Inter"]},"fontSize":{"badge-micro":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"table-cell":["13px",{"lineHeight":"18px","fontWeight":"400"}],"display-hero":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-hero-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-medium":["14px",{"lineHeight":"21px","fontWeight":"500"}],"body-regular":["14px",{"lineHeight":"21px","fontWeight":"400"}],"headline-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-mono":["12px",{"lineHeight":"16px","fontWeight":"500"}],"table-header":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"card-title":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}]}}}}</script>  <link rel="stylesheet" href="shared/demo.css">
+</head><body class="bg-surface font-body-regular text-on-surface antialiased" data-roles="student"><aside class="fixed left-0 top-0 h-full w-64 bg-primary-container text-on-primary-container z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-14 px-space-lg flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center"><span class="material-symbols-outlined text-on-secondary text-[20px]">school</span></div><div class="flex flex-col"><span class="font-headline-md text-card-title text-on-primary leading-tight font-bold tracking-tight">ACADEMIA</span><span class="font-badge-micro text-badge-micro uppercase tracking-wider text-on-primary-container">Student Portal</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-badge-micro text-badge-micro uppercase tracking-wider text-on-primary-container/70">Academic Core</div></div><nav class="flex-1 px-space-md flex flex-col gap-1" data-active-classes="bg-secondary text-on-secondary font-body-medium rounded-lg shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-primary hover:text-on-primary transition-colors font-body-regular text-body-medium" data-path="dashboard" href="student_dashboard.html"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-primary hover:text-on-primary transition-colors font-body-regular text-body-medium" data-path="my-courses" href="my_courses.html"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>My Courses</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-primary hover:text-on-primary transition-colors font-body-regular text-body-medium" data-path="my-e-books" href="ebook_reader.html"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span>My E-books</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-colors bg-secondary text-on-secondary font-body-medium rounded-lg shadow-sm" data-path="assignments" href="student_assignments.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">assignment</span><span>Assignments</span></div><span class="px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-badge-micro text-badge-micro">Active</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-primary hover:text-on-primary transition-colors font-body-regular text-body-medium" data-path="assessments" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Assessments</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-primary hover:text-on-primary transition-colors font-body-regular text-body-medium" data-path="grades" href="#"><span class="material-symbols-outlined text-[20px]">grade</span><span>Grades</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-primary hover:text-on-primary transition-colors font-body-regular text-body-medium" data-path="progress" href="#"><span class="material-symbols-outlined text-[20px]">trending_up</span><span>Progress</span></a><div class="my-space-xs px-space-sm py-space-xs font-badge-micro text-badge-micro uppercase tracking-wider text-on-primary-container/70">Study Workspace</div><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-primary hover:text-on-primary transition-colors font-body-regular text-body-medium" data-path="my-notes" href="student_notes.html"><span class="material-symbols-outlined text-[20px]">edit_note</span><span>My Notes</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-primary hover:text-on-primary transition-colors font-body-regular text-body-medium" data-path="bookmarks" href="#"><span class="material-symbols-outlined text-[20px]">bookmark</span><span>Bookmarks</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-primary hover:text-on-primary transition-colors font-body-regular text-body-medium" data-path="my-activity" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span>My Activity</span></a></nav></div><div class="p-space-md m-space-md rounded-xl bg-primary/40 flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-tertiary-fixed"></div><div class="flex flex-col"><span class="font-label-mono text-label-mono text-on-primary">SYS-SYNC: OK</span><span class="font-table-cell text-table-cell text-on-primary-container">Connected via EduNet</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md w-96"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-space-sm text-outline text-[18px]">search</span><input class="w-full h-9 pl-9 pr-space-md bg-surface-container-low rounded-lg font-body-regular text-body-medium text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/20 transition-all" placeholder="Search curriculum, resources, notes... (⌘K)" type="text"/></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-lg"><span class="material-symbols-outlined text-outline text-[18px]">calendar_today</span><span class="font-body-medium text-table-cell text-on-surface-variant font-semibold">Fall 2025 • Term A</span><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></div><button class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-md pl-space-md"><div class="flex flex-col text-right"><span class="font-body-medium text-body-medium text-on-surface font-semibold leading-tight">Alex Carter</span><span class="font-table-cell text-table-cell text-on-surface-variant leading-tight">BSc Economics</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-14 bg-surface w-full px-space-xl pb-space-xl"><div class="flex flex-col w-full">
+<!-- Page Context & Title Bar -->
+<div class="flex flex-col gap-space-sm mb-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs font-label-mono text-label-mono text-secondary mb-1">
+<span class="material-symbols-outlined text-[15px]">school</span>
+<span>Demo Institution • Academic Term 2025–2026</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight">Assignments</h1>
+<p class="font-body-regular text-body-medium text-on-surface-variant">Track upcoming deadlines, submit course deliverables, and review grading feedback</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-9 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-medium text-table-cell flex items-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<span>Sync to Calendar</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-primary-container text-on-primary font-body-medium text-table-cell flex items-center gap-space-xs shadow-sm hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Quick Submission</span>
+</button>
+</div>
+</div>
+<!-- Quick Metrics Strip (No borders, high tonal elevation) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md mt-space-xs">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-badge-micro text-badge-micro uppercase tracking-wider text-outline">Total Active</span>
+<span class="font-display-hero text-headline-lg text-on-surface font-bold">7</span>
+<span class="font-label-mono text-table-cell text-on-surface-variant">Across 3 terms</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">assignment</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-badge-micro text-badge-micro uppercase tracking-wider text-error">Due Soon (&lt;48h)</span>
+<span class="font-display-hero text-headline-lg text-error font-bold">2</span>
+<span class="font-label-mono text-table-cell text-error">Immediate priority</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">notification_important</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-badge-micro text-badge-micro uppercase tracking-wider text-secondary">In Review</span>
+<span class="font-display-hero text-headline-lg text-secondary font-bold">1</span>
+<span class="font-label-mono text-table-cell text-on-surface-variant">Turnitin verified</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[22px]">hourglass_top</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-badge-micro text-badge-micro uppercase tracking-wider text-on-tertiary-container">Graded Work</span>
+<span class="font-display-hero text-headline-lg text-on-surface font-bold">4 <span class="font-body-medium text-table-cell text-on-tertiary-container font-semibold">(91.5% Avg)</span></span>
+<span class="font-label-mono text-table-cell text-on-tertiary-container">Top 5% in cohort</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Filter Strip & View Switcher -->
+<div class="flex flex-col gap-space-md mb-space-lg">
+<!-- Top Filter Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1">
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-body-medium text-table-cell flex items-center gap-space-xs shadow-sm whitespace-nowrap">
+<span>All</span>
+<span class="px-1.5 py-0.2 rounded-full bg-primary text-on-primary font-badge-micro text-badge-micro">7</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-body-medium text-table-cell flex items-center gap-space-xs whitespace-nowrap transition-colors">
+<span>Upcoming</span>
+<span class="px-1.5 py-0.2 rounded-full bg-error-container text-on-error-container font-badge-micro text-badge-micro">2</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-body-medium text-table-cell flex items-center gap-space-xs whitespace-nowrap transition-colors">
+<span>In Progress</span>
+<span class="px-1.5 py-0.2 rounded-full bg-secondary-fixed text-on-secondary-fixed font-badge-micro text-badge-micro">1</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-body-medium text-table-cell flex items-center gap-space-xs whitespace-nowrap transition-colors">
+<span>Submitted</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface font-badge-micro text-badge-micro">1</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-body-medium text-table-cell flex items-center gap-space-xs whitespace-nowrap transition-colors">
+<span>Graded</span>
+<span class="px-1.5 py-0.2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-badge-micro text-badge-micro">4</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-body-medium text-table-cell flex items-center gap-space-xs whitespace-nowrap transition-colors">
+<span>Overdue</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-outline font-badge-micro text-badge-micro">0</span>
+</button>
+</div>
+<!-- Filter & Search Sub-Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-md p-space-sm rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center gap-space-sm flex-1 min-w-[280px]">
+<div class="relative w-full max-w-md flex items-center">
+<span class="material-symbols-outlined absolute left-space-sm text-outline text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-space-md bg-surface-container-low rounded-lg font-body-regular text-body-medium text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-all" placeholder="Search assignments, topics, course... (⌘K)" type="text"/>
+</div>
+<div class="h-6 w-px bg-surface-container"></div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-1.5 rounded-lg cursor-pointer hover:bg-surface-container transition-colors">
+<span class="font-body-medium text-table-cell text-on-surface">All Courses (4)</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-1.5 rounded-lg cursor-pointer hover:bg-surface-container transition-colors">
+<span class="font-badge-micro text-badge-micro uppercase text-outline">Sort:</span>
+<span class="font-body-medium text-table-cell text-on-surface">Due Date (Soonest)</span>
+<span class="material-symbols-outlined text-[16px] text-outline">sort</span>
+</div>
+<div class="flex items-center p-0.5 rounded-lg bg-surface-container">
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-secondary shadow-xs flex items-center gap-1 font-body-medium text-badge-micro">
+<span class="material-symbols-outlined text-[16px]">view_column</span>
+<span>Split</span>
+</button>
+<button class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface flex items-center gap-1 font-body-medium text-badge-micro transition-colors">
+<span class="material-symbols-outlined text-[16px]">table_rows</span>
+<span>Table</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content Layout (Split-View Workspace) -->
+<div class="flex flex-col lg:flex-row gap-space-lg items-start w-full">
+<!-- LEFT COLUMN: Prioritized Assignment Cards (58%) -->
+<div class="w-full lg:w-[58%] flex flex-col gap-space-md">
+<!-- Item 1: Active Selected Card -->
+<div class="relative p-space-lg rounded-xl bg-surface-container-lowest shadow-md transition-all cursor-pointer">
+<!-- Visual Accent Indicator (Selected State) -->
+<div class="absolute left-0 top-3 bottom-3 w-1.5 bg-secondary rounded-r"></div>
+<div class="flex flex-col gap-space-sm pl-space-xs">
+<!-- Card Meta Header -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed font-label-mono text-badge-micro text-on-secondary-fixed font-semibold tracking-wide">ECON-301</span>
+<span class="font-body-regular text-table-cell text-on-surface-variant">Global Macroeconomics</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-badge-micro text-badge-micro uppercase tracking-wider">
+<span class="material-symbols-outlined text-[13px]">alarm</span>
+<span>Due in 28 hours</span>
+</div>
+</div>
+<!-- Title & Context -->
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold hover:text-secondary transition-colors">
+              Problem Set 4: Sovereign Debt &amp; FX Swaps
+            </h3>
+<p class="font-body-regular text-table-cell text-on-surface-variant line-clamp-1 mt-0.5">
+              Merton structural default modeling, cross-currency balance sheet exposures, and zero-lower-bound policy simulations.
+            </p>
+</div>
+<!-- Specs Footer -->
+<div class="flex flex-wrap items-center justify-between pt-space-xs mt-space-xs border-none">
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-label-mono text-table-cell text-outline">
+<div class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">event</span>
+<span>Tomorrow, 11:59 PM (Oct 24)</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">grade</span>
+<span>100 pts • 15% weight</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>PDF / Jupyter (.ipynb)</span>
+</div>
+</div>
+<button class="mt-2 sm:mt-0 px-space-md py-1.5 rounded-lg bg-secondary text-on-secondary font-body-medium text-table-cell flex items-center gap-1 shadow-xs hover:bg-on-secondary-container transition-all">
+<span>Open &amp; Submit</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2: In Progress Draft -->
+<div class="relative p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-mono text-badge-micro text-on-surface-variant font-semibold">MBA-810</span>
+<span class="font-body-regular text-table-cell text-on-surface-variant">Corporate Strategy in Crisis</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-badge-micro text-badge-micro uppercase tracking-wider">
+<span class="material-symbols-outlined text-[13px]">edit_document</span>
+<span>Draft Saved 2 hrs ago</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold hover:text-secondary transition-colors">
+              Case Analysis 3: Central Bank Liquidity Injection
+            </h3>
+<p class="font-body-regular text-table-cell text-on-surface-variant line-clamp-1 mt-0.5">
+              Comparative analysis of targeted long-term refinancing operations and commercial bank reserve requirements.
+            </p>
+</div>
+<div class="flex flex-wrap items-center justify-between pt-space-xs mt-space-xs">
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-label-mono text-table-cell text-outline">
+<div class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Friday, Oct 25 • 5:00 PM (Due in 3d)</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">grade</span>
+<span>50 pts • 10% weight</span>
+</div>
+</div>
+<button class="mt-2 sm:mt-0 px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-medium text-table-cell flex items-center gap-1 transition-all">
+<span>Resume Draft</span>
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 3: Submitted (Under Review) -->
+<div class="relative p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-mono text-badge-micro text-on-surface-variant font-semibold">FIN-302</span>
+<span class="font-body-regular text-table-cell text-on-surface-variant">Advanced Asset Valuation</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-badge-micro text-badge-micro uppercase tracking-wider">
+<span class="material-symbols-outlined text-[13px]">hourglass_empty</span>
+<span>Awaiting Grading</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold hover:text-secondary transition-colors">
+              DCF Interactive Financial Model &amp; Sensitivity Analysis
+            </h3>
+<p class="font-body-regular text-table-cell text-on-surface-variant line-clamp-1 mt-0.5">
+              10-year discounted cash flow projections for renewable infrastructure project with WACC stress intervals.
+            </p>
+</div>
+<div class="flex flex-wrap items-center justify-between pt-space-xs mt-space-xs">
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-label-mono text-table-cell text-outline">
+<div class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">check_circle</span>
+<span>Submitted Oct 20, 9:15 PM</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">attach_file</span>
+<span>v2_final_model.xlsx</span>
+</div>
+</div>
+<button class="mt-2 sm:mt-0 px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-medium text-table-cell flex items-center gap-1 transition-all">
+<span>View Submission</span>
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 4: Graded (High Distinction) -->
+<div class="relative p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-mono text-badge-micro text-on-surface-variant font-semibold">ECON-301</span>
+<span class="font-body-regular text-table-cell text-on-surface-variant">Global Macroeconomics</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-badge-micro text-badge-micro uppercase tracking-wider font-bold">
+<span class="material-symbols-outlined text-[13px]">grade</span>
+<span>Graded: 94 / 100 (A)</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold hover:text-secondary transition-colors">
+              Midterm Problem Set 2: IS-LM &amp; Monetary Levers
+            </h3>
+<p class="font-body-regular text-table-cell text-on-surface-variant line-clamp-1 mt-0.5">
+              Closed vs. open economy fiscal multiplier dynamics with fixed foreign exchange anchor regimes.
+            </p>
+</div>
+<div class="flex flex-wrap items-center justify-between pt-space-xs mt-space-xs">
+<div class="flex items-center gap-x-space-md font-label-mono text-table-cell text-outline">
+<span>Submitted Oct 12, 2025</span>
+<span class="text-on-tertiary-container font-semibold">Feedback Available (Prof. Thorne)</span>
+</div>
+<button class="mt-2 sm:mt-0 px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-medium text-table-cell flex items-center gap-1 transition-all">
+<span>Review Feedback</span>
+<span class="material-symbols-outlined text-[16px]">chat_bubble_outline</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 5: Graded -->
+<div class="relative p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-mono text-badge-micro text-on-surface-variant font-semibold">MBA-810</span>
+<span class="font-body-regular text-table-cell text-on-surface-variant">Corporate Strategy</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-badge-micro text-badge-micro uppercase tracking-wider font-bold">
+<span class="material-symbols-outlined text-[13px]">grade</span>
+<span>Graded: 88 / 100 (A-)</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold hover:text-secondary transition-colors">
+              Corporate Governance Memo: Freeman vs. Friedman
+            </h3>
+<p class="font-body-regular text-table-cell text-on-surface-variant line-clamp-1 mt-0.5">
+              Stakeholder orientation vs. shareholder primacy in ESG fiduciary duty enforcement.
+            </p>
+</div>
+<div class="flex flex-wrap items-center justify-between pt-space-xs mt-space-xs">
+<div class="flex items-center gap-x-space-md font-label-mono text-table-cell text-outline">
+<span>Submitted Oct 05, 2025</span>
+<span>Annotated PDF Attached</span>
+</div>
+<button class="mt-2 sm:mt-0 px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-medium text-table-cell flex items-center gap-1 transition-all">
+<span>Review Feedback</span>
+<span class="material-symbols-outlined text-[16px]">chat_bubble_outline</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Detailed Workspace & Submission Deck (42%) -->
+<div class="w-full lg:w-[42%] flex flex-col gap-space-md sticky top-20">
+<div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-md flex flex-col gap-space-lg">
+<!-- Detail Header -->
+<div class="flex flex-col gap-space-sm pb-space-md bg-surface-container-low/50 p-space-md rounded-xl">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-mono text-badge-micro uppercase tracking-wider">
+              ECON-301 • Academic Term 2025–2026
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-badge-micro text-badge-micro flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+              Action Required
+            </span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold leading-snug">
+            Problem Set 4: Sovereign Debt &amp; FX Swaps
+          </h2>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-space-md font-table-cell text-table-cell text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">person</span>
+<span>Prof. Aris Thorne</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">assessment</span>
+<span>100 pts possible (15% weight)</span>
+</div>
+</div>
+<!-- Countdown pill -->
+<div class="mt-1 flex items-center gap-2 p-2 rounded-lg bg-error-container/60 text-on-error-container font-label-mono text-table-cell font-medium">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+<span>Due: Oct 24, 2025 • 11:59 PM (28 hrs 14 mins remaining)</span>
+</div>
+</div>
+<!-- Academic Brief & Instructions -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-badge-micro text-badge-micro uppercase tracking-wider text-outline font-bold">Academic Brief &amp; Scope</span>
+<p class="font-body-regular text-body-medium text-on-surface leading-relaxed">
+            Evaluate macroeconomic sovereign default risk parameters using the Merton structural framework and Taylor Rule adjustments under zero-lower-bound conditions. Synthesize the IMF Article IV telemetry in Section 3.
+          </p>
+<div class="mt-space-xs p-space-md rounded-lg bg-surface-container-low flex flex-col gap-1.5 font-body-regular text-table-cell text-on-surface">
+<div class="flex items-start gap-2">
+<span class="w-4 h-4 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-mono text-[10px] font-bold mt-0.5 shrink-0">1</span>
+<span>Model sovereign yield spreads over benchmark German Bunds with duration-adjusted spreads.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="w-4 h-4 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-mono text-[10px] font-bold mt-0.5 shrink-0">2</span>
+<span>Run Monte Carlo simulations (minimum 5,000 draws) for debt sustainability under FX stress.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="w-4 h-4 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-mono text-[10px] font-bold mt-0.5 shrink-0">3</span>
+<span>Formulate 3 actionable central bank counter-cyclical policy recommendations.</span>
+</div>
+</div>
+</div>
+<!-- Attached Resources & Codices -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-badge-micro text-badge-micro uppercase tracking-wider text-outline font-bold">Attached Course Codex &amp; Datasets</span>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[20px] text-error">picture_as_pdf</span>
+<span class="font-body-medium text-table-cell text-on-surface truncate">Lecture_6_Sovereign_Yields_Handout.pdf</span>
+<span class="font-label-mono text-badge-micro text-outline shrink-0">1.4 MB</span>
+</div>
+<button class="p-1 rounded text-secondary hover:text-on-surface transition-colors" title="Download Resource">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[20px] text-secondary">auto_stories</span>
+<span class="font-body-medium text-table-cell text-on-surface truncate">E-book Reader: Ch. 4 (p. 126–140)</span>
+</div>
+<button class="p-1 rounded text-secondary hover:text-on-surface transition-colors flex items-center gap-1 font-body-medium text-badge-micro">
+<span>Open Reader</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[20px] text-on-tertiary-container">table_chart</span>
+<span class="font-body-medium text-table-cell text-on-surface truncate">Dataset_Sovereign_Bonds_2024.csv</span>
+<span class="font-label-mono text-badge-micro text-outline shrink-0">340 KB</span>
+</div>
+<button class="p-1 rounded text-secondary hover:text-on-surface transition-colors" title="Download Dataset">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Submission Upload Zone -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-badge-micro text-badge-micro uppercase tracking-wider text-outline font-bold">Submission Deliverables</span>
+<span class="flex items-center gap-1 font-label-mono text-[11px] text-secondary">
+<span class="material-symbols-outlined text-[14px]">security</span>
+              Turnitin Similarity Active
+            </span>
+</div>
+<!-- Drag and drop zone with styled outline-free container -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col items-center justify-center text-center gap-2 cursor-pointer hover:bg-surface-container transition-all group">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shadow-xs group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[26px]">cloud_upload</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-medium text-table-cell text-on-surface font-semibold">Drag and drop your deliverable files here</span>
+<span class="font-body-regular text-badge-micro text-outline">or click to browse from local workstation</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-mono text-badge-micro text-on-surface-variant">
+              Accepted: PDF, DOCX, ZIP, IPYNB (Max 50MB)
+            </span>
+</div>
+<!-- Staged / Draft File Pill -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-table-cell text-on-surface truncate">Alex_Carter_ProblemSet4_Draft.pdf</span>
+<span class="font-label-mono text-badge-micro text-outline">2.8 MB • Staged Today at 9:40 AM</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 text-on-surface-variant hover:text-on-surface transition-colors" title="Preview file">
+<span class="material-symbols-outlined text-[18px]">preview</span>
+</button>
+<button class="p-1 text-error hover:opacity-80 transition-opacity" title="Remove staged file">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Student Notes Textarea -->
+<div class="flex flex-col gap-1">
+<label class="font-body-medium text-table-cell text-on-surface">Instructor Notes / Academic Comment (Optional)</label>
+<textarea class="w-full p-2.5 bg-surface-container-low rounded-lg font-body-regular text-body-medium text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-all resize-none" placeholder="e.g. Monte Carlo code configured with 10k iterations. Check Appendix C for foreign currency volatility matrix." rows="2"></textarea>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row items-center gap-space-sm pt-space-xs">
+<button class="w-full sm:flex-1 h-10 rounded-lg bg-primary-container text-on-primary font-body-medium text-table-cell flex items-center justify-center gap-2 shadow-sm hover:bg-primary transition-all">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Submit Assignment</span>
+</button>
+<button class="w-full sm:w-auto px-space-lg h-10 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-medium text-table-cell flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save Draft</span>
+</button>
+</div>
+</div>
+<!-- Rubric & History Accordion Section -->
+<div class="flex flex-col gap-2 pt-space-xs">
+<details class="group rounded-lg bg-surface-container-low p-space-sm cursor-pointer open:bg-surface-container">
+<summary class="flex items-center justify-between font-body-medium text-table-cell text-on-surface list-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">rubric</span>
+<span class="font-semibold">Grading Rubric (4 Criteria • 100 Points)</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-space-sm pt-space-sm flex flex-col gap-2 font-body-regular text-table-cell text-on-surface">
+<div class="flex justify-between items-center py-1">
+<span>1. Merton Structural Formula Accuracy</span>
+<span class="font-label-mono text-badge-micro font-semibold text-secondary">30 Pts</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span>2. Monte Carlo Iterations &amp; Tail Risk Metric</span>
+<span class="font-label-mono text-badge-micro font-semibold text-secondary">30 Pts</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span>3. Central Bank Policy Synthesis</span>
+<span class="font-label-mono text-badge-micro font-semibold text-secondary">25 Pts</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span>4. Academic Citations &amp; Methodological Rigor</span>
+<span class="font-label-mono text-badge-micro font-semibold text-secondary">15 Pts</span>
+</div>
+</div>
+</details>
+<details class="group rounded-lg bg-surface-container-low p-space-sm cursor-pointer open:bg-surface-container">
+<summary class="flex items-center justify-between font-body-medium text-table-cell text-on-surface list-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-outline">history</span>
+<span class="font-semibold">Submission History (Attempt 1 of 2 Allowed)</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-space-sm pt-space-sm font-body-regular text-table-cell text-on-surface-variant flex flex-col gap-1">
+<p>No final submission recorded yet for this deliverable. Once submitted, your hash and timestamp will be registered on E26 Submission Records.</p>
+</div>
+</details>
+</div>
+</div>
+</div>
+</div>
+</div></main></div>  <script src="shared/demo-runtime.js"></script>
+  <script src="shared/student-actions.js"></script>
+</body></html>

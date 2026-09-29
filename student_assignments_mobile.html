@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "background": "#f7f9ff", "on-tertiary-fixed": "#002113", "surface-bright": "#f7f9ff", "primary-fixed": "#d1e4ff", "on-primary-fixed": "#001d36", "outline-variant": "#c3c6ce", "surface-container-high": "#dfe9f7", "outline": "#74777e", "tertiary-fixed": "#a4f3ca", "error": "#ba1a1a", "secondary": "#156490", "on-tertiary-fixed-variant": "#005236", "inverse-primary": "#afc9ea", "surface-container-highest": "#d9e3f1", "on-primary": "#ffffff", "surface-container-low": "#edf4ff", "surface-dim": "#d1dbe9", "on-secondary-container": "#005782", "primary-container": "#17324d", "on-surface": "#121c26", "tertiary-fixed-dim": "#88d6af", "on-tertiary-container": "#5aa782", "secondary-fixed-dim": "#8ecdff", "on-secondary-fixed-variant": "#004b71", "on-tertiary": "#ffffff", "on-error": "#ffffff", "surface-variant": "#d9e3f1", "surface-container-lowest": "#ffffff", "tertiary-container": "#003824", "primary-fixed-dim": "#afc9ea", "on-secondary": "#ffffff", "on-error-container": "#93000a", "inverse-surface": "#27313c", "tertiary": "#002113", "error-container": "#ffdad6", "on-primary-container": "#819aba", "secondary-fixed": "#cbe6ff", "surface-container": "#e4effd", "on-surface-variant": "#43474d", "on-primary-fixed-variant": "#2f4865", "surface": "#f7f9ff", "surface-tint": "#47607e", "secondary-container": "#8ecdff", "inverse-on-surface": "#e8f2ff", "primary": "#001d36", "on-secondary-fixed": "#001e30", "on-background": "#121c26" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-xl": "2rem", "space-lg": "1.5rem", "space-md": "1rem", "gutter-mobile": "1rem", "margin-mobile": "1rem", "margin": "2rem", "space-xs": "0.25rem", "gutter": "1.5rem" }, fontFamily: { "badge-micro": ["Inter"], "table-cell": ["Inter"], "display-hero": ["Inter"], "display-hero-mobile": ["Inter"], "body-medium": ["Inter"], "body-regular": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "label-mono": ["JetBrains Mono"], "table-header": ["Inter"], "card-title": ["Inter"] }, fontSize: { "badge-micro": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }], "table-cell": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "display-hero": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-hero-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-medium": ["14px", { "lineHeight": "21px", "fontWeight": "500" }], "body-regular": ["14px", { "lineHeight": "21px", "fontWeight": "400" }], "headline-md": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-mono": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "table-header": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "card-title": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+    <link rel="stylesheet" href="shared/demo.css">
+</head><body class="bg-surface font-body-regular text-body-regular text-on-surface antialiased flex flex-col min-h-screen" data-roles="student"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">school</span></div><h1 class="font-headline-md text-headline-md text-on-surface truncate">Assignments</h1></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors focus:outline-none"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-20 bg-surface px-gutter-mobile"><div class="flex flex-col w-full pb-6 space-y-space-md">
+<!-- Interactive Search and Term Bar -->
+<div class="flex items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface-variant flex-1">
+<span class="material-symbols-outlined text-[18px] text-outline">search</span>
+<input class="bg-transparent text-body-medium font-body-medium text-on-surface focus:outline-none w-full placeholder:text-outline" placeholder="Search course or problem set..." type="text"/>
+</div>
+<div class="flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container text-primary font-label-mono text-label-mono shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+<span>MT-25</span>
+</div>
+</div>
+<!-- Horizontally Scrollable Filter Chips -->
+<div class="-mx-gutter-mobile px-gutter-mobile overflow-x-auto flex items-center gap-space-xs no-scrollbar py-1">
+<button class="filter-chip active flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-badge-micro text-badge-micro tracking-wider uppercase shrink-0 shadow-sm transition-all">
+<span>All (7)</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-badge-micro text-badge-micro tracking-wider uppercase shrink-0 transition-all">
+<span>Upcoming (2)</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-badge-micro text-badge-micro tracking-wider uppercase shrink-0 transition-all">
+<span>In Progress (1)</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-badge-micro text-badge-micro tracking-wider uppercase shrink-0 transition-all">
+<span>Submitted (1)</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-badge-micro text-badge-micro tracking-wider uppercase shrink-0 transition-all">
+<span>Graded (4)</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-badge-micro text-badge-micro tracking-wider uppercase shrink-0 transition-all">
+<span>Overdue (0)</span>
+</button>
+</div>
+<!-- Urgent Deliverable Banner / Hero Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-md space-y-space-md">
+<!-- Visual Accent Stripe -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-500 via-secondary to-primary"></div>
+<div class="flex items-start justify-between gap-space-sm pt-1">
+<!-- Amber alert pill -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 text-amber-900 font-badge-micro text-badge-micro tracking-wide uppercase">
+<span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+<span>Due Tomorrow • 11:59 PM</span>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-amber-100 text-amber-800 font-label-mono text-label-mono font-medium">
+        Upcoming
+      </span>
+</div>
+<!-- Title & Course Details -->
+<div class="space-y-1">
+<div class="flex items-center gap-1.5 text-secondary font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[15px]">account_balance</span>
+<span>ECON-301 • Global Macroeconomics</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-snug">
+        Problem Set 4: Sovereign Debt & FX Swaps
+      </h2>
+<div class="flex items-center gap-space-md text-on-surface-variant font-table-cell text-table-cell pt-0.5">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">grade</span>
+          100 Pts
+        </span>
+<span>•</span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">pie_chart</span>
+          15% Weight
+        </span>
+</div>
+</div>
+<!-- Progress Meter -->
+<div class="space-y-1.5 p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between text-body-regular font-body-regular text-on-surface-variant">
+<span class="flex items-center gap-1 text-primary font-body-medium">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+          28h remaining
+        </span>
+<span class="font-label-mono text-label-mono font-medium text-secondary">Draft 60% complete</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full rounded-full bg-secondary transition-all duration-500" style="width: 60%;"></div>
+</div>
+</div>
+<!-- Big Touch CTA -->
+<button class="w-full h-12 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-body-medium text-body-medium flex items-center justify-center gap-space-sm shadow-sm active:scale-[0.99] transition-transform">
+<span>Continue & Submit</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Section Header: Upcoming & Active -->
+<div class="space-y-space-sm pt-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Upcoming & Active</h3>
+<span class="w-5 h-5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-mono text-label-mono flex items-center justify-center font-bold">1</span>
+</div>
+<span class="text-on-surface-variant font-body-regular text-table-cell">Sorted by Deadline</span>
+</div>
+<!-- Card: Case Analysis 3 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-space-sm hover:shadow transition-shadow">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="font-label-mono text-label-mono text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">domain</span>
+          MBA-810 • Corporate Strategy
+        </span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-mono text-label-mono font-medium shrink-0">
+          In Progress
+        </span>
+</div>
+<div>
+<h4 class="font-card-title text-card-title text-on-surface font-semibold">
+          Case Analysis 3: Central Bank Liquidity Injection
+        </h4>
+<p class="font-table-cell text-table-cell text-on-surface-variant mt-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">event</span>
+          Due: Oct 25, 5:00 PM (3 days left)
+        </p>
+</div>
+<div class="pt-1 flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-mono text-label-mono">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Draft saved 42m ago</span>
+</div>
+<button class="h-9 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-body-medium text-body-medium flex items-center gap-1 transition-colors">
+<span>Resume Draft</span>
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section Header: Submitted & Graded -->
+<div class="space-y-space-sm pt-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Submitted & Graded</h3>
+<span class="w-5 h-5 rounded-full bg-surface-container text-on-surface-variant font-label-mono text-label-mono flex items-center justify-center font-bold">5</span>
+</div>
+<button class="text-secondary font-body-medium text-table-cell flex items-center gap-0.5">
+<span>History</span>
+<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+</button>
+</div>
+<!-- Card 1: Submitted / Awaiting Grade -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="font-label-mono text-label-mono text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">trending_up</span>
+          FIN-302 • Asset Valuation
+        </span>
+<span class="px-2 py-0.5 rounded-md bg-purple-100 text-purple-900 font-label-mono text-label-mono font-medium shrink-0 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
+          Submitted
+        </span>
+</div>
+<div>
+<h4 class="font-card-title text-card-title text-on-surface font-semibold">
+          DCF Interactive Financial Model
+        </h4>
+<div class="flex items-center gap-2 text-on-surface-variant font-table-cell text-table-cell mt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">task_alt</span>
+            Submitted Oct 20
+          </span>
+<span>•</span>
+<span class="text-amber-800 bg-amber-50 px-1.5 py-0.5 rounded font-badge-micro text-badge-micro">
+            Awaiting Grade
+          </span>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between text-table-cell">
+<span class="text-outline font-label-mono text-label-mono">Turnitin: 2% Similarity</span>
+<button class="text-secondary hover:text-primary font-body-medium flex items-center gap-1 py-1">
+<span>View Submission Details</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Midterm Problem Set 2 (Graded with Praise & Delight) -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="font-label-mono text-label-mono text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">account_balance</span>
+          ECON-301 • Macroeconomics
+        </span>
+<span class="px-2 py-0.5 rounded-md bg-tertiary-fixed text-on-tertiary-fixed font-label-mono text-label-mono font-bold shrink-0 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+          Graded
+        </span>
+</div>
+<div class="flex items-baseline justify-between gap-space-sm">
+<h4 class="font-card-title text-card-title text-on-surface font-semibold">
+          Midterm Problem Set 2
+        </h4>
+<div class="text-right shrink-0">
+<div class="font-headline-md text-headline-md text-primary font-bold">
+            94 <span class="font-table-cell text-table-cell text-outline font-normal">/ 100</span>
+</div>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed-dim text-on-tertiary-fixed font-badge-micro text-badge-micro uppercase font-bold">
+            Grade A
+          </span>
+</div>
+</div>
+<!-- Lecturer comment preview with quotation bubble style -->
+<div class="p-3 rounded-lg bg-surface-container-low space-y-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[15px] text-secondary">forum</span>
+<span class="font-medium text-primary">Prof. Alistair Finch, DPhil</span>
+<span class="text-outline text-[11px]">• Oct 14</span>
+</div>
+<p class="font-table-cell text-table-cell text-on-surface-variant italic pl-5">
+          “Excellent derivation of the Taylor Rule in Section 2. Outstanding methodology clarity.”
+        </p>
+</div>
+<div class="pt-1 flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-outline">Cohort Mean: 81.2</span>
+<button class="text-secondary hover:text-primary font-body-medium text-table-cell flex items-center gap-1 py-1">
+<span>View Full Feedback & Rubric</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Assignment Submission Trigger Floating Bar -->
+<div class="pt-2">
+<div class="rounded-xl bg-primary text-on-primary p-space-md shadow-lg flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest/15 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">cloud_upload</span>
+</div>
+<div>
+<div class="font-card-title text-card-title text-on-primary">Quick Submission Drawer</div>
+<div class="font-table-cell text-table-cell text-primary-fixed-dim">Drop PDF, TeX, or ZIP archive</div>
+</div>
+</div>
+<button class="h-10 px-3.5 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-body-medium text-body-medium font-semibold hover:bg-primary-fixed flex items-center gap-1 shrink-0 transition-colors" id="quickSubmitBtn">
+<span class="material-symbols-outlined text-[18px]">attachment</span>
+<span>Attach</span>
+</button>
+</div>
+</div>
+<!-- Interactive Submission Modal Simulation (hidden by default) -->
+<div class="fixed inset-0 z-50 bg-primary-container/40 backdrop-blur-sm hidden items-end justify-center p-0 transition-opacity" id="drawerOverlay">
+<div class="w-full bg-surface-container-lowest rounded-t-2xl p-space-md shadow-2xl space-y-space-md max-w-lg transform translate-y-0">
+<div class="w-12 h-1 rounded-full bg-outline-variant mx-auto"></div>
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Quick Document Upload</h4>
+<p class="font-table-cell text-table-cell text-on-surface-variant">Assignment Submission</p>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" id="closeDrawerBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Assignment upload area -->
+<div class="rounded-xl bg-surface-container-low p-6 text-center space-y-2 flex flex-col items-center justify-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">upload_file</span>
+</div>
+<div class="font-card-title text-card-title text-on-surface">Tap to browse files or camera scan</div>
+<div class="font-label-mono text-label-mono text-outline">Supported: .pdf, .docx, .ipynb, .zip (Max 45MB)</div>
+</div>
+<div class="flex gap-space-sm pt-1">
+<button class="flex-1 h-11 rounded-lg bg-surface-container text-on-surface-variant font-body-medium text-body-medium" id="cancelDrawerBtn">
+          Cancel
+        </button>
+<button class="flex-1 h-11 rounded-lg bg-primary text-on-primary font-body-medium text-body-medium flex items-center justify-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Confirm Dispatch</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Filter chips selection micro-interaction
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.filter-chip').forEach(c => {
+        c.classList.remove('bg-primary', 'text-on-primary', 'active');
+        c.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      chip.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      chip.classList.add('bg-primary', 'text-on-primary', 'active');
+    });
+  });
+
+  // Quick submit modal toggle
+  const quickBtn = document.getElementById('quickSubmitBtn');
+  const drawerOverlay = document.getElementById('drawerOverlay');
+  const closeBtn = document.getElementById('closeDrawerBtn');
+  const cancelBtn = document.getElementById('cancelDrawerBtn');
+
+  const openDrawer = () => {
+    drawerOverlay.classList.remove('hidden');
+    drawerOverlay.classList.add('flex');
+  };
+
+  const closeDrawer = () => {
+    drawerOverlay.classList.add('hidden');
+    drawerOverlay.classList.remove('flex');
+  };
+
+  if (quickBtn) quickBtn.addEventListener('click', openDrawer);
+  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+  if (cancelBtn) cancelBtn.addEventListener('click', closeDrawer);
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-body-medium"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-xs text-on-surface-variant transition-colors" data-path="dashboard" href="student_dashboard.html"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-badge-micro text-badge-micro">Dashboard</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-xs text-on-surface-variant transition-colors" data-path="courses" href="my_courses.html"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-badge-micro text-badge-micro">Courses</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-xs text-on-surface-variant transition-colors" data-path="e-books" href="ebook_reader_mobile.html"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span class="font-badge-micro text-badge-micro">E-books</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-xs transition-colors text-primary font-body-medium" data-path="assignments" href="student_assignments_mobile.html"><span class="material-symbols-outlined text-[22px]">assignment</span><span class="font-badge-micro text-badge-micro">Assignments</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-xs text-on-surface-variant transition-colors" data-path="notes" href="student_notes_mobile.html"><span class="material-symbols-outlined text-[22px]">edit_note</span><span class="font-badge-micro text-badge-micro">Notes</span></a></div></nav>  <script src="shared/demo-runtime.js"></script>
+  <script src="shared/student-actions.js"></script>
+</body></html>

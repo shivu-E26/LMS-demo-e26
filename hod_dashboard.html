@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#f7f9ff","background":"#f7f9ff","surface-container-highest":"#d9e3f1","primary-fixed":"#d1e4ff","tertiary-container":"#003824","on-primary-fixed-variant":"#2f4865","on-secondary-container":"#005782","on-error-container":"#93000a","surface-container-low":"#edf4ff","primary-fixed-dim":"#afc9ea","secondary-container":"#8ecdff","error":"#ba1a1a","secondary":"#156490","secondary-fixed":"#cbe6ff","surface-container":"#e4effd","surface-container-high":"#dfe9f7","on-secondary-fixed":"#001e30","on-error":"#ffffff","on-surface-variant":"#43474d","primary-container":"#17324d","error-container":"#ffdad6","on-primary-fixed":"#001d36","secondary-fixed-dim":"#8ecdff","inverse-on-surface":"#e8f2ff","inverse-primary":"#afc9ea","surface-variant":"#d9e3f1","on-secondary-fixed-variant":"#004b71","surface-dim":"#d1dbe9","on-primary":"#ffffff","tertiary-fixed":"#a4f3ca","on-background":"#121c26","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","on-surface":"#121c26","on-tertiary-fixed-variant":"#005236","tertiary":"#002113","surface-bright":"#f7f9ff","outline":"#74777e","primary":"#001d36","on-tertiary-container":"#5aa782","surface-tint":"#47607e","on-secondary":"#ffffff","inverse-surface":"#27313c","on-primary-container":"#819aba","outline-variant":"#c3c6ce","on-tertiary-fixed":"#002113","tertiary-fixed-dim":"#88d6af"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2rem","gutter":"1.5rem","gutter-mobile":"1rem","margin-mobile":"1rem","space-xs":"0.25rem","space-lg":"1.5rem","margin":"2rem","space-md":"1rem","space-sm":"0.5rem"},fontFamily:{"headline-lg":["Inter"],"display-hero-mobile":["Inter"],"card-title":["Inter"],"body-regular":["Inter"],"table-header":["Inter"],"table-cell":["Inter"],"badge-micro":["Inter"],"headline-md":["Inter"],"display-hero":["Inter"],"body-medium":["Inter"],"label-mono":["JetBrains Mono"]},fontSize:{"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.02em","fontWeight":"700"}],"card-title":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"body-regular":["14px",{"lineHeight":"21px","fontWeight":"400"}],"table-header":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"table-cell":["13px",{"lineHeight":"18px","fontWeight":"400"}],"badge-micro":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-medium":["14px",{"lineHeight":"21px","fontWeight":"500"}],"label-mono":["12px",{"lineHeight":"16px","fontWeight":"500"}]}}}}</script>  <link rel="stylesheet" href="shared/demo.css">
+</head><body class="bg-background font-body-regular text-body-regular text-on-surface antialiased" data-roles="hod"><aside class="fixed left-0 top-0 h-full w-60 bg-primary-container z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-14 px-gutter flex items-center gap-space-sm bg-primary border-b border-outline-variant/15"><span class="e26-brand-mark" aria-label="E26">E26</span><div class="flex flex-col"><span class="font-headline-md text-card-title text-on-primary font-semibold tracking-tight leading-tight">E26 Digital Learning Platform</span><span class="font-badge-micro text-badge-micro text-on-primary-container tracking-wider font-semibold uppercase">Department Manager</span></div></div><div class="px-gutter pt-space-md pb-space-xs"><span class="font-table-header text-table-header text-on-primary-container/70 uppercase tracking-wider font-semibold">Department Workspace</span></div><nav class="px-space-sm flex flex-col gap-0.5" data-active-classes="bg-secondary text-on-secondary font-semibold"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2 rounded transition-colors bg-secondary text-on-secondary font-semibold" data-path="dashboard" href="hod_dashboard.html"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span class="font-body-medium text-body-medium">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="students" href="institution_students.html"><span class="material-symbols-outlined text-[18px]">school</span><span class="font-body-medium text-body-medium">Students</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="lecturers" href="institution_departments.html"><span class="material-symbols-outlined text-[18px]">co_present</span><span class="font-body-medium text-body-medium">Lecturers</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="programs" href="hod_programs.html"><span class="material-symbols-outlined text-[18px]">account_tree</span><span class="font-body-medium text-body-medium">Programs</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="courses" href="hod_courses.html"><span class="material-symbols-outlined text-[18px]">menu_book</span><span class="font-body-medium text-body-medium">Courses</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="publisher-library" href="#"><span class="material-symbols-outlined text-[18px]">local_library</span><span class="font-body-medium text-body-medium">Publisher Library</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="assignments" href="#"><span class="material-symbols-outlined text-[18px]">assignment</span><span class="font-body-medium text-body-medium">Assignments</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="assessments" href="#"><span class="material-symbols-outlined text-[18px]">fact_check</span><span class="font-body-medium text-body-medium">Assessments</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[18px]">bar_chart</span><span class="font-body-medium text-body-medium">Reports</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span class="font-body-medium text-body-medium">Settings</span></a></nav></div><div class="p-space-md mx-space-sm mb-space-md rounded bg-primary/60 border border-outline-variant/15 flex flex-col gap-1.5"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary-fixed text-[14px]">apartment</span><span class="font-table-header text-table-header text-secondary-fixed uppercase tracking-wider font-semibold truncate">ECONOMICS &amp; BUSINESS</span></div><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-tertiary-fixed-dim text-[14px]">verified</span><span class="font-badge-micro text-badge-micro text-on-primary-container uppercase">AACSB &amp; EQUIS ACCREDITED</span></div><div class="flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-tertiary-fixed-dim"></span><span class="font-badge-micro text-badge-micro text-on-primary-container/80 uppercase">Privacy controls · LMS sync active</span></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-14 bg-surface-container-lowest border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg gap-space-md"><div class="flex items-center gap-space-md min-w-0"><div class="flex items-center gap-space-sm truncate"><span class="font-body-medium text-body-medium text-on-surface font-semibold">Demo Institution</span><span class="text-outline text-body-regular">•</span><span class="font-body-regular text-body-regular text-on-surface-variant truncate">Dept. of Economics &amp; Business</span></div><span class="hidden xl:inline-flex items-center px-2 py-0.5 rounded font-label-mono text-label-mono font-medium bg-surface-container-high text-primary border border-outline-variant/50">HOD CONSOLE - Business Department</span></div><div class="flex items-center gap-space-md flex-shrink-0"><div class="relative w-64 lg:w-80 hidden md:block"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full pl-8 pr-3 py-1.5 bg-surface-container-low rounded border border-outline-variant/60 font-body-regular text-table-cell text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-secondary" placeholder="Search students, faculty, courses, codices (⌘K)" type="text"/></div><div class="h-8 px-space-sm rounded bg-surface-container-low border border-outline-variant/50 flex items-center gap-1.5 text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span><span class="font-table-header text-table-header font-semibold text-on-surface-variant">Academic Term 2025–2026</span></div><button aria-label="Notifications" class="relative p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 h-2 w-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><button aria-label="Faculty Handbook" class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><div class="h-6 w-px bg-outline-variant/40"></div><div class="flex items-center gap-space-sm pl-1"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden lg:flex flex-col text-left"><span class="font-body-medium text-body-medium font-semibold text-on-surface leading-tight">Dr. Sarah Morgan</span><span class="font-badge-micro text-badge-micro text-on-surface-variant font-semibold leading-tight">HOD / PROFESSOR</span></div></div></div></header><main class="relative pt-14 w-full bg-background min-h-screen px-gutter py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- PAGE HEADER & ACTION BAR -->
+<section class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm mb-1">
+<span class="font-display-hero text-headline-lg lg:text-display-hero text-on-surface font-bold tracking-tight">Business Department</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded font-badge-micro text-badge-micro font-bold bg-surface-container-high text-secondary border border-outline-variant/50">HOD SECURED VIEW</span>
+</div>
+<p class="font-body-regular text-body-regular text-on-surface-variant">
+        Department Overview • Academic Term 2025–2026 • Business & Management Department &amp; Faculty of Economics
+      </p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="h-9 px-space-md rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container font-body-medium text-body-medium shadow-sm transition-colors flex items-center gap-2" onclick="alert('Exporting Department Brief (PDF)...')">
+<span class="material-symbols-outlined text-[18px] text-secondary">download</span>
+<span>Export Department Brief (PDF)</span>
+</button>
+<button class="h-9 px-space-md rounded bg-primary-container text-on-primary hover:bg-secondary font-body-medium text-body-medium shadow-sm transition-colors flex items-center gap-2" onclick="alert('Opening Course / Section Provisioning Modal')">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>+ Add Department Course / Section</span>
+</button>
+</div>
+</section>
+<!-- KPI METRIC CARDS (6-CARD GRID) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-card-title text-card-title text-on-surface-variant font-medium">Department Students</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">groups</span>
+</div>
+<div class="font-display-hero text-display-hero text-on-surface font-bold leading-tight">3,800</div>
+<div class="mt-2 font-badge-micro text-badge-micro text-on-surface-variant flex items-center gap-1 truncate">
+<span class="text-tertiary-container font-bold">98.2% Active</span>
+<span>• +140 vs Last Term</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-card-title text-card-title text-on-surface-variant font-medium">Department Lecturers</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">co_present</span>
+</div>
+<div class="font-display-hero text-display-hero text-on-surface font-bold leading-tight">42</div>
+<div class="mt-2 font-badge-micro text-badge-micro text-on-surface-variant flex items-center gap-1 truncate">
+<span>28 Full-time • 14 Adjunct</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-card-title text-card-title text-on-surface-variant font-medium">Active Courses</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">menu_book</span>
+</div>
+<div class="font-display-hero text-display-hero text-on-surface font-bold leading-tight">49</div>
+<div class="mt-2 font-badge-micro text-badge-micro text-on-surface-variant flex items-center gap-1 truncate">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+<span>105 Class Sections Live</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-card-title text-card-title text-on-surface-variant font-medium">Programs</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">account_tree</span>
+</div>
+<div class="font-display-hero text-display-hero text-on-surface font-bold leading-tight">4</div>
+<div class="mt-2 font-badge-micro text-badge-micro text-on-surface-variant truncate">
+<span>BSc, MSc Fin, MBA, EMBA</span>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-card-title text-card-title text-on-surface-variant font-medium">Licensed Titles</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">auto_stories</span>
+</div>
+<div class="font-display-hero text-display-hero text-on-surface font-bold leading-tight">49</div>
+<div class="mt-2 font-badge-micro text-badge-micro text-on-surface-variant truncate">
+<span class="font-semibold text-secondary">3,800 Seats</span> (90.5% Utilized)
+      </div>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-card-title text-card-title text-on-surface-variant font-medium">Assignment Completion</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">task_alt</span>
+</div>
+<div class="font-display-hero text-display-hero text-on-surface font-bold leading-tight">88.4%</div>
+<div class="mt-2 font-badge-micro text-badge-micro text-tertiary-container flex items-center gap-1 font-semibold truncate">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+3.2% vs target • On track</span>
+</div>
+</div>
+</section>
+<!-- SECTION 1: PERFORMANCE & STUDENT ENGAGEMENT (60% / 40%) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column: Department Performance (7 cols / ~60%) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Department Performance — Course Average &amp; Completion</h2>
+<span class="font-badge-micro text-badge-micro px-2 py-0.5 rounded bg-surface-container font-semibold text-on-surface-variant">Academic Term 2025–2026 BENCHMARK</span>
+</div>
+<p class="font-body-regular text-table-cell text-on-surface-variant mb-space-md">Comparative rate of student courseware progression against verified midterm performance grades.</p>
+<!-- Bar Visualizations -->
+<div class="flex flex-col gap-3.5 my-2">
+<!-- Item 1 -->
+<div>
+<div class="flex justify-between items-center mb-1 text-table-cell">
+<span class="font-body-medium font-semibold text-on-surface">ECON-101 Microeconomic Theory</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">91% comp. / <strong class="text-secondary">86% avg</strong></span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded overflow-hidden flex">
+<div class="h-full bg-secondary rounded" style="width: 91%"></div>
+</div>
+</div>
+<!-- Item 2 -->
+<div>
+<div class="flex justify-between items-center mb-1 text-table-cell">
+<span class="font-body-medium font-semibold text-on-surface">MBA-810 Strategic Management</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">94% comp. / <strong class="text-secondary">89% avg</strong></span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded overflow-hidden flex">
+<div class="h-full bg-secondary rounded" style="width: 94%"></div>
+</div>
+</div>
+<!-- Item 3 -->
+<div>
+<div class="flex justify-between items-center mb-1 text-table-cell">
+<span class="font-body-medium font-semibold text-on-surface">FIN-302 Corporate Finance &amp; Valuation</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">84% comp. / <strong class="text-secondary">78% avg</strong></span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded overflow-hidden flex">
+<div class="h-full bg-secondary rounded" style="width: 84%"></div>
+</div>
+</div>
+<!-- Item 4 -->
+<div>
+<div class="flex justify-between items-center mb-1 text-table-cell">
+<span class="font-body-medium font-semibold text-on-surface">MKT-205 Global Brand Leadership</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">88% comp. / <strong class="text-secondary">82% avg</strong></span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded overflow-hidden flex">
+<div class="h-full bg-secondary rounded" style="width: 88%"></div>
+</div>
+</div>
+<!-- Item 5 -->
+<div>
+<div class="flex justify-between items-center mb-1 text-table-cell">
+<span class="font-body-medium font-semibold text-on-surface">STAT-210 Econometrics &amp; Data Analysis</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">79% comp. / <strong class="text-[#C58A22]">74% avg (Warning)</strong></span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded overflow-hidden flex">
+<div class="h-full bg-[#C58A22] rounded" style="width: 79%"></div>
+</div>
+</div>
+<!-- Item 6 -->
+<div>
+<div class="flex justify-between items-center mb-1 text-table-cell">
+<span class="font-body-medium font-semibold text-on-surface">BUS-450 Business Ethics &amp; Corporate Governance</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">96% comp. / <strong class="text-tertiary-container">92% avg (Honor)</strong></span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded overflow-hidden flex">
+<div class="h-full bg-[#2E7D5B] rounded" style="width: 96%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Legend -->
+<div class="pt-space-md mt-space-md border-t border-surface-container flex flex-wrap items-center justify-between gap-space-sm text-table-cell text-on-surface-variant">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-secondary"></span>
+<span>Standard Course Pace</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-[#C58A22]"></span>
+<span>Target Review Needed</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-[#2E7D5B]"></span>
+<span>Exceeding Benchmark</span>
+</div>
+</div>
+<span class="font-label-mono text-label-mono">Term Benchmark: <strong>82.0%</strong></span>
+</div>
+</div>
+<!-- Right Column: Student Overview & Engagement Health (5 cols / ~40%) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Student Overview &amp; Engagement</h2>
+<span class="h-2 w-2 rounded-full bg-tertiary-fixed-dim ring-4 ring-tertiary-fixed/30"></span>
+</div>
+<p class="font-body-regular text-table-cell text-on-surface-variant mb-space-md">Real-time telemetry across registered student cohorts.</p>
+<!-- 3 Stat Blocks -->
+<div class="grid grid-cols-3 gap-space-sm mb-space-md">
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-table-header text-table-header uppercase text-on-surface-variant block">Total Enrolled</span>
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">3,800</span>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">4 Programs</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-table-header text-table-header uppercase text-on-surface-variant block">Active (7d)</span>
+<span class="font-headline-lg text-headline-lg font-bold text-secondary">3,732</span>
+<span class="font-badge-micro text-badge-micro text-tertiary-container font-semibold">98.2% Rate</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-table-header text-table-header uppercase text-on-surface-variant block">Participation</span>
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">92.6%</span>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">Codex + LMS</span>
+</div>
+</div>
+<!-- Segmented Program Enrollment Bar -->
+<div class="mb-space-md">
+<div class="flex justify-between items-center text-table-header text-on-surface-variant uppercase mb-2">
+<span>Cohort Distribution by Degree</span>
+<span class="font-label-mono text-label-mono font-medium">3,800 Total</span>
+</div>
+<div class="h-3 w-full rounded overflow-hidden flex gap-0.5 bg-surface-container">
+<div class="bg-primary-container h-full" style="width: 42%" title="Undergraduate Economics: 42%"></div>
+<div class="bg-secondary h-full" style="width: 33%" title="MBA &amp; EMBA: 33%"></div>
+<div class="bg-secondary-fixed-dim h-full" style="width: 25%" title="MSc Finance &amp; FinTech: 25%"></div>
+</div>
+<div class="mt-3 flex flex-col gap-1.5 text-table-cell">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>Undergraduate Economics</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">1,596 (42%)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>MBA &amp; Executive MBA</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">1,254 (33%)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim"></span>MSc Finance &amp; FinTech</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">950 (25%)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex items-center justify-between text-table-cell">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">verified_user</span>
+<span class="text-on-surface font-medium">Academic Integrity Status</span>
+</div>
+<span class="font-badge-micro text-badge-micro font-bold px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed">0 Flags Pending</span>
+</div>
+</div>
+</section>
+<!-- SECTION 2: LECTURER ACTIVITY & ALLOCATION TABLE -->
+<section class="bg-surface-container-lowest rounded-lg shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Lecturer Activity &amp; Staffing Allocation</h2>
+<p class="font-body-regular text-table-cell text-on-surface-variant">Direct department teaching load, student coverage, and current grading turnaround.</p>
+</div>
+<!-- Filters -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="relative w-48 sm:w-56">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px]">search</span>
+<input class="w-full pl-8 pr-2.5 py-1 rounded bg-surface-container-low font-body-regular text-table-cell text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Filter faculty..." type="text"/>
+</div>
+<select class="py-1 px-2.5 rounded bg-surface-container-low font-body-regular text-table-cell text-on-surface focus:outline-none">
+<option>All Programs</option>
+<option>Undergraduate</option>
+<option>MBA &amp; EMBA</option>
+<option>MSc Finance</option>
+</select>
+<select class="py-1 px-2.5 rounded bg-surface-container-low font-body-regular text-table-cell text-on-surface focus:outline-none">
+<option>Status: All</option>
+<option>Active</option>
+<option>Grading Pending</option>
+<option>Sabbatical</option>
+</select>
+</div>
+</div>
+<!-- Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-table-header text-table-header uppercase tracking-wider">
+<th class="py-2.5 px-space-md">Lecturer</th>
+<th class="py-2.5 px-space-md">Courses</th>
+<th class="py-2.5 px-space-md">Students</th>
+<th class="py-2.5 px-space-md">Assignments</th>
+<th class="py-2.5 px-space-md">Office Hours</th>
+<th class="py-2.5 px-space-md">Status</th>
+<th class="py-2.5 px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-table-cell text-table-cell text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary font-bold flex items-center justify-center text-xs">AT</div>
+<div>
+<div class="font-body-medium font-semibold text-on-surface">Dr. Sarah Morgan</div>
+<div class="text-on-surface-variant text-xs">HOD / Department Manager</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-medium">2 Courses</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant block">ECON-301, MBA-810</span>
+</td>
+<td class="py-3 px-space-md font-label-mono font-medium">380</td>
+<td class="py-3 px-space-md">
+<span class="text-secondary font-medium">8 Active</span> / <span class="text-on-surface-variant">24 Graded</span>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Tue/Thu 14:00</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-badge-micro text-badge-micro font-bold bg-[#EDF7F2] text-[#2E7D5B]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#2E7D5B]"></span>
+                ACTIVE • ON SCHEDULE
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant" title="Message"><span class="material-symbols-outlined text-[18px]">mail</span></button>
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant" title="Roster"><span class="material-symbols-outlined text-[18px]">group</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary text-on-secondary font-bold flex items-center justify-center text-xs">HV</div>
+<div>
+<div class="font-body-medium font-semibold text-on-surface">Prof. Henriette Vance</div>
+<div class="text-on-surface-variant text-xs">Senior Fellow</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-medium">3 Courses</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant block">FIN-302, FIN-405, FIN-501</span>
+</td>
+<td class="py-3 px-space-md font-label-mono font-medium">490</td>
+<td class="py-3 px-space-md">
+<span class="text-secondary font-medium">12 Active</span> / <span class="text-on-surface-variant">30 Graded</span>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Mon/Wed 10:00</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-badge-micro text-badge-micro font-bold bg-[#EDF7F2] text-[#2E7D5B]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#2E7D5B]"></span>
+                ACTIVE • ON SCHEDULE
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant" title="Message"><span class="material-symbols-outlined text-[18px]">mail</span></button>
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant" title="Roster"><span class="material-symbols-outlined text-[18px]">group</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface font-bold flex items-center justify-center text-xs">JD</div>
+<div>
+<div class="font-body-medium font-semibold text-on-surface">Dr. Julian Davenport</div>
+<div class="text-on-surface-variant text-xs">Associate Professor</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-medium">2 Courses</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant block">STAT-210, STAT-211</span>
+</td>
+<td class="py-3 px-space-md font-label-mono font-medium">520</td>
+<td class="py-3 px-space-md">
+<span class="text-secondary font-medium">6 Active</span> / <span class="text-on-surface-variant">18 Graded</span>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Wed 15:00</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-badge-micro text-badge-micro font-bold bg-[#FFF8EB] text-[#C58A22]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#C58A22]"></span>
+                GRADING REVIEW
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant" title="Message"><span class="material-symbols-outlined text-[18px]">mail</span></button>
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant" title="Roster"><span class="material-symbols-outlined text-[18px]">group</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold flex items-center justify-center text-xs">CS</div>
+<div>
+<div class="font-body-medium font-semibold text-on-surface">Dr. Clara Stirling</div>
+<div class="text-on-surface-variant text-xs">Visiting Lecturer</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-medium">2 Courses</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant block">MKT-205, MKT-402</span>
+</td>
+<td class="py-3 px-space-md font-label-mono font-medium">340</td>
+<td class="py-3 px-space-md">
+<span class="text-secondary font-medium">4 Active</span> / <span class="text-on-surface-variant">16 Graded</span>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Fri 11:00</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-badge-micro text-badge-micro font-bold bg-[#EDF7F2] text-[#2E7D5B]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#2E7D5B]"></span>
+                ACTIVE • ON SCHEDULE
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant" title="Message"><span class="material-symbols-outlined text-[18px]">mail</span></button>
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant" title="Roster"><span class="material-symbols-outlined text-[18px]">group</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-primary-fixed-dim text-primary font-bold flex items-center justify-center text-xs">MS</div>
+<div>
+<div class="font-body-medium font-semibold text-on-surface">Prof. Marcus Sterling</div>
+<div class="text-on-surface-variant text-xs">Chair in Economics</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-medium">1 Course</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant block">ECON-101 Core</span>
+</td>
+<td class="py-3 px-space-md font-label-mono font-medium">650</td>
+<td class="py-3 px-space-md">
+<span class="text-secondary font-medium">5 Active</span> / <span class="text-on-surface-variant">20 Graded</span>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Mon 16:00</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-badge-micro text-badge-micro font-bold bg-[#EDF7F2] text-[#2E7D5B]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#2E7D5B]"></span>
+                ACTIVE • ON SCHEDULE
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant" title="Message"><span class="material-symbols-outlined text-[18px]">mail</span></button>
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant" title="Roster"><span class="material-symbols-outlined text-[18px]">group</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- SECTION 3 & 4: COURSE HEALTH (8 COLS) & AUDIT FEED (4 COLS) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Course Performance & Syllabus Health (8 Cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-lg shadow-sm p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Course Performance &amp; Syllabus Health</h2>
+<span class="font-badge-micro text-badge-micro px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-bold">LMS integration SYNCED</span>
+</div>
+<p class="font-body-regular text-table-cell text-on-surface-variant mb-space-md">Department syllabus compliance, student cohort progress, and publisher courseware sync.</p>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-table-header text-table-header uppercase">
+<th class="py-2 px-space-sm">Course</th>
+<th class="py-2 px-space-sm">Lead</th>
+<th class="py-2 px-space-sm">Students</th>
+<th class="py-2 px-space-sm">Avg Progress</th>
+<th class="py-2 px-space-sm">Status</th>
+<th class="py-2 px-space-sm">Publisher Codex</th>
+<th class="py-2 px-space-sm text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-table-cell text-table-cell text-on-surface">
+<!-- Item 1 -->
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3 px-space-sm">
+<div class="font-body-medium font-semibold">ECON-301</div>
+<div class="text-xs text-on-surface-variant truncate max-w-[180px]">Global Macroeconomics</div>
+</td>
+<td class="py-3 px-space-sm text-xs font-medium">Dr. Sarah Morgan</td>
+<td class="py-3 px-space-sm font-label-mono">420</td>
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-16 h-1.5 bg-surface-container rounded overflow-hidden">
+<div class="bg-secondary h-full" style="width: 82%"></div>
+</div>
+<span class="text-xs font-label-mono">82%</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded font-badge-micro text-[10px] font-bold bg-[#EDF7F2] text-[#2E7D5B]">
+                    MIDTERM GRADED (84%)
+                  </span>
+</td>
+<td class="py-3 px-space-sm text-xs text-on-surface-variant">E26 Academic Publishing (3rd Ed.)</td>
+<td class="py-3 px-space-sm text-right">
+<button class="text-secondary hover:text-primary font-body-medium text-xs font-semibold">Manage</button>
+</td>
+</tr>
+<!-- Item 2 -->
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3 px-space-sm">
+<div class="font-body-medium font-semibold">MBA-810</div>
+<div class="text-xs text-on-surface-variant truncate max-w-[180px]">Corporate Strategy in Global Markets</div>
+</td>
+<td class="py-3 px-space-sm text-xs font-medium">Dr. Sarah Morgan</td>
+<td class="py-3 px-space-sm font-label-mono">280</td>
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-16 h-1.5 bg-surface-container rounded overflow-hidden">
+<div class="bg-secondary h-full" style="width: 78%"></div>
+</div>
+<span class="text-xs font-label-mono">78%</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded font-badge-micro text-[10px] font-bold bg-surface-container-high text-secondary">
+                    CASE STUDY 3 LIVE
+                  </span>
+</td>
+<td class="py-3 px-space-sm text-xs text-on-surface-variant">Demo Publisher Casebank</td>
+<td class="py-3 px-space-sm text-right">
+<button class="text-secondary hover:text-primary font-body-medium text-xs font-semibold">Manage</button>
+</td>
+</tr>
+<!-- Item 3 -->
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3 px-space-sm">
+<div class="font-body-medium font-semibold">FIN-302</div>
+<div class="text-xs text-on-surface-variant truncate max-w-[180px]">Corporate Valuation &amp; M&amp;A</div>
+</td>
+<td class="py-3 px-space-sm text-xs font-medium">Prof. Vance</td>
+<td class="py-3 px-space-sm font-label-mono">310</td>
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-16 h-1.5 bg-surface-container rounded overflow-hidden">
+<div class="bg-secondary h-full" style="width: 88%"></div>
+</div>
+<span class="text-xs font-label-mono">88%</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded font-badge-micro text-[10px] font-bold bg-[#EDF7F2] text-[#2E7D5B]">
+                    MIDTERM GRADED (79%)
+                  </span>
+</td>
+<td class="py-3 px-space-sm text-xs text-on-surface-variant">Demo Publisher Finance Codex</td>
+<td class="py-3 px-space-sm text-right">
+<button class="text-secondary hover:text-primary font-body-medium text-xs font-semibold">Manage</button>
+</td>
+</tr>
+<!-- Item 4 -->
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3 px-space-sm">
+<div class="font-body-medium font-semibold">STAT-210</div>
+<div class="text-xs text-on-surface-variant truncate max-w-[180px]">Econometrics &amp; Quant Finance</div>
+</td>
+<td class="py-3 px-space-sm text-xs font-medium">Dr. Davenport</td>
+<td class="py-3 px-space-sm font-label-mono">440</td>
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-16 h-1.5 bg-surface-container rounded overflow-hidden">
+<div class="bg-[#C58A22] h-full" style="width: 64%"></div>
+</div>
+<span class="text-xs font-label-mono">64%</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded font-badge-micro text-[10px] font-bold bg-[#FFF8EB] text-[#C58A22]">
+                    PROBLEM SET 4 OPEN
+                  </span>
+</td>
+<td class="py-3 px-space-sm text-xs text-on-surface-variant">Demo Publisher Core Econ</td>
+<td class="py-3 px-space-sm text-right">
+<button class="text-secondary hover:text-primary font-body-medium text-xs font-semibold">Manage</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-surface-container flex items-center justify-between text-xs text-on-surface-variant">
+<span>Showing 4 of 49 active departmental syllabus trackers</span>
+<a class="font-semibold text-secondary hover:underline flex items-center gap-1" href="hod_courses.html">
+          View All Syllabi <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Recent Department Activity (4 Cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-lg shadow-sm p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Recent Activity</h2>
+<span class="material-symbols-outlined text-outline text-[18px]">history</span>
+</div>
+<p class="font-body-regular text-table-cell text-on-surface-variant mb-space-md">Live departmental audit stream.</p>
+<!-- Timeline -->
+<div class="flex flex-col gap-space-md relative before:absolute before:top-2 before:bottom-2 before:left-[11px] before:w-0.5 before:bg-surface-container">
+<!-- Item 1 -->
+<div class="flex items-start gap-3 relative">
+<span class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0 z-10">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+</span>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium font-semibold text-on-surface leading-snug">Course Syllabus Approved</span>
+<span class="font-table-cell text-table-cell text-on-surface-variant">Prof. Vance published revised syllabus for FIN-501</span>
+<span class="font-label-mono text-[11px] text-outline mt-0.5">18m ago • Academic Board</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start gap-3 relative">
+<span class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0 z-10">
+<span class="material-symbols-outlined text-[13px]">campaign</span>
+</span>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium font-semibold text-on-surface leading-snug">Midterm Assessment Published</span>
+<span class="font-table-cell text-table-cell text-on-surface-variant">ECON-301 Midterm results released to 420 students</span>
+<span class="font-label-mono text-[11px] text-outline mt-0.5">2h ago • Automated Release</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-start gap-3 relative">
+<span class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0 z-10">
+<span class="material-symbols-outlined text-[13px]">library_books</span>
+</span>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium font-semibold text-on-surface leading-snug">Publisher Title Allocated</span>
+<span class="font-table-cell text-table-cell text-on-surface-variant">'Principles of Modern Macro' 250 seat buffer added</span>
+<span class="font-label-mono text-[11px] text-outline mt-0.5">5h ago • License Console</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex items-start gap-3 relative">
+<span class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0 z-10">
+<span class="material-symbols-outlined text-[13px]">person_add</span>
+</span>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium font-semibold text-on-surface leading-snug">New Adjunct Onboarded</span>
+<span class="font-table-cell text-table-cell text-on-surface-variant">Dr. Clara Stirling credentials verified for Academic Term 2025–2026</span>
+<span class="font-label-mono text-[11px] text-outline mt-0.5">1d ago • Faculty Ops</span>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="flex items-start gap-3 relative">
+<span class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-[#2E7D5B] shrink-0 z-10">
+<span class="material-symbols-outlined text-[13px]">balance</span>
+</span>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium font-semibold text-on-surface leading-snug">Grade Normalization Complete</span>
+<span class="font-table-cell text-table-cell text-on-surface-variant">STAT-210 midterm curve approved by HOD</span>
+<span class="font-label-mono text-[11px] text-outline mt-0.5">2d ago • Dr. Sarah Morgan (HOD)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-surface-container">
+<button class="w-full py-1.5 text-center font-body-medium text-xs font-semibold text-secondary hover:text-primary transition-colors">
+          View Audit Log Details
+        </button>
+</div>
+</div>
+</section>
+</div></main></div>  <script src="shared/demo-runtime.js"></script>
+</body></html>

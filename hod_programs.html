@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"background":"#f7f9ff","on-primary-fixed-variant":"#2f4865","on-surface":"#121c26","on-secondary-fixed":"#001e30","surface-container":"#e4effd","on-secondary":"#ffffff","inverse-primary":"#afc9ea","surface-container-lowest":"#ffffff","outline":"#74777e","inverse-surface":"#27313c","secondary-fixed":"#cbe6ff","outline-variant":"#c3c6ce","error":"#ba1a1a","primary":"#001d36","on-tertiary-fixed":"#002113","inverse-on-surface":"#e8f2ff","surface-variant":"#d9e3f1","on-primary":"#ffffff","on-error-container":"#93000a","on-surface-variant":"#43474d","tertiary-fixed":"#a4f3ca","on-error":"#ffffff","surface-dim":"#d1dbe9","surface-tint":"#47607e","on-primary-container":"#819aba","error-container":"#ffdad6","primary-fixed-dim":"#afc9ea","tertiary":"#002113","primary-fixed":"#d1e4ff","surface-bright":"#f7f9ff","on-primary-fixed":"#001d36","surface-container-highest":"#d9e3f1","secondary-container":"#8ecdff","secondary":"#156490","on-tertiary-container":"#5aa782","on-background":"#121c26","on-secondary-container":"#005782","surface-container-high":"#dfe9f7","tertiary-fixed-dim":"#88d6af","surface":"#f7f9ff","secondary-fixed-dim":"#8ecdff","tertiary-container":"#003824","primary-container":"#17324d","on-tertiary":"#ffffff","surface-container-low":"#edf4ff","on-tertiary-fixed-variant":"#005236","on-secondary-fixed-variant":"#004b71"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin-mobile":"1rem","space-md":"1rem","margin":"2rem","gutter":"1.5rem","space-xl":"2rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem"},fontFamily:{"display-hero":["Inter"],"body-regular":["Inter"],"label-mono":["JetBrains Mono"],"body-medium":["Inter"],"table-cell":["Inter"],"badge-micro":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"],"display-hero-mobile":["Inter"],"card-title":["Inter"],"table-header":["Inter"]},fontSize:{"display-hero":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-regular":["14px",{"lineHeight":"21px","fontWeight":"400"}],"label-mono":["12px",{"lineHeight":"16px","fontWeight":"500"}],"body-medium":["14px",{"lineHeight":"21px","fontWeight":"500"}],"table-cell":["13px",{"lineHeight":"18px","fontWeight":"400"}],"badge-micro":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.02em","fontWeight":"700"}],"card-title":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"table-header":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}]}}}}</script>  <link rel="stylesheet" href="shared/demo.css">
+</head><body class="bg-background font-body-regular text-body-regular text-on-surface antialiased" data-roles="hod"><aside class="fixed left-0 top-0 h-screen w-60 bg-primary-container text-on-primary z-50 flex flex-col justify-between select-none shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="px-space-md py-space-md flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><span class="e26-brand-mark" aria-label="E26">E26</span><div class="flex flex-col min-w-0"><span class="font-headline-md text-headline-md text-on-primary tracking-tight leading-none truncate">E26 Digital Learning Platform</span><span class="font-badge-micro text-badge-micro uppercase tracking-wider text-secondary-fixed mt-0.5">Higher Education ERP</span></div></div><div class="mt-space-xs"><span class="inline-flex items-center px-space-xs py-0.5 rounded bg-primary text-secondary-fixed font-badge-micro text-badge-micro tracking-wider uppercase">INSTITUTION ADMIN</span></div></div><nav class="flex-1 px-space-sm py-space-xs flex flex-col gap-1" data-active-classes="bg-secondary text-on-secondary font-body-medium rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="dashboard" href="institution_dashboard.html"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 transition-all bg-secondary text-on-secondary font-body-medium rounded-lg" data-path="departments" href="institution_departments.html"><span class="material-symbols-outlined text-[18px]">domain</span><span>Departments</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="programs" href="hod_programs.html"><span class="material-symbols-outlined text-[18px]">schema</span><span>Programs</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="courses" href="hod_courses.html"><span class="material-symbols-outlined text-[18px]">menu_book</span><span>Courses</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="lecturers" href="institution_departments.html"><span class="material-symbols-outlined text-[18px]">supervisor_account</span><span>Lecturers</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="students" href="institution_students.html"><span class="material-symbols-outlined text-[18px]">school</span><span>Students</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="publisher-library" href="institution_licensing.html"><span class="material-symbols-outlined text-[18px]">local_library</span><span>Publisher Library</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="assignments" href="#"><span class="material-symbols-outlined text-[18px]">assignment</span><span>Assignments</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="assessments" href="#"><span class="material-symbols-outlined text-[18px]">fact_check</span><span>Assessments</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="reports" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-primary-fixed-dim hover:bg-secondary/40 hover:text-on-primary transition-all font-body-regular text-body-regular" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>Settings</span></a></nav></div><div class="p-space-md bg-primary/70"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span><span class="font-label-mono text-label-mono text-tertiary-fixed tracking-wider uppercase">Demo Institution · Active</span></div><div class="mt-1 text-[10px] text-primary-fixed-dim tracking-tight font-label-mono">LMS integration / Privacy controls configured</div></div></aside><div class="pl-60 min-h-screen flex flex-col"><header class="fixed top-0 left-60 right-0 h-14 bg-surface/90 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><span class="e26-brand-mark" aria-label="E26">E26</span><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-[18px]">account_balance</span><span class="font-body-medium text-body-medium text-on-surface">Demo Institution • Business &amp; Management Department</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">unfold_more</span></div></div><div class="flex-1 max-w-lg mx-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full h-9 pl-9 pr-4 rounded bg-surface-container-lowest text-on-surface placeholder-outline font-body-regular text-body-regular focus:outline-none shadow-[0_1px_3px_rgba(16,24,40,0.04)] transition-all" placeholder="Search departments, courses, faculty, students (⌘K)" type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="h-5 w-px bg-surface-variant"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-body-medium text-body-medium text-on-surface leading-tight">Institution Admin</span><span class="font-badge-micro text-badge-micro uppercase text-on-surface-variant tracking-wider leading-none mt-0.5">Institution Administrator</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full flex-1 pt-14 px-gutter pb-space-xl bg-background"><div class="flex flex-col w-full">
+<div class="w-full py-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-mono text-label-mono mb-2">
+<span class="hover:text-primary cursor-pointer transition-colors">Institution</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-secondary font-medium">Departments &amp; Academic Programs</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div>
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight">Academic Departments</h1>
+<p class="font-body-regular text-body-regular text-on-surface-variant mt-1">
+          Oversee university faculties, academic departments, accredited degree tracks, and institutional seat allocations.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container transition-all flex items-center gap-space-xs font-body-medium text-body-medium">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Export Directory</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-primary-container text-on-primary shadow-sm hover:bg-secondary transition-all flex items-center gap-space-xs font-body-medium text-body-medium">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add Academic Department</span>
+</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md mb-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-table-header text-table-header text-on-surface-variant uppercase tracking-wider">Departments</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">apartment</span>
+</div>
+</div>
+<div class="mt-3 flex items-baseline gap-space-xs">
+<span class="font-display-hero text-[28px] font-bold text-on-surface">14</span>
+<span class="font-label-mono text-label-mono text-tertiary-container font-semibold bg-tertiary-fixed px-1.5 py-0.5 rounded">All Active</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-table-cell text-table-cell">Across 5 Academic Faculties</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-table-header text-table-header text-on-surface-variant uppercase tracking-wider">Accredited Programs</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+</div>
+</div>
+<div class="mt-3 flex items-baseline gap-space-xs">
+<span class="font-display-hero text-[28px] font-bold text-on-surface">48</span>
+<span class="font-label-mono text-label-mono text-on-secondary-container font-semibold bg-secondary-fixed px-1.5 py-0.5 rounded">+3 Q3 Audit</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-table-cell text-table-cell">BSc, MSc, MPhil &amp; PhD tracks</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-table-header text-table-header text-on-surface-variant uppercase tracking-wider">Appointed Faculty</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+</div>
+<div class="mt-3 flex items-baseline gap-space-xs">
+<span class="font-display-hero text-[28px] font-bold text-on-surface">840</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">Lecturers</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-table-cell text-table-cell">96.4% Course staffing ratio</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-table-header text-table-header text-on-surface-variant uppercase tracking-wider">Enrolled Cohort</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+</div>
+</div>
+<div class="mt-3 flex items-baseline gap-space-xs">
+<span class="font-display-hero text-[28px] font-bold text-on-surface">18,450</span>
+<span class="font-label-mono text-label-mono text-tertiary-container font-semibold bg-tertiary-fixed px-1.5 py-0.5 rounded">Fall '25</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-table-cell text-table-cell">Enterprise LTI Enrolled</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex flex-1 items-center gap-space-sm w-full md:w-auto">
+<div class="relative flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-4 rounded-lg bg-surface-container-low text-on-surface placeholder-outline font-body-regular text-body-regular focus:outline-none focus:bg-surface-container-lowest transition-all" id="dept-search-input" placeholder="Search departments, HODs, programs, or codes..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs">
+<select class="h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-medium text-body-medium focus:outline-none">
+<option>All Faculties</option>
+<option>Business &amp; Management Department</option>
+<option>Business &amp; Management Department</option>
+<option>Business &amp; Management Department</option>
+<option>Business &amp; Management Department</option>
+</select>
+<select class="h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-medium text-body-medium focus:outline-none">
+<option>Status: All</option>
+<option>Active</option>
+<option>Under Review</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-mono text-label-mono self-end md:self-auto">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span>SYNCED WITH SIS REGISTRAR (AUTOSYNC 14M AGO)</span>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<div class="xl:col-span-8 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="px-space-lg py-3.5 bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-card-title text-card-title text-on-surface">Institutional Department Directory</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-badge-micro text-badge-micro">14 UNITS</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container-high transition-colors" title="Filter columns">
+<span class="material-symbols-outlined text-[18px]">view_column</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container-high transition-colors" title="Density">
+<span class="material-symbols-outlined text-[18px]">density_medium</span>
+</button>
+</div>
+</div>
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-table-header text-table-header uppercase">
+<th class="py-3 px-space-md">Department &amp; Faculty</th>
+<th class="py-3 px-space-md">HOD Leadership</th>
+<th class="py-3 px-space-md">Programs</th>
+<th class="py-3 px-space-md text-right">Courses</th>
+<th class="py-3 px-space-md text-right">Faculty</th>
+<th class="py-3 px-space-md text-right">Students</th>
+<th class="py-3 px-space-md">Status</th>
+<th class="py-3 px-space-md text-center">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-table-cell text-table-cell text-on-surface">
+<tr class="bg-surface-container-lowest hover:bg-surface-container/50 transition-colors cursor-pointer group" onclick="selectDepartment('cs')">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-label-mono text-[12px] font-bold">
+                    CS
+                  </div>
+<div>
+<div class="font-body-medium text-body-medium text-on-surface font-semibold group-hover:text-secondary transition-colors">
+                      Dept. of Computer Science &amp; AI
+                    </div>
+<div class="text-[12px] text-on-surface-variant font-label-mono">
+                      CS-ENG-01 • Science &amp; Tech
+                    </div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center text-[11px] font-bold">
+                    ER
+                  </div>
+<div>
+<div class="font-medium text-on-surface">Dr. Elena Rostova</div>
+<div class="text-[11px] text-on-surface-variant font-label-mono">erostova@Demo Institution.ac.uk</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-badge-micro text-badge-micro font-medium">
+                  4 Accredited
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-label-mono font-medium">94</td>
+<td class="py-3.5 px-space-md text-right font-label-mono">142</td>
+<td class="py-3.5 px-space-md text-right font-label-mono font-semibold text-primary">4,820</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-badge-micro text-badge-micro">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-fixed"></span>
+                  ACTIVE
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<button class="p-1 rounded hover:bg-surface-container text-secondary transition-colors" title="Inspect">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-surface-container/50 transition-colors cursor-pointer group" onclick="selectDepartment('med')">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-secondary text-on-secondary flex items-center justify-center font-label-mono text-[12px] font-bold">
+                    BM
+                  </div>
+<div>
+<div class="font-body-medium text-body-medium text-on-surface font-semibold group-hover:text-secondary transition-colors">
+                      Biomedical Sciences &amp; Genetics
+                    </div>
+<div class="text-[12px] text-on-surface-variant font-label-mono">
+                      MED-BIO-04 • Medicine &amp; Health
+                    </div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-tint text-on-secondary flex items-center justify-center text-[11px] font-bold">
+                    MT
+                  </div>
+<div>
+<div class="font-medium text-on-surface">Prof. Marcus Thorne</div>
+<div class="text-[11px] text-on-surface-variant font-label-mono">mthorne@Demo Institution.ac.uk</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-badge-micro text-badge-micro font-medium">
+                  6 Accredited
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-label-mono font-medium">112</td>
+<td class="py-3.5 px-space-md text-right font-label-mono">198</td>
+<td class="py-3.5 px-space-md text-right font-label-mono font-semibold text-primary">3,410</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-badge-micro text-badge-micro">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-fixed"></span>
+                  ACTIVE
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<button class="p-1 rounded hover:bg-surface-container text-secondary transition-colors" title="Inspect">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-surface-container/50 transition-colors cursor-pointer group">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center font-label-mono text-[12px] font-bold">
+                    ME
+                  </div>
+<div>
+<div class="font-body-medium text-body-medium text-on-surface font-semibold group-hover:text-secondary transition-colors">
+                      Mechanical &amp; Aerospace Eng.
+                    </div>
+<div class="text-[12px] text-on-surface-variant font-label-mono">
+                      ENG-MEC-02 • Business &amp; Management Department
+                    </div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center text-[11px] font-bold">
+                    SA
+                  </div>
+<div>
+<div class="font-medium text-on-surface">Dr. Samuel Adebayo</div>
+<div class="text-[11px] text-on-surface-variant font-label-mono">sadebayo@Demo Institution.ac.uk</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-badge-micro text-badge-micro font-medium">
+                  5 Accredited
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-label-mono font-medium">88</td>
+<td class="py-3.5 px-space-md text-right font-label-mono">115</td>
+<td class="py-3.5 px-space-md text-right font-label-mono font-semibold text-primary">2,940</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-badge-micro text-badge-micro">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-fixed"></span>
+                  ACTIVE
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<button class="p-1 rounded hover:bg-surface-container text-secondary transition-colors" title="Inspect">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-surface-container/50 transition-colors cursor-pointer group">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center font-label-mono text-[12px] font-bold">
+                    LW
+                  </div>
+<div>
+<div class="font-body-medium text-body-medium text-on-surface font-semibold group-hover:text-secondary transition-colors">
+                      Business &amp; Management Department
+                    </div>
+<div class="text-[12px] text-on-surface-variant font-label-mono">
+                      LAW-JUR-09 • Humanities &amp; Law
+                    </div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center text-[11px] font-bold">
+                    AK
+                  </div>
+<div>
+<div class="font-medium text-on-surface">Lady Justice A. Kincaid</div>
+<div class="text-[11px] text-on-surface-variant font-label-mono">akincaid@Demo Institution.ac.uk</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-badge-micro text-badge-micro font-medium">
+                  3 Accredited
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-label-mono font-medium">42</td>
+<td class="py-3.5 px-space-md text-right font-label-mono">68</td>
+<td class="py-3.5 px-space-md text-right font-label-mono font-semibold text-primary">1,780</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-badge-micro text-badge-micro">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  REVIEW
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<button class="p-1 rounded hover:bg-surface-container text-secondary transition-colors" title="Inspect">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-surface-container/50 transition-colors cursor-pointer group">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center font-label-mono text-[12px] font-bold">
+                    PY
+                  </div>
+<div>
+<div class="font-body-medium text-body-medium text-on-surface font-semibold group-hover:text-secondary transition-colors">
+                      Quantum Physics &amp; Astrophysics
+                    </div>
+<div class="text-[12px] text-on-surface-variant font-label-mono">
+                      PHY-AST-03 • Science &amp; Tech
+                    </div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center text-[11px] font-bold">
+                    CL
+                  </div>
+<div>
+<div class="font-medium text-on-surface">Dr. Chen Liu</div>
+<div class="text-[11px] text-on-surface-variant font-label-mono">cliu@Demo Institution.ac.uk</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-badge-micro text-badge-micro font-medium">
+                  5 Accredited
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-label-mono font-medium">76</td>
+<td class="py-3.5 px-space-md text-right font-label-mono">102</td>
+<td class="py-3.5 px-space-md text-right font-label-mono font-semibold text-primary">1,960</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-badge-micro text-badge-micro">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-fixed"></span>
+                  ACTIVE
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<button class="p-1 rounded hover:bg-surface-container text-secondary transition-colors" title="Inspect">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-surface-container/50 transition-colors cursor-pointer group">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center font-label-mono text-[12px] font-bold">
+                    EC
+                  </div>
+<div>
+<div class="font-body-medium text-body-medium text-on-surface font-semibold group-hover:text-secondary transition-colors">
+                      Applied Economics &amp; Public Policy
+                    </div>
+<div class="text-[12px] text-on-surface-variant font-label-mono">
+                      SOC-EC-05 • Humanities &amp; Law
+                    </div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-tint text-on-secondary flex items-center justify-center text-[11px] font-bold">
+                    HV
+                  </div>
+<div>
+<div class="font-medium text-on-surface">Prof. Henriette Vance</div>
+<div class="text-[11px] text-on-surface-variant font-label-mono">hvance@Demo Institution.ac.uk</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-badge-micro text-badge-micro font-medium">
+                  4 Accredited
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-label-mono font-medium">62</td>
+<td class="py-3.5 px-space-md text-right font-label-mono">84</td>
+<td class="py-3.5 px-space-md text-right font-label-mono font-semibold text-primary">3,540</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-badge-micro text-badge-micro">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-fixed"></span>
+                  ACTIVE
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<button class="p-1 rounded hover:bg-surface-container text-secondary transition-colors" title="Inspect">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-md bg-surface-container-low flex items-center justify-between text-on-surface-variant font-table-header text-table-header">
+<div>Showing 6 of 14 Academic Departments</div>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container transition-colors disabled:opacity-50" disabled="">Previous</button>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-medium">1</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors">2</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors">3</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container transition-colors">Next</button>
+</div>
+</div>
+</div>
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden border-t-4 border-secondary">
+<div class="p-space-md bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">account_tree</span>
+<span class="font-card-title text-card-title text-on-surface">Department Blueprint</span>
+</div>
+<span class="font-label-mono text-label-mono text-secondary font-semibold bg-secondary-fixed px-2 py-0.5 rounded">
+            CS-ENG-01
+          </span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="flex items-start gap-space-sm">
+<img class="w-16 h-16 rounded-xl object-cover shadow-sm shrink-0" data-alt="Modern high-tech university laboratory for computer science and artificial intelligence research at the Demo Institution, featuring rows of workstations, clean geometric desks, soft oceanic blue ambient lighting, architectural glass walls, and scholarly academic interior design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBumwZK3DHw4QBsFrxmy9okGr7CP2P0QIyz_9_x-WgGRy5gYhYCRiY73hDZsyNJrXKc76MPJuFYlG9T1zNw1lVFecRSXvLGLBXCebQJ2djNC46Bh6kxPptTi0fL6BkISwUpeUblaDPI1muBsa0Il90s7MdhRXt4jnq7IUhoSyWM9mRFWVdv_5xSAqpXnag5verD143eZj0THiPdjFNEJHh5uKOzrItOG1k6tlSztMLTo81FX-tv_kjmtg"/>
+<div class="flex-1 min-w-0">
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight truncate">Dept. of Computer Science &amp; AI</h2>
+<p class="font-body-regular text-[13px] text-on-surface-variant mt-0.5">Business &amp; Management Department • Est. 1984</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="inline-flex items-center gap-1 font-badge-micro text-badge-micro bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-fixed"></span>
+                  FULLY ACCREDITED
+                </span>
+<span class="text-on-surface-variant font-label-mono text-[11px]">ABET / BCS CERT</span>
+</div>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-semibold text-sm">
+                ER
+              </div>
+<div>
+<div class="font-body-medium text-body-medium text-on-surface font-semibold">Dr. Elena Rostova</div>
+<div class="text-[12px] text-on-surface-variant">Tenured Chair &amp; Head of Dept</div>
+</div>
+</div>
+<button class="h-8 px-2.5 rounded bg-surface-container-lowest text-secondary font-body-medium text-[12px] shadow-sm hover:bg-surface-container transition-colors">
+              Manage HOD
+            </button>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md">
+<div class="flex items-center justify-between mb-2">
+<span class="font-table-header text-table-header text-on-surface-variant uppercase">Publisher Seat License Allocation</span>
+<span class="font-label-mono text-label-mono text-primary font-bold">92.6% UTILIZED</span>
+</div>
+<div class="w-full bg-surface-variant h-2 rounded-full overflow-hidden mb-2">
+<div class="bg-secondary h-full rounded-full" style="width: 92.6%"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-table-cell text-table-cell">
+<span><strong>4,820</strong> Active Readers</span>
+<span><strong>5,200</strong> Seats Allocated ($58,900 ARR)</span>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-table-header text-table-header text-on-surface uppercase tracking-wider">Associated Degree Programs</span>
+<span class="font-label-mono text-label-mono text-secondary font-semibold">4 ACTIVE TRACKS</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm hover:shadow transition-shadow">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-body-medium text-body-medium text-on-surface font-semibold">BSc Computer Science</div>
+<div class="font-table-cell text-table-cell text-on-surface-variant mt-0.5">3 Year Standard • Undergrad</div>
+</div>
+<span class="font-label-mono text-label-mono font-semibold text-primary">1,840 Students</span>
+</div>
+<div class="mt-2 pt-2 flex items-center justify-between text-[12px] text-on-surface-variant font-label-mono">
+<span>38 Core Courses</span>
+<span class="text-tertiary-container font-semibold">100% Staffed</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm hover:shadow transition-shadow">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-body-medium text-body-medium text-on-surface font-semibold">MSc Artificial Intelligence &amp; ML</div>
+<div class="font-table-cell text-table-cell text-on-surface-variant mt-0.5">1 Year Intensive • Postgrad</div>
+</div>
+<span class="font-label-mono text-label-mono font-semibold text-primary">620 Students</span>
+</div>
+<div class="mt-2 pt-2 flex items-center justify-between text-[12px] text-on-surface-variant font-label-mono">
+<span>24 Advanced Courses</span>
+<span class="text-secondary font-semibold">12 Content Adoptions</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm hover:shadow transition-shadow">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-body-medium text-body-medium text-on-surface font-semibold">MSc Software Engineering</div>
+<div class="font-table-cell text-table-cell text-on-surface-variant mt-0.5">1 Year Track • Postgrad</div>
+</div>
+<span class="font-label-mono text-label-mono font-semibold text-primary">480 Students</span>
+</div>
+<div class="mt-2 pt-2 flex items-center justify-between text-[12px] text-on-surface-variant font-label-mono">
+<span>18 Specialized Modules</span>
+<span class="text-tertiary-container font-semibold">Curriculum Audited</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm hover:shadow transition-shadow">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-body-medium text-body-medium text-on-surface font-semibold">PhD Computing &amp; Info Systems</div>
+<div class="font-table-cell text-table-cell text-on-surface-variant mt-0.5">3-4 Year Doctoral Research</div>
+</div>
+<span class="font-label-mono text-label-mono font-semibold text-primary">110 Researchers</span>
+</div>
+<div class="mt-2 pt-2 flex items-center justify-between text-[12px] text-on-surface-variant font-label-mono">
+<span>14 Research Groups</span>
+<span class="text-on-surface-variant">Tier-1 Grants</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex flex-col gap-2">
+<div class="grid grid-cols-2 gap-2">
+<button class="h-9 px-3 rounded-lg bg-surface-container text-on-surface font-body-medium text-body-medium hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">groups</span>
+<span>All 142 Faculty</span>
+</button>
+<button class="h-9 px-3 rounded-lg bg-surface-container text-on-surface font-body-medium text-body-medium hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">library_books</span>
+<span>View 94 Courses</span>
+</button>
+</div>
+<button class="h-9 px-3 rounded-lg bg-surface-container-low text-on-surface-variant font-body-medium text-body-medium hover:bg-surface-container transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Review Seat Allocation Policy</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-card-title text-card-title text-on-surface">Curriculum Compliance Health</span>
+<span class="material-symbols-outlined text-tertiary-container text-[18px]">verified</span>
+</div>
+<div class="space-y-3">
+<div>
+<div class="flex justify-between text-[12px] font-body-medium mb-1">
+<span class="text-on-surface-variant">LMS integration LMS Integration</span>
+<span class="font-label-mono font-semibold text-tertiary-container">100% ONLINE</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-fixed-dim h-full" style="width: 100%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[12px] font-body-medium mb-1">
+<span class="text-on-surface-variant">Faculty Syllabus Authorizations</span>
+<span class="font-label-mono font-semibold text-secondary">94% COMPLETED</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 94%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[12px] font-body-medium mb-1">
+<span class="text-on-surface-variant">Publisher Resource Royalties Settled</span>
+<span class="font-label-mono font-semibold text-primary">AUDITED</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 98%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function selectDepartment(deptKey) {
+    console.log('Selected academic department for inspection:', deptKey);
+  }
+
+  const searchInput = document.getElementById('dept-search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', function(e) {
+      const term = e.target.value.toLowerCase();
+      const rows = document.querySelectorAll('tbody tr');
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(term) ? '' : 'none';
+      });
+    });
+  }
+</script></main></div>  <script src="shared/demo-runtime.js"></script>
+</body></html>

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#f7f9ff","background":"#f7f9ff","surface-container-highest":"#d9e3f1","primary-fixed":"#d1e4ff","tertiary-container":"#003824","on-primary-fixed-variant":"#2f4865","on-secondary-container":"#005782","on-error-container":"#93000a","surface-container-low":"#edf4ff","primary-fixed-dim":"#afc9ea","secondary-container":"#8ecdff","error":"#ba1a1a","secondary":"#156490","secondary-fixed":"#cbe6ff","surface-container":"#e4effd","surface-container-high":"#dfe9f7","on-secondary-fixed":"#001e30","on-error":"#ffffff","on-surface-variant":"#43474d","primary-container":"#17324d","error-container":"#ffdad6","on-primary-fixed":"#001d36","secondary-fixed-dim":"#8ecdff","inverse-on-surface":"#e8f2ff","inverse-primary":"#afc9ea","surface-variant":"#d9e3f1","on-secondary-fixed-variant":"#004b71","surface-dim":"#d1dbe9","on-primary":"#ffffff","tertiary-fixed":"#a4f3ca","on-background":"#121c26","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","on-surface":"#121c26","on-tertiary-fixed-variant":"#005236","tertiary":"#002113","surface-bright":"#f7f9ff","outline":"#74777e","primary":"#001d36","on-tertiary-container":"#5aa782","surface-tint":"#47607e","on-secondary":"#ffffff","inverse-surface":"#27313c","on-primary-container":"#819aba","outline-variant":"#c3c6ce","on-tertiary-fixed":"#002113","tertiary-fixed-dim":"#88d6af"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2rem","gutter":"1.5rem","gutter-mobile":"1rem","margin-mobile":"1rem","space-xs":"0.25rem","space-lg":"1.5rem","margin":"2rem","space-md":"1rem","space-sm":"0.5rem"},fontFamily:{"headline-lg":["Inter"],"display-hero-mobile":["Inter"],"card-title":["Inter"],"body-regular":["Inter"],"table-header":["Inter"],"table-cell":["Inter"],"badge-micro":["Inter"],"headline-md":["Inter"],"display-hero":["Inter"],"body-medium":["Inter"],"label-mono":["JetBrains Mono"]},fontSize:{"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.02em","fontWeight":"700"}],"card-title":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"body-regular":["14px",{"lineHeight":"21px","fontWeight":"400"}],"table-header":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"table-cell":["13px",{"lineHeight":"18px","fontWeight":"400"}],"badge-micro":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-medium":["14px",{"lineHeight":"21px","fontWeight":"500"}],"label-mono":["12px",{"lineHeight":"16px","fontWeight":"500"}]}}}}</script>  <link rel="stylesheet" href="shared/demo.css">
+</head><body class="bg-background font-body-regular text-body-regular text-on-surface antialiased" data-roles="hod"><aside class="fixed left-0 top-0 h-full w-60 bg-primary-container z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-14 px-gutter flex items-center gap-space-sm bg-primary border-b border-outline-variant/15"><span class="e26-brand-mark" aria-label="E26">E26</span><div class="flex flex-col"><span class="font-headline-md text-card-title text-on-primary font-semibold tracking-tight leading-tight">E26 Digital Learning Platform</span><span class="font-badge-micro text-badge-micro text-on-primary-container tracking-wider font-semibold uppercase">Department Manager</span></div></div><div class="px-gutter pt-space-md pb-space-xs"><span class="font-table-header text-table-header text-on-primary-container/70 uppercase tracking-wider font-semibold">Department Workspace</span></div><nav class="px-space-sm flex flex-col gap-0.5" data-active-classes="bg-secondary text-on-secondary font-semibold"><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="dashboard" href="hod_dashboard.html"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span class="font-body-medium text-body-medium">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="students" href="institution_students.html"><span class="material-symbols-outlined text-[18px]">school</span><span class="font-body-medium text-body-medium">Students</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="lecturers" href="institution_departments.html"><span class="material-symbols-outlined text-[18px]">co_present</span><span class="font-body-medium text-body-medium">Lecturers</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="programs" href="hod_programs.html"><span class="material-symbols-outlined text-[18px]">account_tree</span><span class="font-body-medium text-body-medium">Programs</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2 rounded transition-colors bg-secondary text-on-secondary font-semibold" data-path="courses" href="hod_courses.html"><span class="material-symbols-outlined text-[18px]">menu_book</span><span class="font-body-medium text-body-medium">Courses</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="publisher-library" href="#"><span class="material-symbols-outlined text-[18px]">local_library</span><span class="font-body-medium text-body-medium">Publisher Library</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="assignments" href="#"><span class="material-symbols-outlined text-[18px]">assignment</span><span class="font-body-medium text-body-medium">Assignments</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="assessments" href="#"><span class="material-symbols-outlined text-[18px]">fact_check</span><span class="font-body-medium text-body-medium">Assessments</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[18px]">bar_chart</span><span class="font-body-medium text-body-medium">Reports</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span class="font-body-medium text-body-medium">Settings</span></a></nav></div><div class="p-space-md mx-space-sm mb-space-md rounded bg-primary/60 border border-outline-variant/15 flex flex-col gap-1.5"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary-fixed text-[14px]">apartment</span><span class="font-table-header text-table-header text-secondary-fixed uppercase tracking-wider font-semibold truncate">ECONOMICS &amp; BUSINESS</span></div><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-tertiary-fixed-dim text-[14px]">verified</span><span class="font-badge-micro text-badge-micro text-on-primary-container uppercase">AACSB &amp; EQUIS ACCREDITED</span></div><div class="flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-tertiary-fixed-dim"></span><span class="font-badge-micro text-badge-micro text-on-primary-container/80 uppercase">Privacy controls · LMS sync active</span></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-14 bg-surface-container-lowest border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg gap-space-md"><div class="flex items-center gap-space-md min-w-0"><div class="flex items-center gap-space-sm truncate"><span class="font-body-medium text-body-medium text-on-surface font-semibold">Demo Institution</span><span class="text-outline text-body-regular">•</span><span class="font-body-regular text-body-regular text-on-surface-variant truncate">Dept. of Economics &amp; Business</span></div><span class="hidden xl:inline-flex items-center px-2 py-0.5 rounded font-label-mono text-label-mono font-medium bg-surface-container-high text-primary border border-outline-variant/50">HOD CONSOLE - Business Department</span></div><div class="flex items-center gap-space-md flex-shrink-0"><div class="relative w-64 lg:w-80 hidden md:block"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full pl-8 pr-3 py-1.5 bg-surface-container-low rounded border border-outline-variant/60 font-body-regular text-table-cell text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-secondary" placeholder="Search students, faculty, courses, codices (⌘K)" type="text"/></div><div class="h-8 px-space-sm rounded bg-surface-container-low border border-outline-variant/50 flex items-center gap-1.5 text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span><span class="font-table-header text-table-header font-semibold text-on-surface-variant">Academic Term 2025–2026</span></div><button aria-label="Notifications" class="relative p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 h-2 w-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><button aria-label="Faculty Handbook" class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><div class="h-6 w-px bg-outline-variant/40"></div><div class="flex items-center gap-space-sm pl-1"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden lg:flex flex-col text-left"><span class="font-body-medium text-body-medium font-semibold text-on-surface leading-tight">Dr. Sarah Morgan</span><span class="font-badge-micro text-badge-micro text-on-surface-variant font-semibold leading-tight">HOD / PROFESSOR</span></div></div></div></header><main class="relative pt-14 w-full bg-background min-h-screen px-gutter py-space-lg"><div class="flex flex-col w-full">
+<!-- Dynamic Route Synchronization Script -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const activeLink = document.querySelector('nav a[data-path="courses"]');
+      if (activeLink) {
+        document.querySelectorAll("nav a").forEach(el => {
+          el.className = "flex items-center gap-space-sm px-space-md py-2 rounded text-on-primary-container hover:bg-secondary/40 hover:text-on-secondary transition-colors";
+        });
+        activeLink.className = "flex items-center gap-space-sm px-space-md py-2 rounded bg-secondary text-on-secondary font-semibold transition-colors";
+      }
+    });
+  </script>
+<!-- Context Header & Actions -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-table-header text-table-header text-secondary font-semibold uppercase tracking-wider">Curricular Governance &amp; Administration</span>
+<span class="text-outline-variant font-label-mono text-label-mono">•</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant font-medium">TERM Academic Term 2025–2026</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Department Courses &amp; Curricula</h1>
+<p class="font-body-regular text-body-regular text-on-surface-variant mt-0.5">Manage 49 active departmental courses, syllabus approvals, faculty assignments, and publisher codex adoptions.</p>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="h-9 px-space-md bg-surface-container-lowest text-on-surface font-body-medium text-body-medium rounded shadow-sm hover:bg-surface-container transition-colors flex items-center gap-1.5 focus:outline-none">
+<span class="material-symbols-outlined text-[17px] text-on-surface-variant">download</span>
+<span>Curriculum Audit (CSV)</span>
+</button>
+<button class="h-9 px-space-md bg-primary-container text-on-primary font-body-medium text-body-medium rounded shadow-sm hover:bg-secondary transition-colors flex items-center gap-1.5 focus:outline-none">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Provision New Course Section</span>
+</button>
+</div>
+</div>
+<!-- Top Metrics Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-table-header text-table-header uppercase text-on-surface-variant tracking-wider font-semibold">Total Active Courses</span>
+<span class="p-1 rounded bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-display-hero text-display-hero text-on-surface font-bold leading-none">49</span>
+<span class="font-badge-micro text-badge-micro font-semibold text-on-surface-variant">COURSES</span>
+</div>
+<div class="mt-2.5 flex items-center gap-1.5">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+<span class="font-table-cell text-table-cell text-on-surface-variant">Across 4 Degree Programs</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-table-header text-table-header uppercase text-on-surface-variant tracking-wider font-semibold">Total Class Sections</span>
+<span class="p-1 rounded bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-display-hero text-display-hero text-on-surface font-bold leading-none">105</span>
+<span class="font-badge-micro text-badge-micro font-semibold text-secondary">SECTIONS</span>
+</div>
+<div class="mt-2.5 flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded font-badge-micro text-badge-micro font-bold bg-surface-container text-secondary">100% STAFFED</span>
+<span class="font-table-cell text-table-cell text-on-surface-variant">Full faculty coverage</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-table-header text-table-header uppercase text-on-surface-variant tracking-wider font-semibold">Publisher Codices Bound</span>
+<span class="p-1 rounded bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[18px]">auto_stories</span>
+</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-display-hero text-display-hero text-on-surface font-bold leading-none">38</span>
+<span class="font-badge-micro text-badge-micro font-semibold text-on-surface-variant">TITLE LICENSES</span>
+</div>
+<div class="mt-2.5 flex items-center gap-1.5">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-table-cell text-table-cell text-on-surface-variant truncate">LMS integration Digital Courseware Synced</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-table-header text-table-header uppercase text-on-surface-variant tracking-wider font-semibold">Syllabus Compliance</span>
+<span class="p-1 rounded bg-surface-container text-on-tertiary-container">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-display-hero text-display-hero text-on-surface font-bold leading-none">100%</span>
+<span class="font-badge-micro text-badge-micro font-bold px-1.5 py-0.5 rounded bg-surface-container text-tertiary-fixed-dim">COMPLIANT</span>
+</div>
+<div class="mt-2.5 flex items-center gap-1.5">
+<span class="font-table-cell text-table-cell text-on-surface-variant">All 49 authorized for Fall/Academic Term 2025–2026</span>
+</div>
+</div>
+</div>
+<!-- Main Content Two-Panel Partition -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT PANEL: Course Roster Table (approx 65% width = 8 cols) -->
+<div class="xl:col-span-8 flex flex-col bg-surface-container-lowest rounded shadow-sm overflow-hidden">
+<!-- Filter and Query Header -->
+<div class="p-space-md bg-surface-container-lowest flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="relative flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full pl-8 pr-3 py-1.5 bg-surface-container-low rounded font-body-regular text-table-cell text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none" id="course-filter-input" placeholder="Filter by code, title, or instructor..." type="text"/>
+</div>
+<div class="flex items-center gap-2 flex-wrap">
+<select class="h-8 px-2.5 bg-surface-container-low text-on-surface font-body-regular text-table-cell rounded focus:outline-none">
+<option>All Degree Programs</option>
+<option>BSc Economics</option>
+<option>MBA Executive</option>
+<option>MSc Finance</option>
+</select>
+<select class="h-8 px-2.5 bg-surface-container-low text-on-surface font-body-regular text-table-cell rounded focus:outline-none">
+<option>All Levels</option>
+<option>Undergraduate (Level 100-300)</option>
+<option>Graduate (Level 400-800)</option>
+</select>
+<select class="h-8 px-2.5 bg-surface-container-low text-on-surface font-body-regular text-table-cell rounded focus:outline-none">
+<option>Active Academic Term 2025–2026</option>
+<option>Archived Hilary</option>
+</select>
+</div>
+</div>
+<!-- Course Roster Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left" id="courses-data-table">
+<thead>
+<tr class="h-10 bg-surface-container text-on-surface-variant font-table-header text-table-header uppercase tracking-wider">
+<th class="px-space-md py-2 font-semibold">Course Code &amp; Title</th>
+<th class="px-space-sm py-2 font-semibold">Program</th>
+<th class="px-space-sm py-2 font-semibold">Faculty Lead</th>
+<th class="px-space-sm py-2 font-semibold">Sections / Enrolled</th>
+<th class="px-space-sm py-2 font-semibold">Bound Codex</th>
+<th class="px-space-sm py-2 font-semibold">Syllabus</th>
+<th class="px-space-md py-2 text-right font-semibold">Action</th>
+</tr>
+</thead>
+<tbody class="font-table-cell text-table-cell divide-y-0 text-on-surface">
+<!-- Row 1: Selected Row -->
+<tr class="h-14 bg-surface-container-low cursor-pointer transition-colors group" onclick="selectCourse(this, 'ECON-301')">
+<td class="px-space-md py-2 font-medium">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-6 bg-secondary rounded-full"></span>
+<div>
+<div class="font-body-medium text-body-medium font-semibold text-primary">ECON-301</div>
+<div class="font-body-regular text-table-cell text-on-surface-variant font-normal">Global Macroeconomics</div>
+</div>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<span class="px-2 py-0.5 rounded font-badge-micro text-badge-micro font-semibold bg-surface-container-highest text-on-surface-variant">BSc Economics</span>
+</td>
+<td class="px-space-sm py-2">
+<div class="font-medium text-on-surface">Dr. Sarah Morgan</div>
+<div class="font-badge-micro text-badge-micro text-on-surface-variant">HOD / Professor</div>
+</td>
+<td class="px-space-sm py-2">
+<div class="font-label-mono text-label-mono font-medium text-on-surface">4 Sec • 420 Students</div>
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full overflow-hidden mt-1">
+<div class="bg-secondary h-full rounded-full" style="width: 93%;"></div>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<div class="flex items-center gap-1.5 text-on-surface truncate max-w-[150px]">
+<span class="material-symbols-outlined text-[15px] text-secondary">book</span>
+<span class="truncate">Demo Publisher Macro (3rd Ed)</span>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-badge-micro text-badge-micro font-bold bg-surface-container text-tertiary-fixed-dim">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+                  APPROVED
+                </span>
+</td>
+<td class="px-space-md py-2 text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="h-14 hover:bg-surface-container-low/60 cursor-pointer transition-colors group" onclick="selectCourse(this, 'MBA-810')">
+<td class="px-space-md py-2 font-medium">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-6 bg-transparent rounded-full group-hover:bg-outline-variant"></span>
+<div>
+<div class="font-body-medium text-body-medium font-semibold text-primary">MBA-810</div>
+<div class="font-body-regular text-table-cell text-on-surface-variant font-normal">Corporate Strategy &amp; Innovation</div>
+</div>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<span class="px-2 py-0.5 rounded font-badge-micro text-badge-micro font-semibold bg-surface-container-highest text-on-surface-variant">MBA Executive</span>
+</td>
+<td class="px-space-sm py-2">
+<div class="font-medium text-on-surface">Dr. Sarah Morgan</div>
+<div class="font-badge-micro text-badge-micro text-on-surface-variant">HOD / Professor</div>
+</td>
+<td class="px-space-sm py-2">
+<div class="font-label-mono text-label-mono font-medium text-on-surface">2 Sec • 280 Students</div>
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full overflow-hidden mt-1">
+<div class="bg-secondary h-full rounded-full" style="width: 88%;"></div>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<div class="flex items-center gap-1.5 text-on-surface truncate max-w-[150px]">
+<span class="material-symbols-outlined text-[15px] text-secondary">book</span>
+<span class="truncate">HBR Core Series</span>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-badge-micro text-badge-micro font-bold bg-surface-container text-tertiary-fixed-dim">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+                  APPROVED
+                </span>
+</td>
+<td class="px-space-md py-2 text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="h-14 hover:bg-surface-container-low/60 cursor-pointer transition-colors group" onclick="selectCourse(this, 'FIN-302')">
+<td class="px-space-md py-2 font-medium">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-6 bg-transparent rounded-full group-hover:bg-outline-variant"></span>
+<div>
+<div class="font-body-medium text-body-medium font-semibold text-primary">FIN-302</div>
+<div class="font-body-regular text-table-cell text-on-surface-variant font-normal">Advanced Corporate Valuation</div>
+</div>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<span class="px-2 py-0.5 rounded font-badge-micro text-badge-micro font-semibold bg-surface-container-highest text-on-surface-variant">MSc Finance</span>
+</td>
+<td class="px-space-sm py-2">
+<div class="font-medium text-on-surface">Prof. Henriette Vance</div>
+<div class="font-badge-micro text-badge-micro text-on-surface-variant">Chair of Finance</div>
+</td>
+<td class="px-space-sm py-2">
+<div class="font-label-mono text-label-mono font-medium text-on-surface">3 Sec • 310 Students</div>
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full overflow-hidden mt-1">
+<div class="bg-secondary h-full rounded-full" style="width: 79%;"></div>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<div class="flex items-center gap-1.5 text-on-surface truncate max-w-[150px]">
+<span class="material-symbols-outlined text-[15px] text-secondary">book</span>
+<span class="truncate">Demo Publisher Finance Codex</span>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-badge-micro text-badge-micro font-bold bg-surface-container text-tertiary-fixed-dim">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+                  APPROVED
+                </span>
+</td>
+<td class="px-space-md py-2 text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="h-14 hover:bg-surface-container-low/60 cursor-pointer transition-colors group" onclick="selectCourse(this, 'STAT-210')">
+<td class="px-space-md py-2 font-medium">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-6 bg-transparent rounded-full group-hover:bg-outline-variant"></span>
+<div>
+<div class="font-body-medium text-body-medium font-semibold text-primary">STAT-210</div>
+<div class="font-body-regular text-table-cell text-on-surface-variant font-normal">Econometrics &amp; Quantitative Modeling</div>
+</div>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<span class="px-2 py-0.5 rounded font-badge-micro text-badge-micro font-semibold bg-surface-container-highest text-on-surface-variant">BSc Economics</span>
+</td>
+<td class="px-space-sm py-2">
+<div class="font-medium text-on-surface">Dr. Julian Davenport</div>
+<div class="font-badge-micro text-badge-micro text-on-surface-variant">Assoc. Professor</div>
+</td>
+<td class="px-space-sm py-2">
+<div class="font-label-mono text-label-mono font-medium text-on-surface">4 Sec • 440 Students</div>
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full overflow-hidden mt-1">
+<div class="bg-secondary h-full rounded-full" style="width: 98%;"></div>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<div class="flex items-center gap-1.5 text-on-surface truncate max-w-[150px]">
+<span class="material-symbols-outlined text-[15px] text-secondary">book</span>
+<span class="truncate">Demo Publisher Core Econometrics</span>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-badge-micro text-badge-micro font-bold bg-surface-container-highest text-on-secondary-container">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+                  AUDIT REVIEW
+                </span>
+</td>
+<td class="px-space-md py-2 text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="h-14 hover:bg-surface-container-low/60 cursor-pointer transition-colors group" onclick="selectCourse(this, 'MKT-205')">
+<td class="px-space-md py-2 font-medium">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-6 bg-transparent rounded-full group-hover:bg-outline-variant"></span>
+<div>
+<div class="font-body-medium text-body-medium font-semibold text-primary">MKT-205</div>
+<div class="font-body-regular text-table-cell text-on-surface-variant font-normal">Global Brand Marketing &amp; Consumer Dynamics</div>
+</div>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<span class="px-2 py-0.5 rounded font-badge-micro text-badge-micro font-semibold bg-surface-container-highest text-on-surface-variant">BSc Economics</span>
+</td>
+<td class="px-space-sm py-2">
+<div class="font-medium text-on-surface">Dr. Clara Stirling</div>
+<div class="font-badge-micro text-badge-micro text-on-surface-variant">Visiting Fellow</div>
+</td>
+<td class="px-space-sm py-2">
+<div class="font-label-mono text-label-mono font-medium text-on-surface">2 Sec • 340 Students</div>
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full overflow-hidden mt-1">
+<div class="bg-secondary h-full rounded-full" style="width: 85%;"></div>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<div class="flex items-center gap-1.5 text-on-surface truncate max-w-[150px]">
+<span class="material-symbols-outlined text-[15px] text-secondary">book</span>
+<span class="truncate">Demo Publisher Higher Ed Casebank</span>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-badge-micro text-badge-micro font-bold bg-surface-container text-tertiary-fixed-dim">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+                  APPROVED
+                </span>
+</td>
+<td class="px-space-md py-2 text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="h-14 hover:bg-surface-container-low/60 cursor-pointer transition-colors group" onclick="selectCourse(this, 'BUS-450')">
+<td class="px-space-md py-2 font-medium">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-6 bg-transparent rounded-full group-hover:bg-outline-variant"></span>
+<div>
+<div class="font-body-medium text-body-medium font-semibold text-primary">BUS-450</div>
+<div class="font-body-regular text-table-cell text-on-surface-variant font-normal">Business Ethics &amp; Public Policy</div>
+</div>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<span class="px-2 py-0.5 rounded font-badge-micro text-badge-micro font-semibold bg-surface-container-highest text-on-surface-variant">MBA Executive</span>
+</td>
+<td class="px-space-sm py-2">
+<div class="font-medium text-on-surface">Dame Evelyn Sterling</div>
+<div class="font-badge-micro text-badge-micro text-on-surface-variant">Honorary Professor</div>
+</td>
+<td class="px-space-sm py-2">
+<div class="font-label-mono text-label-mono font-medium text-on-surface">2 Sec • 260 Students</div>
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full overflow-hidden mt-1">
+<div class="bg-secondary h-full rounded-full" style="width: 72%;"></div>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<div class="flex items-center gap-1.5 text-on-surface truncate max-w-[150px]">
+<span class="material-symbols-outlined text-[15px] text-secondary">book</span>
+<span class="truncate">Demo Institution Law &amp; Ethics</span>
+</div>
+</td>
+<td class="px-space-sm py-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-badge-micro text-badge-micro font-bold bg-surface-container text-tertiary-fixed-dim">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+                  APPROVED
+                </span>
+</td>
+<td class="px-space-md py-2 text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination and Registry Health Footer -->
+<div class="p-space-md bg-surface-container-lowest flex items-center justify-between font-table-cell text-table-cell text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span>Showing <strong>6</strong> of <strong>49</strong> departmental courses</span>
+<span class="font-label-mono text-label-mono text-outline-variant">•</span>
+<span class="text-tertiary-fixed-dim font-medium">Synced with Demo Institution 4m ago</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="h-8 w-8 rounded flex items-center justify-center bg-surface-container hover:bg-surface-container-high text-on-surface" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<button class="h-8 px-3 rounded bg-primary text-on-primary font-medium">1</button>
+<button class="h-8 px-3 rounded bg-surface-container hover:bg-surface-container-high text-on-surface">2</button>
+<button class="h-8 px-3 rounded bg-surface-container hover:bg-surface-container-high text-on-surface">3</button>
+<button class="h-8 w-8 rounded flex items-center justify-center bg-surface-container hover:bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: Selected Course Detail & Syllabus Inspector (approx 35% width = 4 cols) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Primary Card: Course Inspector -->
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col">
+<!-- Badge and Status Header -->
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded font-label-mono text-label-mono font-semibold bg-primary-container text-on-primary">
+              ECON-301 • LEVEL 300
+            </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-badge-micro text-badge-micro font-bold bg-surface-container text-tertiary-fixed-dim">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+              VERIFIED SYLLABUS
+            </span>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant font-medium">Course Section</span>
+</div>
+<!-- Course Title & Hierarchy -->
+<div class="space-y-1 mb-space-md">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold leading-tight">Global Macroeconomics &amp; Central Banking</h2>
+<div class="font-body-medium text-body-medium text-secondary font-medium">Lead: Dr. Sarah Morgan (HOD) • Co-Lecturer: Prof. Marcus Sterling</div>
+<p class="font-table-cell text-table-cell text-on-surface-variant">BSc Economics &amp; Management (Core 3rd Year Requirement)</p>
+</div>
+<!-- Rich Academic Asset Box -->
+<div class="p-space-md bg-surface-container rounded mb-space-md">
+<div class="flex items-start gap-space-sm">
+<img class="w-16 h-20 object-cover rounded shadow-sm flex-shrink-0" data-alt="Scholarly hardcover textbook cover of Global Macroeconomics and Central Banking by E26 Academic Publishing, navy blue and gold refined typography, modern financial graph schematic visible on cover, clean academic library aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOzr4mVElEWO1sMb-CA8nGIKbbRT5bYWKxCwk0fuomawtEMLSWv4UIxT2HfpT5yqne4-JjPbtJf79QaGzTkHcRru_-RH-oPlhflYnD7Qs6SduWZOV8sgZcrj34VcC68v-S5rVxkqkw8cqtl0fEiGG_dZ0Duf7eYmUGNq_AYJ19TA-s5LAfDAmaUQJM0x5DN4sSKiulsVvFl2AHl2uw1q3L2XgXMdYeVBBi3kx0CE2F4lIiuLFvwJoRVA"/>
+<div class="min-w-0 flex-1">
+<span class="font-table-header text-table-header uppercase text-on-surface-variant font-semibold">Assigned Codex Courseware</span>
+<div class="font-body-medium text-body-medium font-semibold text-on-surface truncate">Macroeconomics (3rd Edition)</div>
+<div class="font-table-cell text-table-cell text-on-surface-variant">E26 Academic Publishing • Digital Edition</div>
+<div class="mt-1 flex items-center gap-1.5">
+<span class="h-2 w-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-badge-micro text-badge-micro font-semibold text-secondary">LMS institution learning platform integration Online</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Course Vital Stats Grid -->
+<div class="grid grid-cols-2 gap-space-sm p-space-sm bg-surface-container-low rounded mb-space-md">
+<div class="p-2">
+<span class="font-table-header text-table-header text-on-surface-variant uppercase font-semibold">Seat Quota</span>
+<div class="font-headline-md text-headline-md font-bold text-on-surface mt-0.5">420 / 450</div>
+<span class="font-badge-micro text-badge-micro text-secondary font-semibold">93.3% Allocated</span>
+</div>
+<div class="p-2">
+<span class="font-table-header text-table-header text-on-surface-variant uppercase font-semibold">Sections Active</span>
+<div class="font-headline-md text-headline-md font-bold text-on-surface mt-0.5">4 Sections</div>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant font-semibold">Sec A, B, C, D (4 TA labs)</span>
+</div>
+</div>
+<!-- Assessment Blueprint & Weights with Inline SVG Bars -->
+<div class="mb-space-md">
+<div class="flex items-center justify-between mb-2">
+<span class="font-table-header text-table-header text-on-surface font-semibold uppercase tracking-wider">Assessment Blueprint</span>
+<span class="font-badge-micro text-badge-micro font-bold text-on-surface-variant uppercase">Total 100% Weight</span>
+</div>
+<div class="space-y-2.5">
+<!-- Assessment 1 -->
+<div class="p-2.5 rounded bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-body-medium text-body-medium font-semibold text-on-surface">Problem Sets &amp; Case Briefs</span>
+<span class="font-label-mono text-label-mono font-bold text-secondary">25%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 25%"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-badge-micro text-badge-micro">
+<span>4 of 5 Completed by Cohort</span>
+<span>Average: 88.4%</span>
+</div>
+</div>
+<!-- Assessment 2 -->
+<div class="p-2.5 rounded bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-body-medium text-body-medium font-semibold text-on-surface">Midterm Examination</span>
+<span class="font-label-mono text-label-mono font-bold text-secondary">35%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 35%"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-badge-micro text-badge-micro">
+<span>Graded &amp; Moderate</span>
+<span class="text-tertiary-fixed-dim font-bold">Cohort Median: 84.2%</span>
+</div>
+</div>
+<!-- Assessment 3 -->
+<div class="p-2.5 rounded bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-body-medium text-body-medium font-semibold text-on-surface">Final Capstone Thesis</span>
+<span class="font-label-mono text-label-mono font-bold text-secondary">40%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 40%"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-badge-micro text-badge-micro">
+<span>Due Dec 12, 2025 (Demo Institution Exam Schools)</span>
+<span class="font-medium text-on-surface">Blind Double Marked</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Faculty & TA Staffing Roster -->
+<div class="mb-space-lg">
+<div class="flex items-center justify-between mb-2">
+<span class="font-table-header text-table-header text-on-surface font-semibold uppercase tracking-wider">Faculty &amp; Teaching Staff</span>
+<span class="font-badge-micro text-badge-micro text-secondary font-bold uppercase">4 Assigned</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-2">
+<div class="h-7 w-7 rounded-full bg-primary flex items-center justify-center text-on-primary font-badge-micro text-badge-micro font-bold">AT</div>
+<div>
+<div class="font-body-medium text-body-medium font-semibold text-on-surface">Dr. Sarah Morgan</div>
+<div class="font-badge-micro text-badge-micro text-on-surface-variant">Lead Lecturer (Tu/Th AM)</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-2">
+<div class="h-7 w-7 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-badge-micro text-badge-micro font-bold">MS</div>
+<div>
+<div class="font-body-medium text-body-medium font-semibold text-on-surface">Prof. Marcus Sterling</div>
+<div class="font-badge-micro text-badge-micro text-on-surface-variant">Co-Lecturer (Mon Lab)</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">co_present</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-2">
+<div class="h-7 w-7 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-badge-micro text-badge-micro font-bold">LG</div>
+<div>
+<div class="font-body-medium text-body-medium font-semibold text-on-surface">Liam Gallagher</div>
+<div class="font-badge-micro text-badge-micro text-on-surface-variant">Lead Graduate Teaching Assistant</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">school</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-2">
+<div class="h-7 w-7 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-badge-micro text-badge-micro font-bold">SJ</div>
+<div>
+<div class="font-body-medium text-body-medium font-semibold text-on-surface">Sarah Jenkins</div>
+<div class="font-badge-micro text-badge-micro text-on-surface-variant">GTA • Sections C &amp; D Recitations</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">school</span>
+</div>
+</div>
+</div>
+<!-- Action Drawer Operations -->
+<div class="flex flex-col gap-2 pt-space-sm mt-auto">
+<button class="w-full h-9 bg-primary-container text-on-primary font-body-medium text-body-medium rounded hover:bg-secondary transition-colors flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">edit_document</span>
+<span>Edit Course Blueprint &amp; Syllabus</span>
+</button>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-8 px-2 bg-surface-container text-on-surface font-body-medium text-body-medium rounded hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">group</span>
+<span>View Roster (420)</span>
+</button>
+<button class="h-8 px-2 bg-surface-container text-on-surface font-body-medium text-body-medium rounded hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">open_in_new</span>
+<span>Publisher Studio</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Secondary Quick Insights Panel -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">insights</span>
+<span class="font-body-medium text-body-medium font-semibold text-on-surface">Syllabus Accreditation Check</span>
+</div>
+<span class="px-2 py-0.5 rounded font-badge-micro text-badge-micro font-bold bg-surface-container text-tertiary-fixed-dim">AACSB VALID</span>
+</div>
+<p class="font-table-cell text-table-cell text-on-surface-variant mb-space-sm">
+          Learning outcomes aligned with Demo Institution Division of Social Sciences Guideline 4.2. All required publisher materials comply with accessibility WCAG 2.1 AAA.
+        </p>
+<div class="flex items-center justify-between text-on-surface-variant font-label-mono text-label-mono">
+<span>Last Audit: 12 Oct 2025</span>
+<a class="text-secondary hover:underline font-semibold flex items-center gap-1" href="#">
+<span>Audit Trail</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Table Row Selection Handler -->
+<script>
+    function selectCourse(rowElement, courseCode) {
+      const tableRows = document.querySelectorAll("#courses-data-table tbody tr");
+      tableRows.forEach(row => {
+        row.classList.remove("bg-surface-container-low");
+        const bar = row.querySelector("td span.rounded-full");
+        if (bar) {
+          bar.classList.remove("bg-secondary");
+          bar.classList.add("bg-transparent");
+        }
+      });
+
+      rowElement.classList.add("bg-surface-container-low");
+      const indicator = rowElement.querySelector("td span.rounded-full");
+      if (indicator) {
+        indicator.classList.remove("bg-transparent");
+        indicator.classList.add("bg-secondary");
+      }
+    }
+
+    // Client-side quick filter
+    const searchInput = document.getElementById("course-filter-input");
+    if (searchInput) {
+      searchInput.addEventListener("input", function(e) {
+        const query = e.target.value.toLowerCase();
+        const rows = document.querySelectorAll("#courses-data-table tbody tr");
+        rows.forEach(row => {
+          const text = row.innerText.toLowerCase();
+          row.style.display = text.includes(query) ? "" : "none";
+        });
+      });
+    }
+  </script>
+</div></main></div>  <script src="shared/demo-runtime.js"></script>
+</body></html>
