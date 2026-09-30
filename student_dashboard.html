@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>E26 Digital Learning Platform — Dashboard</title>
+<title>Braczero Digital Learning Platform — Dashboard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -176,14 +176,25 @@ h1{font-size:30px;line-height:36px;letter-spacing:-.03em;margin:0;font-weight:80
 }
 @media(max-width:480px){.page-head{align-items:flex-start;flex-direction:column}.stats{grid-template-columns:1fr 1fr}.nav{grid-template-columns:1fr 1fr}.course{min-height:0}}
 </style>
+
+<style>
+.brand-mark { display:block; width:clamp(56px,6vw,66px); height:28px; max-width:100%; padding:3px; box-sizing:border-box; object-fit:contain; flex:0 0 auto; border:0; border-radius:0; background:transparent; }
+</style>
+<style>
+.brand { height:auto; min-height:82px; padding:14px 14px; gap:9px; }
+.brand-mark { width:62px; height:27px; padding:3px; box-sizing:border-box; object-fit:contain; flex:0 0 62px; }
+.brand-title { font-size:12px; line-height:15px; font-weight:700; }
+.brand-sub { font-size:8px; line-height:11px; letter-spacing:.07em; }
+@media (max-width:800px) { .brand { min-height:72px; padding:12px 14px; } }
+</style>
 </head>
 <body>
 <div class="app">
 <aside class="sidebar">
   <div>
     <div class="brand">
-      <div class="brand-mark">E26</div>
-      <div><div class="brand-title">E26 Digital Learning Platform</div><div class="brand-sub">E26 Digital Learning Platform</div></div>
+      <img class="brand-mark" src="shared/braczero-logo.svg" alt="Braczero" />
+      <div><div class="brand-title">Braczero</div><div class="brand-sub">Student Workspace</div></div>
     </div>
     <nav class="nav">
       <div class="nav-label">Academic Workspace</div>

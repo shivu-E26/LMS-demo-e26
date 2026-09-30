@@ -1,5 +1,5 @@
 (() => {
-  const demo = window.E26Demo;
+  const demo = window.BraczeroDemo;
   if (!demo || demo.role !== 'student') return;
   const page = location.pathname.split('/').pop();
   const notify = message => demo.toast(message);

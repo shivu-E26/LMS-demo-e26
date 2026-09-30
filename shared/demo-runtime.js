@@ -9,7 +9,7 @@
     student: 'Student'
   };
   const ROLE_USERS = {
-    publisher: 'E26 Publisher Admin',
+    publisher: 'Braczero Publisher Admin',
     institution: 'Institution Admin',
     hod: 'Dr. Sarah Morgan',
     lecturer: 'Dr. Aris Thomas',
@@ -104,7 +104,7 @@
   if (selectedRole) { try { localStorage.setItem('e26_demo_role', selectedRole); } catch { /* URL role state also supports file previews */ } }
   const acceptedRoles = PAGE_ROLES[page] || [];
   if (!selectedRole || !acceptedRoles.includes(selectedRole)) {
-    document.body.innerHTML = `<main class="e26-access-wall"><section class="e26-access-card" role="alert"><span class="e26-brand-mark">E26</span><h1>Demo Role Access</h1><p>${selectedRole ? 'This screen is not part of the selected role workspace.' : 'Choose a demo role to open this screen.'}</p><a href="index.html">Return to Role Launcher</a></section></main>`;
+    document.body.innerHTML = `<main class="e26-access-wall"><section class="e26-access-card" role="alert"><img class="e26-brand-mark" src="shared/braczero-logo.svg" alt="Braczero" /><h1>Demo Role Access</h1><p>${selectedRole ? 'This screen is not part of the selected role workspace.' : 'Choose a demo role to open this screen.'}</p><a href="index.html">Return to Role Launcher</a></section></main>`;
     return;
   }
 
@@ -115,10 +115,11 @@
 
   document.querySelectorAll('.e26-brand-mark').forEach(mark => {
     const parent=mark.parentElement;
-    if (!parent || /E26 Digital Learning Platform/i.test(parent.innerText)) return;
+    const next=mark.nextElementSibling;
+    if (!parent || next && /\bBraczero\b/i.test(next.textContent)) return;
     const title=document.createElement('span');
     title.className='e26-brand-name';
-    title.textContent='E26 Digital Learning Platform';
+    title.textContent='Braczero';
     mark.after(title);
   });
 
@@ -254,7 +255,7 @@
     }
   });
 
-  window.E26Demo = {
+  window.BraczeroDemo = {
     role: selectedRole,
     roles: ROLE_NAMES,
     pages: PAGE_ROLES,
